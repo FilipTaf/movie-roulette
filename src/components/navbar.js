@@ -12,7 +12,7 @@ import { List } from "react-bootstrap-icons";
 const NavigationBar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div style={{ position: "relative", height: "250px" }}>
+    <div style={{ position: "relative"}}>
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="/">Movie Rulette</Navbar.Brand>
