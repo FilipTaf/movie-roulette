@@ -13,6 +13,4 @@ export default function Test() {
       </ul>
     </div>
   );
-
-  return "p";
 }

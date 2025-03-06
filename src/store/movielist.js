@@ -1,5 +1,5 @@
 const list = {
-  movies: [
+  movielist: [
     {
       title: "Cisza w Mieście",
       description:
@@ -62,7 +62,7 @@ const list = {
       rating: "4/5",
     },
     {
-      name: "Wielki Skok",
+      title: "Wielki Skok",
       description:
         "Grupa przestępców planuje idealny napad na bank, ale wszystko idzie nie tak, jak miało.",
       director: "Piotr Borkowski",
@@ -71,7 +71,7 @@ const list = {
       rating: "3/5",
     },
     {
-      name: "Ziemia Bez Prawa",
+      title: "Ziemia Bez Prawa",
       description:
         "W post-apokaliptycznym świecie, grupka ocalałych musi stawić czoła nowym zagrożeniom.",
       director: "Kacper Zawisza",
@@ -80,7 +80,7 @@ const list = {
       rating: "4/5",
     },
     {
-      name: "Tajemnicza Wyspa",
+      title: "Tajemnicza Wyspa",
       description:
         "Grupa naukowców przypadkowo ląduje na nieznanej wyspie, pełnej niebezpiecznych stworzeń i starożytnych sekretów.",
       director: "Ewa Kowalczyk",
@@ -89,7 +89,7 @@ const list = {
       rating: "2/5",
     },
     {
-      name: "Ostatni Lot",
+      title: "Ostatni Lot",
       description:
         "Po katastrofie lotniczej, ocalała kobieta walczy o przetrwanie na bezludnej wyspie.",
       director: "Tomasz Wesołowski",
@@ -98,7 +98,7 @@ const list = {
       rating: "4/5",
     },
     {
-      name: "W Sieci Kłamstw",
+      title: "W Sieci Kłamstw",
       description:
         "Młody dziennikarz odkrywa, że jego śledztwo prowadzi do wciągania go w świat wielkich oszustw i korupcji.",
       director: "Marek Malinowski",
@@ -107,7 +107,7 @@ const list = {
       rating: "4/5",
     },
     {
-      name: "Na Skraju Przepaści",
+      title: "Na Skraju Przepaści",
       description:
         "Pracownik korporacji zmienia swoje życie, decydując się na ryzykowny projekt, który stawia go na krawędzi katastrofy.",
       director: "Magdalena Sierżant",
@@ -116,7 +116,7 @@ const list = {
       rating: "1/5",
     },
     {
-      name: "Oczy Ciemności",
+      title: "Oczy Ciemności",
       description:
         "Kobieta staje się świadkiem morderstwa i odkrywa, że zabić ją może ktoś z jej najbliższego otoczenia.",
       director: "Piotr Jarosz",
@@ -125,7 +125,7 @@ const list = {
       rating: "4/5",
     },
     {
-      name: "Między Światami",
+      title: "Między Światami",
       description:
         "Po tragicznej śmierci ukochanej osoby, mężczyzna stara się skontaktować z jej duchem, nieświadomy, że ma moc zmieniania rzeczywistości.",
       director: "Alicja Wójcik",
@@ -134,7 +134,7 @@ const list = {
       rating: "2/5",
     },
     {
-      name: "Wysoka Gra",
+      title: "Wysoka Gra",
       description:
         "Ambitny pokerzysta wplątuje się w niebezpieczną grę, gdzie stawką jest życie.",
       director: "Grzegorz Ławniczak",
@@ -143,7 +143,7 @@ const list = {
       rating: "5/5",
     },
     {
-      name: "Czas Przemian",
+      title: "Czas Przemian",
       description:
         "Mężczyzna odkrywa, że jego życie to tylko jedna z wielu alternatywnych rzeczywistości.",
       director: "Jan Mazur",
@@ -152,7 +152,7 @@ const list = {
       rating: "3/5",
     },
     {
-      name: "Ucieczka z Piekła",
+      title: "Ucieczka z Piekła",
       description:
         "Grupa więźniów planuje zuchwałą ucieczkę z najwyżej strzeżonego więzienia na świecie.",
       director: "Krzysztof Piątek",
@@ -161,7 +161,7 @@ const list = {
       rating: "4/5",
     },
     {
-      name: "Złodziejka",
+      title: "Złodziejka",
       description:
         "Kobieta z przeszłością kryminalną stara się zacząć nowe życie, ale nie udaje jej się uciec od dawnego zawodu.",
       director: "Karol Wojdak",
@@ -170,7 +170,7 @@ const list = {
       rating: "2/5",
     },
     {
-      name: "Cisza Przed Burzą",
+      title: "Cisza Przed Burzą",
       description:
         "W małej wiosce dochodzi do tragedii, która rozdziela rodzinę i zmienia życie mieszkańców na zawsze.",
       director: "Michał Różalski",
@@ -179,7 +179,7 @@ const list = {
       ocena: 4.2,
     },
     {
-      name: "Podziemne Miasto",
+      title: "Podziemne Miasto",
       description:
         "Po katastrofie ekologicznej, ludzkość przenosi się do podziemnych miast, gdzie życie staje się coraz trudniejsze.",
       director: "Wojciech Kaczmarek",
@@ -188,7 +188,7 @@ const list = {
       ocena: 4.5,
     },
     {
-      name: "Zatrzymany Czas",
+      title: "Zatrzymany Czas",
       description:
         "Mężczyzna, który odkrywa, że jego zegarek może zatrzymać czas, staje przed decyzją, jak wykorzystać tę moc.",
       director: "Agnieszka Laskowska",
@@ -197,7 +197,7 @@ const list = {
       ocena: 4.0,
     },
     {
-      name: "Kroki w Ciemności",
+      title: "Kroki w Ciemności",
       description:
         "Policjant zaczyna ścigać seryjnego mordercę, który zawsze zostawia ślady, które prowadzą w głąb jego przeszłości.",
       director: "Tomasz Kwiatkowski",
@@ -207,7 +207,7 @@ const list = {
       ocena: 4.3,
     },
     {
-      name: "Złudne Piękno",
+      title: "Złudne Piękno",
       description:
         "Młoda kobieta podejmuje pracę jako modelka, ale szybko odkrywa, że branża ma mroczną stronę.",
       director: "Anna Zielińska",
@@ -217,7 +217,7 @@ const list = {
       ocena: 4.1,
     },
     {
-      name: "Ostatni Dzień Lata",
+      title: "Ostatni Dzień Lata",
       description:
         "Grupa przyjaciół spotyka się na wakacjach, gdzie jeden z nich przyznaje się do niewypowiedzianej tajemnicy.",
       director: "Adam Płocki",
@@ -226,7 +226,7 @@ const list = {
       ocena: 4.0,
     },
     {
-      name: "Cień Wspomnień",
+      title: "Cień Wspomnień",
       description:
         "Po wielu latach, mężczyzna wraca do swojego rodzinnego miasta, gdzie zaczyna odkrywać nieznane dotąd sekrety rodziny.",
       director: "Jacek Wroński",
@@ -235,7 +235,7 @@ const list = {
       ocena: 4.4,
     },
     {
-      name: "Tajemnica Skrzyni",
+      title: "Tajemnica Skrzyni",
       description:
         "Młody chłopak znajduje starą skrzynię, która skrywa niesamowitą tajemnicę związaną z jego przodkami.",
       director: "Michał Wojda",
@@ -244,7 +244,7 @@ const list = {
       ocena: 4.2,
     },
     {
-      name: "Upadek Ikony",
+      title: "Upadek Ikony",
       description:
         "Historia upadku jednej z największych gwiazd muzyki pop, która zmienia swoje życie na zawsze po publicznym skandalu.",
       director: "Krzysztof Żuraw",
@@ -253,7 +253,7 @@ const list = {
       ocena: 4.3,
     },
     {
-      name: "Złota Rzeka",
+      title: "Złota Rzeka",
       description:
         "Poszukiwacze złota w 19 wieku ryzykują życie, by odnaleźć legendarne złoża, ale na ich drodze stają liczne niebezpieczeństwa.",
       director: "Andrzej Domański",
@@ -262,7 +262,7 @@ const list = {
       ocena: 4.4,
     },
     {
-      name: "Wspomnienie Tego Dnia",
+      title: "Wspomnienie Tego Dnia",
       description:
         "Mężczyzna zaczyna widzieć w snach fragmenty swojego przyszłego życia, co prowadzi go do podejmowania ryzykownych decyzji.",
       director: "Tomasz Kaczmarek",
@@ -271,7 +271,7 @@ const list = {
       ocena: 4.2,
     },
     {
-      name: "Zmierzch Nowego Świata",
+      title: "Zmierzch Nowego Świata",
       description:
         "W świecie przyszłości, gdzie technologia rządzi życiem, młody idealista stara się walczyć z systemem.",
       director: "Krzysztof Wysocki",
@@ -280,7 +280,7 @@ const list = {
       ocena: 4.3,
     },
     {
-      name: "Pogrzebany Wspomnieniami",
+      title: "Pogrzebany Wspomnieniami",
       description:
         "Mężczyzna zmaga się z traumą po śmierci ukochanej osoby, aż pewnego dnia zaczyna widzieć ją w swoich snach.",
       director: "Aleksandra Lis",
@@ -290,7 +290,7 @@ const list = {
       ocena: 4.1,
     },
     {
-      name: "Tajemnicza Wiadomość",
+      title: "Tajemnicza Wiadomość",
       description:
         "Pewnego dnia, kobieta otrzymuje anonimowy list, który prowadzi ją do zaginionego członka rodziny.",
       director: "Andrzej Wasilewski",
@@ -300,7 +300,7 @@ const list = {
       ocena: 4.5,
     },
     {
-      name: "Zamach na Czas",
+      title: "Zamach na Czas",
       description:
         "Grupa naukowców odkrywa sposób podróży w czasie, ale ich eksperymenty prowadzą do nieoczekiwanych konsekwencji.",
       director: "Łukasz Bielawski",
@@ -309,7 +309,7 @@ const list = {
       ocena: 4.4,
     },
     {
-      name: "Dzieci Nocy",
+      title: "Dzieci Nocy",
       description:
         "Grupa dzieci posiadających paranormalne zdolności zostaje uwikłana w niebezpieczną grę, w której stawką jest ich przyszłość.",
       director: "Barbara Nowicka",
@@ -318,7 +318,7 @@ const list = {
       ocena: 4.0,
     },
     {
-      name: "Błąd w Systemie",
+      title: "Błąd w Systemie",
       description:
         "Programista odkrywa, że jego firma jest odpowiedzialna za stworzenie sztucznej inteligencji, która przejęła kontrolę nad światem.",
       director: "Krzysztof Grzesiuk",
@@ -327,7 +327,7 @@ const list = {
       ocena: 4.3,
     },
     {
-      name: "Zatruta Rzeka",
+      title: "Zatruta Rzeka",
       description:
         "W małej wiosce zaczynają dziać się dziwne rzeczy po zanieczyszczeniu wód przez fabrykę. Grupa mieszkańców staje przed walką o przeżycie.",
       director: "Katarzyna Kowalska",
@@ -336,7 +336,7 @@ const list = {
       ocena: 4.2,
     },
     {
-      name: "Złapani w Sieci",
+      title: "Złapani w Sieci",
       description:
         "Grupa osób zostaje uwikłana w nielegalny świat internetowego ścigania, gdzie nie ma ucieczki.",
       director: "Tomasz Górski",
@@ -345,7 +345,7 @@ const list = {
       ocena: 4.3,
     },
     {
-      name: "Świat za Kurtyną",
+      title: "Świat za Kurtyną",
       description:
         "Historia życia młodego aktora, który musi zmierzyć się z rzeczywistością show-biznesu i odkrywać swoją prawdziwą tożsamość.",
       director: "Aleksandra Król",
@@ -354,7 +354,7 @@ const list = {
       ocena: 4.4,
     },
     {
-      name: "Krople Łez",
+      title: "Krople Łez",
       description:
         "Historia kobiet, które zmagają się z traumy przeszłości i próbują odbudować swoje życie po rozstaniu z mężem.",
       director: "Iwona Orłowska",
@@ -363,7 +363,7 @@ const list = {
       ocena: 4.1,
     },
     {
-      name: "Zatrzymany Czas",
+      title: "Zatrzymany Czas",
       description:
         "Mężczyzna zyskuje zdolność zatrzymywania czasu, ale wkrótce odkrywa, że jego moc ma tragiczne konsekwencje.",
       director: "Dariusz Kubacki",
@@ -372,7 +372,7 @@ const list = {
       ocena: 4.0,
     },
     {
-      name: "Złowrogie Oczy",
+      title: "Złowrogie Oczy",
       description:
         "Po powrocie do rodzinnego miasta, detektyw staje w obliczu serii tajemniczych zbrodni, które są ściśle związane z jego przeszłością.",
       director: "Michał Szewczyk",
@@ -381,7 +381,7 @@ const list = {
       ocena: 4.5,
     },
     {
-      name: "Dźwięk Przeszłości",
+      title: "Dźwięk Przeszłości",
       description:
         "Grupa muzyków odkrywa tajemnicze nagrania, które przenoszą ich do innych wymiarów.",
       director: "Maciej Klimczak",
@@ -390,7 +390,7 @@ const list = {
       ocena: 4.2,
     },
     {
-      name: "W Złotej Klatce",
+      title: "W Złotej Klatce",
       description:
         "Historia życia pewnej aktorki, która po latach kariery staje przed dylematem: pozostać w złotej klatce czy zacząć od nowa.",
       director: "Julia Prus",
@@ -399,7 +399,7 @@ const list = {
       ocena: 4.1,
     },
     {
-      name: "Wizja",
+      title: "Wizja",
       description:
         "Mężczyzna, który doświadcza dziwnych wizji przyszłości, postanawia zmienić swoje życie i zapobiec nadchodzącej katastrofie.",
       director: "Michał Strzalkowski",
@@ -408,7 +408,7 @@ const list = {
       ocena: 4.3,
     },
     {
-      name: "Kraina Cieni",
+      title: "Kraina Cieni",
       description:
         "Grupa osób ląduje na wyspie pełnej tajemniczych istot, które wydają się polować na każdego, kto się zbliży.",
       director: "Agata Twardowska",
@@ -417,7 +417,7 @@ const list = {
       ocena: 4.4,
     },
     {
-      name: "Labirynt Wspomnień",
+      title: "Labirynt Wspomnień",
       description:
         "Mężczyzna zmaga się z utratą pamięci i stara się odkryć prawdę o swojej przeszłości, podróżując po labiryncie swoich wspomnień.",
       director: "Adam Lis",
@@ -426,7 +426,7 @@ const list = {
       ocena: 4.2,
     },
     {
-      name: "Nieznajoma Prawda",
+      title: "Nieznajoma Prawda",
       description:
         "Młoda dziennikarka stara się odkryć tajemnicę zniknięcia swojej siostry sprzed lat.",
       director: "Kamil Jasiński",
@@ -435,7 +435,7 @@ const list = {
       ocena: 4.4,
     },
     {
-      name: "Sekretna Misja",
+      title: "Sekretna Misja",
       description:
         "Były agent służb specjalnych powraca do akcji, by wykonać misję, która może kosztować go życie.",
       director: "Piotr Białek",
@@ -444,7 +444,7 @@ const list = {
       ocena: 4.3,
     },
     {
-      name: "Tylko Jeden Krelease",
+      title: "Tylko Jeden Krelease",
       description:
         "Historia mężczyzny, który podejmuje decyzję o zmianie swojego życia, a każdy jego wybór prowadzi do zupełnie innego zakończenia.",
       director: "Joanna Socha",
@@ -453,7 +453,7 @@ const list = {
       ocena: 4.0,
     },
     {
-      name: "Na Granicy Światów",
+      title: "Na Granicy Światów",
       description:
         "Dwie osoby żyjące w różnych wymiarach, odkrywają, że ich losy są ze sobą połączone, co prowadzi do dramatycznej konfrontacji.",
       director: "Grzegorz Wojciechowski",
