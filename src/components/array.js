@@ -16,29 +16,23 @@ const MovieList = () => {
     },
   ];
   return (
-    <div className="block" style={{ backgroundColor: "red", height: "40px" }}>
-      <Container>
-        <Row>
-          <Col xs={2}>{movies.map((movie) => (movie.title, movie.genre))}</Col>
-        </Row>
-      </Container>
+    <div>
+      {movies.map((movie, index) => (
+        <div
+          key={index}
+          className="Movie"
+          style={{
+            padding: "10px",
+            margin: "5px",
+            border: "1px solid #ccc",
+            backgroundColor: "#f9f9f9",
+          }}
+        >
+          {movie.title},{movie.genre}
+        </div>
+      ))}
     </div>
   );
 };
 
 export default MovieList;
-
-/*
-<Container>
-      <Row>
-        <Col xs={2}>
-          <div
-            className="block"
-            style={{ backgroundColor: "red", height: "40px" }}
-          >
-            
-          </div>
-        </Col>
-      </Row>
-    </Container>
-    */
