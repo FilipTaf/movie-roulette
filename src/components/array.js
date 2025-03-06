@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import Table from "react-bootstrap/Table";
 
 const MovieList = () => {
   const movies = [
@@ -16,22 +16,24 @@ const MovieList = () => {
     },
   ];
   return (
-    <div>
-      {movies.map((movie, index) => (
-        <div
-          key={index}
-          className="Movie"
-          style={{
-            padding: "10px",
-            margin: "5px",
-            border: "1px solid #ccc",
-            backgroundColor: "#f9f9f9",
-          }}
-        >
-          {movie.title},{movie.genre}
-        </div>
-      ))}
-    </div>
+    <>
+      <Table bordered hover>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Genre</th>
+          </tr>
+        </thead>
+        <tbody>
+          {movies.map((movie) => (
+            <tr>
+              <td>{movie.title}</td>
+              <td>{movie.genre}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    </>
   );
 };
 
