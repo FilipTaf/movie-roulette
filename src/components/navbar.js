@@ -12,42 +12,35 @@ import { List } from "react-bootstrap-icons";
 const NavigationBar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div style={{ position: "relative", height: "250px" }}>
+    <div style={{ position: "relative", height: "auto" }}>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="/">Movie Rulette</Navbar.Brand>
+          <Navbar.Brand href="/" style={{ width: "80%" }}>
+            Movie Rulette
+          </Navbar.Brand>
 
-          <div
-            style={{
-              position: "relative",
-              height: "80px",
-            }}
-          >
-            <Collapse in={open} dimension="width">
-              <div id="example-collapse-text">
-                <Card
-                  style={{
-                    width: "auto",
-                    height: "40px",
-                    marginTop: "20px",
-                    transformOrigin: "left",
-                  }}
-                >
-                  <Nav>
-                    <Nav.Link href="/" style={{ color: "red" }}>
-                      Main
-                    </Nav.Link>
-                    <Nav.Link href="/views/app" style={{ color: "red" }}>
-                      History
-                    </Nav.Link>
-                    <Nav.Link href="/views/app" style={{ color: "red" }}>
-                      Favorite
-                    </Nav.Link>
-                  </Nav>
-                </Card>
-              </div>
-            </Collapse>
-          </div>
+          <Collapse in={open} dimension="width" style={{ width: "10%" }}>
+            <Card
+              style={{
+                width: "auto",
+                height: "40px",
+                right: "0",
+                left: "auto",
+              }}
+            >
+              <Nav>
+                <Nav.Link href="/" style={{ color: "black" }}>
+                  Main
+                </Nav.Link>
+                <Nav.Link href="/views/app" style={{ color: "black" }}>
+                  History
+                </Nav.Link>
+                <Nav.Link href="/views/app" style={{ color: "black" }}>
+                  Favorite
+                </Nav.Link>
+              </Nav>
+            </Card>
+          </Collapse>
 
           <Button
             variant="outline-light"
