@@ -1,5 +1,5 @@
 import React from "react";
-import Table from "react-bootstrap/Table";
+import { Container, Row, Col } from "react-bootstrap";
 
 const MovieList = () => {
   const movies = [
@@ -16,26 +16,29 @@ const MovieList = () => {
     },
   ];
   return (
-    <div className="block mt-3">
-      <h2>Lista filmów z wybraanego gatunku</h2>
-      <Table>
-        <thead>
-          <tr>
-            <th>Tytuł</th>
-            <th>Gatunek</th>
-          </tr>
-        </thead>
-        <tbody>
-          {movies.map((movie) => (
-            <tr key={movie.id}>
-              <td>{movie.title}</td>
-              <td>{movie.genre}</td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
+    <div className="block" style={{ backgroundColor: "red", height: "40px" }}>
+      <Container>
+        <Row>
+          <Col xs={2}>{movies.map((movie) => (movie.title, movie.genre))}</Col>
+        </Row>
+      </Container>
     </div>
   );
 };
 
 export default MovieList;
+
+/*
+<Container>
+      <Row>
+        <Col xs={2}>
+          <div
+            className="block"
+            style={{ backgroundColor: "red", height: "40px" }}
+          >
+            
+          </div>
+        </Col>
+      </Row>
+    </Container>
+    */

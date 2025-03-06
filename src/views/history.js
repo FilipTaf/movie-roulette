@@ -1,9 +1,12 @@
 import React from "react";
+import General from "../components/use";
+import MovieList from "../components/array";
 
 const History = () => {
   return (
     <div>
-      <h1>Historia wylosowanych filmów</h1>
+      <General />
+      <MovieList />
     </div>
   );
 };
