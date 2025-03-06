@@ -1,13 +1,13 @@
-import { configureStore } from '@reduxjs/toolkit'
-import movieReducer from './movieReducer'
+import { configureStore } from "@reduxjs/toolkit";
+import movieReducer from "./movieReducer";
 
 const store = configureStore({
-  reducer: {movies:movieReducer}
-})
+  reducer: { movies: movieReducer },
+});
 
-const selectCounterValue = state => state.value
-const currentValue = selectCounterValue(store.getState())
+const selectCounterValue = (state) => state.value;
+const currentValue = selectCounterValue(store.getState());
 
-console.log(currentValue)
+console.log(currentValue);
 
-export default store
+export default store;
