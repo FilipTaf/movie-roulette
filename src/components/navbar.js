@@ -12,25 +12,42 @@ import { List } from "react-bootstrap-icons";
 const NavigationBar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative", height: "250px" }}>
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="/">Movie Rulette</Navbar.Brand>
 
-          <Collapse in={open} dimension="width">
-            <div>
-              <Card body style={{ width: "400px" }}>
-                <Nav>
-                  <Nav.Link href="/" style={{ color: "red" }}>
-                    Main
-                  </Nav.Link>
-                  <Nav.Link href="/views/app" style={{ color: "red" }}>
-                    Main
-                  </Nav.Link>
-                </Nav>
-              </Card>
-            </div>
-          </Collapse>
+          <div
+            style={{
+              position: "relative",
+              height: "80px",
+            }}
+          >
+            <Collapse in={open} dimension="width">
+              <div id="example-collapse-text">
+                <Card
+                  style={{
+                    width: "auto",
+                    height: "40px",
+                    marginTop: "20px",
+                    transformOrigin: "left",
+                  }}
+                >
+                  <Nav>
+                    <Nav.Link href="/" style={{ color: "red" }}>
+                      Main
+                    </Nav.Link>
+                    <Nav.Link href="/views/app" style={{ color: "red" }}>
+                      History
+                    </Nav.Link>
+                    <Nav.Link href="/views/app" style={{ color: "red" }}>
+                      Favorite
+                    </Nav.Link>
+                  </Nav>
+                </Card>
+              </div>
+            </Collapse>
+          </div>
 
           <Button
             variant="outline-light"
