@@ -1,59 +1,31 @@
-import React, { useState } from "react";
-import {
-  Navbar,
-  Container,
-  Button,
-  Collapse,
-  Card,
-  Nav,
-} from "react-bootstrap";
-import { List } from "react-bootstrap-icons";
+import React from "react";
+import { Navbar, Nav, Container, Offcanvas } from "react-bootstrap";
 
-const NavigationBar = () => {
-  const [open, setOpen] = useState(false);
+const MyNavbar = () => {
   return (
-    <div style={{ position: "relative", height: "auto" }}>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="/" style={{ width: "80%" }}>
-            Movie Rulette
-          </Navbar.Brand>
-
-          <Collapse in={open} dimension="width" style={{ width: "10%" }}>
-            <Card
-              style={{
-                width: "auto",
-                height: "40px",
-                right: "0",
-                left: "auto",
-              }}
-            >
-              <Nav>
-                <Nav.Link href="/" style={{ color: "black" }}>
-                  Main
-                </Nav.Link>
-                <Nav.Link href="/views/app" style={{ color: "black" }}>
-                  History
-                </Nav.Link>
-                <Nav.Link href="/views/app" style={{ color: "black" }}>
-                  Favorite
-                </Nav.Link>
-              </Nav>
-            </Card>
-          </Collapse>
-
-          <Button
-            variant="outline-light"
-            onClick={() => setOpen(!open)}
-            aria-controls="-collapse-text"
-            aria-expanded={open}
-          >
-            <List size={30} />
-          </Button>
-        </Container>
-      </Navbar>
-    </div>
+    <Navbar expand={false} bg="dark" variant="dark" className="px-3">
+      <Container fluid>
+        <Navbar.Brand>Movie-rulette</Navbar.Brand>
+        <Navbar.Toggle aria-controls="offcanvasNavbar" />
+        <Navbar.Offcanvas
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+          placement="end"
+        >
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title id="offcanvasNavbarLabel">Menu</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Nav className="justify-content-end flex-grow-1 pe-3">
+              <Nav.Link href="/">Main</Nav.Link>
+              <Nav.Link href="/">History</Nav.Link>
+              <Nav.Link href="/">Favorites</Nav.Link>
+            </Nav>
+          </Offcanvas.Body>
+        </Navbar.Offcanvas>
+      </Container>
+    </Navbar>
   );
 };
 
-export default NavigationBar;
+export default MyNavbar;
