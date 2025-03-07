@@ -3,8 +3,6 @@ import { createAction } from "@reduxjs/toolkit";
 import list from "./movielist";
 import { createSlice } from "@reduxjs/toolkit";
 
-const addMovie = createAction("addMovie");
-
 const initialState = list.movielist;
 
 const movieReducer = createSlice({
