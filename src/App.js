@@ -2,8 +2,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import History from "./views/history";
 import Navibar from "./components/navbar";
-import Mainbody from "./components/restWebpage";
 import MyNavbar from "./components/navbar";
+import Mainbody from "./components/restWebpage";
 
 function App() {
   return (
