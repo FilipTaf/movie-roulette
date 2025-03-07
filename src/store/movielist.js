@@ -6,7 +6,7 @@ const list = {
         "W czasach apokalipsy, grupka ocalałych próbuje znaleźć schronienie w pustym mieście",
       director: "Michał Kowalski",
       release: "2014",
-      genre: "thiller",
+      genre: "Thriller",
       rating: "3/5",
     },
     {
@@ -15,7 +15,7 @@ const list = {
         "Młody mężczyzna budzi się bez pamięci i musi odkryć, cp stało się z hegi życiem, podczas gyd ktoś nieustannie stara się go zabić",
       director: "Adam Kowalski",
       release: "2018",
-      genre: "thiller",
+      genre: "Thriller",
       rating: "4/5",
     },
     {
@@ -24,7 +24,7 @@ const list = {
         "W 1985 roku młody chłopak odkrywa tajemnicze zdjęcia, które prowadzą go do zaginionej cywilizacji",
       director: "Michał Nowak",
       release: "2000",
-      genre: "Przygowody/Sci-fi",
+      genre: "Przygodowy",
       rating: "4/5",
     },
     {
@@ -41,7 +41,7 @@ const list = {
       description:
         "Dwoje artystów spotyka się w Los Angeles i zaczyna nieoczekiwaną, intensywną miłość",
       director: "Piotr Wójcik",
-      genre: "Romans/Dramat",
+      genre: "Romans",
       release: "2024",
       rating: "4/5",
     },
@@ -66,7 +66,7 @@ const list = {
       description:
         "Grupa przestępców planuje idealny napad na bank, ale wszystko idzie nie tak, jak miało.",
       director: "Piotr Borkowski",
-      genre: "Kryminał, Thriller",
+      genre: "Kryminał",
       release: "2020",
       rating: "3/5",
     },
@@ -75,7 +75,7 @@ const list = {
       description:
         "W post-apokaliptycznym świecie, grupka ocalałych musi stawić czoła nowym zagrożeniom.",
       director: "Kacper Zawisza",
-      genre: "Akcja, Sci-Fi",
+      genre: "Akcja",
       release: "2013",
       rating: "4/5",
     },
@@ -84,7 +84,7 @@ const list = {
       description:
         "Grupa naukowców przypadkowo ląduje na nieznanej wyspie, pełnej niebezpiecznych stworzeń i starożytnych sekretów.",
       director: "Ewa Kowalczyk",
-      genre: "Przygodowy, Thriller",
+      genre: "Przygodowy",
       release: "2015",
       rating: "2/5",
     },
@@ -93,7 +93,7 @@ const list = {
       description:
         "Po katastrofie lotniczej, ocalała kobieta walczy o przetrwanie na bezludnej wyspie.",
       director: "Tomasz Wesołowski",
-      genre: "Dramat, Survival",
+      genre: "Dramat",
       release: "2018",
       rating: "4/5",
     },
@@ -102,7 +102,7 @@ const list = {
       description:
         "Młody dziennikarz odkrywa, że jego śledztwo prowadzi do wciągania go w świat wielkich oszustw i korupcji.",
       director: "Marek Malinowski",
-      genre: "Thriller, Dramat",
+      genre: "Thriller",
       release: "2020",
       rating: "4/5",
     },
@@ -111,7 +111,7 @@ const list = {
       description:
         "Pracownik korporacji zmienia swoje życie, decydując się na ryzykowny projekt, który stawia go na krawędzi katastrofy.",
       director: "Magdalena Sierżant",
-      genre: "Dramat, Thriller",
+      genre: "Dramat",
       release: "2016",
       rating: "1/5",
     },
@@ -120,7 +120,7 @@ const list = {
       description:
         "Kobieta staje się świadkiem morderstwa i odkrywa, że zabić ją może ktoś z jej najbliższego otoczenia.",
       director: "Piotr Jarosz",
-      genre: "Kryminał, Thriller",
+      genre: "Kryminał",
       release: "2013",
       rating: "4/5",
     },
@@ -129,7 +129,7 @@ const list = {
       description:
         "Po tragicznej śmierci ukochanej osoby, mężczyzna stara się skontaktować z jej duchem, nieświadomy, że ma moc zmieniania rzeczywistości.",
       director: "Alicja Wójcik",
-      genre: "Dramat, Fantasy",
+      genre: "Dramat",
       release: "2018",
       rating: "2/5",
     },
@@ -138,7 +138,7 @@ const list = {
       description:
         "Ambitny pokerzysta wplątuje się w niebezpieczną grę, gdzie stawką jest życie.",
       director: "Grzegorz Ławniczak",
-      genre: "Kryminał, Dramat",
+      genre: "Kryminał",
       release: "2025",
       rating: "5/5",
     },
@@ -147,7 +147,7 @@ const list = {
       description:
         "Mężczyzna odkrywa, że jego życie to tylko jedna z wielu alternatywnych rzeczywistości.",
       director: "Jan Mazur",
-      genre: "Sci-Fi, Dramat",
+      genre: "Sci-Fi",
       release: "2012",
       rating: "3/5",
     },
@@ -156,7 +156,7 @@ const list = {
       description:
         "Grupa więźniów planuje zuchwałą ucieczkę z najwyżej strzeżonego więzienia na świecie.",
       director: "Krzysztof Piątek",
-      genre: "Akcja, Thriller",
+      genre: "Akcja",
       release: "2010",
       rating: "4/5",
     },
@@ -165,7 +165,7 @@ const list = {
       description:
         "Kobieta z przeszłością kryminalną stara się zacząć nowe życie, ale nie udaje jej się uciec od dawnego zawodu.",
       director: "Karol Wojdak",
-      genre: "Dramat, Kryminał",
+      genre: "Dramat",
       release: "2015",
       rating: "2/5",
     },
@@ -183,7 +183,7 @@ const list = {
       description:
         "Po katastrofie ekologicznej, ludzkość przenosi się do podziemnych miast, gdzie życie staje się coraz trudniejsze.",
       director: "Wojciech Kaczmarek",
-      genre: "Sci-Fi, Thriller",
+      genre: "Sci-Fi",
       release: "2024",
       rating: "4.5",
     },
@@ -192,7 +192,7 @@ const list = {
       description:
         "Mężczyzna, który odkrywa, że jego zegarek może zatrzymać czas, staje przed decyzją, jak wykorzystać tę moc.",
       director: "Agnieszka Laskowska",
-      genre: "Sci-Fi, Dramat",
+      genre: "Sci-Fi",
       release: "2022",
       rating: "4.0",
     },
@@ -201,8 +201,7 @@ const list = {
       description:
         "Policjant zaczyna ścigać seryjnego mordercę, który zawsze zostawia ślady, które prowadzą w głąb jego przeszłości.",
       director: "Tomasz Kwiatkowski",
-      genre: "Kryminał, Thriller",
-
+      genre: "Kryminał",
       release: "2021",
       rating: "4.3",
     },
@@ -211,8 +210,7 @@ const list = {
       description:
         "Młoda kobieta podejmuje pracę jako modelka, ale szybko odkrywa, że branża ma mroczną stronę.",
       director: "Anna Zielińska",
-      genre: "Dramat, Thriller",
-
+      genre: "Dramat",
       release: "2022",
       rating: "4.1",
     },
@@ -221,7 +219,7 @@ const list = {
       description:
         "Grupa przyjaciół spotyka się na wakacjach, gdzie jeden z nich przyznaje się do niewypowiedzianej tajemnicy.",
       director: "Adam Płocki",
-      genre: "Dramat, Komedia",
+      genre: "Dramat",
       release: "2020",
       rating: "4.0",
     },
@@ -230,7 +228,7 @@ const list = {
       description:
         "Po wielu latach, mężczyzna wraca do swojego rodzinnego miasta, gdzie zaczyna odkrywać nieznane dotąd sekrety rodziny.",
       director: "Jacek Wroński",
-      genre: "Dramat, Thriller",
+      genre: "Dramat",
       release: "2021",
       rating: "4.4",
     },
@@ -239,7 +237,7 @@ const list = {
       description:
         "Młody chłopak znajduje starą skrzynię, która skrywa niesamowitą tajemnicę związaną z jego przodkami.",
       director: "Michał Wojda",
-      genre: "Przygodowy, Fantastyka",
+      genre: "Przygodowy",
       release: "2023",
       rating: "4.2",
     },
@@ -248,7 +246,7 @@ const list = {
       description:
         "Historia upadku jednej z największych gwiazd muzyki pop, która zmienia swoje życie na zawsze po publicznym skandalu.",
       director: "Krzysztof Żuraw",
-      genre: "Dramat, Biograficzny",
+      genre: "Dramat",
       release: "2022",
       rating: "4.3",
     },
@@ -257,7 +255,7 @@ const list = {
       description:
         "Poszukiwacze złota w 19 wieku ryzykują życie, by odnaleźć legendarne złoża, ale na ich drodze stają liczne niebezpieczeństwa.",
       director: "Andrzej Domański",
-      genre: "Przygodowy, Western",
+      genre: "Przygodowy",
       release: "2021",
       rating: "4.4",
     },
@@ -266,7 +264,7 @@ const list = {
       description:
         "Mężczyzna zaczyna widzieć w snach fragmenty swojego przyszłego życia, co prowadzi go do podejmowania ryzykownych decyzji.",
       director: "Tomasz Kaczmarek",
-      genre: "Thriller, Sci-Fi",
+      genre: "Thriller",
       release: "2022",
       rating: "4.2",
     },
@@ -275,7 +273,7 @@ const list = {
       description:
         "W świecie przyszłości, gdzie technologia rządzi życiem, młody idealista stara się walczyć z systemem.",
       director: "Krzysztof Wysocki",
-      genre: "Sci-Fi, Akcja",
+      genre: "Sci-Fi",
       release: "2023",
       rating: "4.3",
     },
@@ -284,8 +282,7 @@ const list = {
       description:
         "Mężczyzna zmaga się z traumą po śmierci ukochanej osoby, aż pewnego dnia zaczyna widzieć ją w swoich snach.",
       director: "Aleksandra Lis",
-      genre: "Dramat, Fantastyka",
-
+      genre: "Dramat",
       release: "2021",
       rating: "4.1",
     },
@@ -294,8 +291,7 @@ const list = {
       description:
         "Pewnego dnia, kobieta otrzymuje anonimowy list, który prowadzi ją do zaginionego członka rodziny.",
       director: "Andrzej Wasilewski",
-      genre: "Thriller, Dramat",
-
+      genre: "Thriller",
       release: "2024",
       rating: "4.5",
     },
@@ -304,7 +300,7 @@ const list = {
       description:
         "Grupa naukowców odkrywa sposób podróży w czasie, ale ich eksperymenty prowadzą do nieoczekiwanych konsekwencji.",
       director: "Łukasz Bielawski",
-      genre: "Sci-Fi, Thriller",
+      genre: "Sci-Fi",
       release: "2022",
       rating: "4.4",
     },
@@ -313,7 +309,7 @@ const list = {
       description:
         "Grupa dzieci posiadających paranormalne zdolności zostaje uwikłana w niebezpieczną grę, w której stawką jest ich przyszłość.",
       director: "Barbara Nowicka",
-      genre: "Fantasy, Thriller",
+      genre: "Fantasy",
       release: "2023",
       rating: "4.0",
     },
@@ -322,7 +318,7 @@ const list = {
       description:
         "Programista odkrywa, że jego firma jest odpowiedzialna za stworzenie sztucznej inteligencji, która przejęła kontrolę nad światem.",
       director: "Krzysztof Grzesiuk",
-      genre: "Sci-Fi, Thriller",
+      genre: "Sci-Fi",
       release: "2024",
       rating: "4.3",
     },
@@ -331,7 +327,7 @@ const list = {
       description:
         "W małej wiosce zaczynają dziać się dziwne rzeczy po zanieczyszczeniu wód przez fabrykę. Grupa mieszkańców staje przed walką o przeżycie.",
       director: "Katarzyna Kowalska",
-      genre: "Thriller, Dramat",
+      genre: "Thriller",
       release: "2021",
       rating: "4.2",
     },
@@ -340,7 +336,7 @@ const list = {
       description:
         "Grupa osób zostaje uwikłana w nielegalny świat internetowego ścigania, gdzie nie ma ucieczki.",
       director: "Tomasz Górski",
-      genre: "Kryminał, Thriller",
+      genre: "Kryminał",
       release: "2022",
       rating: "4.3",
     },
@@ -349,14 +345,14 @@ const list = {
       description:
         "Historia życia młodego aktora, który musi zmierzyć się z rzeczywistością show-biznesu i odkrywać swoją prawdziwą tożsamość.",
       director: "Aleksandra Król",
-      genre: "Dramat, Biograficzny",
+      genre: "Dramat",
       release: "2021",
       rating: "4.4",
     },
     {
       title: "Krople Łez",
       description:
-        "Historia kobiet, które zmagają się z traumy przeszłości i próbują odbudować swoje życie po rozstaniu z mężem.",
+        "Historia kobiet, które zmagają się z traumą przeszłości i próbują odbudować swoje życie po rozstaniu z mężem.",
       director: "Iwona Orłowska",
       genre: "Dramat",
       release: "2022",
@@ -367,7 +363,7 @@ const list = {
       description:
         "Mężczyzna zyskuje zdolność zatrzymywania czasu, ale wkrótce odkrywa, że jego moc ma tragiczne konsekwencje.",
       director: "Dariusz Kubacki",
-      genre: "Sci-Fi, Dramat",
+      genre: "Sci-Fi",
       release: "2023",
       rating: "4.0",
     },
@@ -376,7 +372,7 @@ const list = {
       description:
         "Po powrocie do rodzinnego miasta, detektyw staje w obliczu serii tajemniczych zbrodni, które są ściśle związane z jego przeszłością.",
       director: "Michał Szewczyk",
-      genre: "Kryminał, Thriller",
+      genre: "Kryminał",
       release: "2024",
       rating: "4.5",
     },
@@ -385,7 +381,7 @@ const list = {
       description:
         "Grupa muzyków odkrywa tajemnicze nagrania, które przenoszą ich do innych wymiarów.",
       director: "Maciej Klimczak",
-      genre: "Sci-Fi, Thriller",
+      genre: "Sci-Fi",
       release: "2021",
       rating: "4.2",
     },
@@ -403,7 +399,7 @@ const list = {
       description:
         "Mężczyzna, który doświadcza dziwnych wizji przyszłości, postanawia zmienić swoje życie i zapobiec nadchodzącej katastrofie.",
       director: "Michał Strzalkowski",
-      genre: "Sci-Fi, Thriller",
+      genre: "Sci-Fi",
       release: "2023",
       rating: "4.3",
     },
@@ -412,25 +408,16 @@ const list = {
       description:
         "Grupa osób ląduje na wyspie pełnej tajemniczych istot, które wydają się polować na każdego, kto się zbliży.",
       director: "Agata Twardowska",
-      genre: "Horror, Thriller",
+      genre: "Horror",
       release: "2024",
       rating: "4.4",
-    },
-    {
-      title: "Labirynt Wspomnień",
-      description:
-        "Mężczyzna zmaga się z utratą pamięci i stara się odkryć prawdę o swojej przeszłości, podróżując po labiryncie swoich wspomnień.",
-      director: "Adam Lis",
-      genre: "Dramat, Thriller",
-      release: "2021",
-      rating: "4.2",
     },
     {
       title: "Nieznajoma Prawda",
       description:
         "Młoda dziennikarka stara się odkryć tajemnicę zniknięcia swojej siostry sprzed lat.",
       director: "Kamil Jasiński",
-      genre: "Kryminał, Thriller",
+      genre: "Thriller",
       release: "2023",
       rating: "4.4",
     },
@@ -439,7 +426,7 @@ const list = {
       description:
         "Były agent służb specjalnych powraca do akcji, by wykonać misję, która może kosztować go życie.",
       director: "Piotr Białek",
-      genre: "Akcja, Kryminał",
+      genre: "Kryminał",
       release: "2022",
       rating: "4.3",
     },
@@ -457,7 +444,7 @@ const list = {
       description:
         "Dwie osoby żyjące w różnych wymiarach, odkrywają, że ich losy są ze sobą połączone, co prowadzi do dramatycznej konfrontacji.",
       director: "Grzegorz Wojciechowski",
-      genre: "Sci-Fi, Dramat",
+      genre: "Sci-Fi",
       release: "2024",
       rating: "4.4",
     },

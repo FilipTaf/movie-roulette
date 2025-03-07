@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const Search = ({ onSearch }) => {
   const [query, setQuery] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
     onSearch(query);
