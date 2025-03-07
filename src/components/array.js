@@ -1,20 +1,9 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
+import { useSelector } from "react-redux";
 
 const MovieList = () => {
-  const movies = [
-    { title: "Furia", genre: "Wojna" },
-    { title: "Szeregowiec Ryan", genre: "Wojna" },
-    { title: "The Ring", genre: "Horror" },
-    { title: "Matrix", genre: "Akcja" },
-    { title: "Forrest Gump", genre: "Dramat" },
-    { title: "Gladiator", genre: "Dramat" },
-    { title: "Druga wojna światowa w kolorze", genre: "Historia" },
-    {
-      title: "Star Wars: Episode V - The Empire Strikes Back",
-      genre: "Sci-Fi",
-    },
-  ];
+  const movieList = useSelector((state) => state.movies);
   return (
     <>
       <Table bordered hover>
@@ -25,7 +14,7 @@ const MovieList = () => {
           </tr>
         </thead>
         <tbody>
-          {movies.map((movie) => (
+          {movieList.map((movie) => (
             <tr>
               <td>{movie.title}</td>
               <td>{movie.genre}</td>
