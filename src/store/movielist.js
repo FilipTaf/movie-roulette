@@ -8,6 +8,7 @@ const list = {
       release: "2014",
       genre: "thiller",
       rating: "3/5",
+      id: true,
     },
     {
       title: "Zagubione Wspomnienia",
@@ -17,6 +18,7 @@ const list = {
       release: "2018",
       genre: "thiller",
       rating: "4/5",
+      id: true,
     },
     {
       title: "Lśnienie Przeszłośći",
@@ -26,6 +28,7 @@ const list = {
       release: "2000",
       genre: "Przygowody/Sci-fi",
       rating: "4/5",
+      id: true,
     },
     {
       title: "Echo w Ciemnośći",
@@ -35,6 +38,7 @@ const list = {
       release: "2020",
       genre: "Horror",
       rating: "2/5",
+      id: true,
     },
     {
       title: "Miłość w Blasku Gwiazd",
@@ -44,6 +48,7 @@ const list = {
       genre: "Romans/Dramat",
       release: "2024",
       rating: "4/5",
+      id: true,
     },
     {
       title: "Tylko jedno Życie",
@@ -52,6 +57,7 @@ const list = {
       release: "2015",
       genre: "Dramat",
       rating: "5/5",
+      id: true,
     },
     {
       title: "Sekretne Drzwi",
@@ -60,6 +66,7 @@ const list = {
       release: "2020",
       genre: "Sci-Fi",
       rating: "4/5",
+      id: false,
     },
     {
       title: "Wielki Skok",
@@ -69,6 +76,7 @@ const list = {
       genre: "Kryminał, Thriller",
       release: "2020",
       rating: "3/5",
+      id: false,
     },
     {
       title: "Ziemia Bez Prawa",
@@ -78,6 +86,7 @@ const list = {
       genre: "Akcja, Sci-Fi",
       release: "2013",
       rating: "4/5",
+      id: false,
     },
     {
       title: "Tajemnicza Wyspa",
@@ -87,6 +96,7 @@ const list = {
       genre: "Przygodowy, Thriller",
       release: "2015",
       rating: "2/5",
+      id: false,
     },
     {
       title: "Ostatni Lot",
@@ -96,6 +106,7 @@ const list = {
       genre: "Dramat, Survival",
       release: "2018",
       rating: "4/5",
+      id: false,
     },
     {
       title: "W Sieci Kłamstw",
@@ -105,6 +116,7 @@ const list = {
       genre: "Thriller, Dramat",
       release: "2020",
       rating: "4/5",
+      id: false,
     },
     {
       title: "Na Skraju Przepaści",
@@ -114,6 +126,7 @@ const list = {
       genre: "Dramat, Thriller",
       release: "2016",
       rating: "1/5",
+      id: false,
     },
     {
       title: "Oczy Ciemności",
@@ -123,6 +136,7 @@ const list = {
       genre: "Kryminał, Thriller",
       release: "2013",
       rating: "4/5",
+      id: false,
     },
     {
       title: "Między Światami",
@@ -132,6 +146,7 @@ const list = {
       genre: "Dramat, Fantasy",
       release: "2018",
       rating: "2/5",
+      id: false,
     },
     {
       title: "Wysoka Gra",
@@ -141,6 +156,7 @@ const list = {
       genre: "Kryminał, Dramat",
       release: "2025",
       rating: "5/5",
+      id: false,
     },
     {
       title: "Czas Przemian",
@@ -150,6 +166,7 @@ const list = {
       genre: "Sci-Fi, Dramat",
       release: "2012",
       rating: "3/5",
+      id: false,
     },
     {
       title: "Ucieczka z Piekła",
@@ -159,6 +176,7 @@ const list = {
       genre: "Akcja, Thriller",
       release: "2010",
       rating: "4/5",
+      id: false,
     },
     {
       title: "Złodziejka",
@@ -168,6 +186,7 @@ const list = {
       genre: "Dramat, Kryminał",
       release: "2015",
       rating: "2/5",
+      id: false,
     },
     {
       title: "Cisza Przed Burzą",
@@ -177,6 +196,7 @@ const list = {
       genre: "Dramat",
       release: "2023",
       rating: "4.2",
+      id: false,
     },
     {
       title: "Podziemne Miasto",
@@ -186,6 +206,7 @@ const list = {
       genre: "Sci-Fi, Thriller",
       release: "2024",
       rating: "4.5",
+      id: false,
     },
     {
       title: "Zatrzymany Czas",
@@ -195,6 +216,7 @@ const list = {
       genre: "Sci-Fi, Dramat",
       release: "2022",
       rating: "4.0",
+      id: false,
     },
     {
       title: "Kroki w Ciemności",
@@ -205,6 +227,7 @@ const list = {
 
       release: "2021",
       rating: "4.3",
+      id: false,
     },
     {
       title: "Złudne Piękno",
@@ -215,6 +238,7 @@ const list = {
 
       release: "2022",
       rating: "4.1",
+      id: false,
     },
     {
       title: "Ostatni Dzień Lata",
@@ -224,6 +248,7 @@ const list = {
       genre: "Dramat, Komedia",
       release: "2020",
       rating: "4.0",
+      id: false,
     },
     {
       title: "Cień Wspomnień",
@@ -233,6 +258,7 @@ const list = {
       genre: "Dramat, Thriller",
       release: "2021",
       rating: "4.4",
+      id: false,
     },
     {
       title: "Tajemnica Skrzyni",
@@ -242,6 +268,7 @@ const list = {
       genre: "Przygodowy, Fantastyka",
       release: "2023",
       rating: "4.2",
+      id: false,
     },
     {
       title: "Upadek Ikony",
@@ -251,6 +278,7 @@ const list = {
       genre: "Dramat, Biograficzny",
       release: "2022",
       rating: "4.3",
+      id: false,
     },
     {
       title: "Złota Rzeka",
@@ -260,6 +288,7 @@ const list = {
       genre: "Przygodowy, Western",
       release: "2021",
       rating: "4.4",
+      id: false,
     },
     {
       title: "Wspomnienie Tego Dnia",
@@ -269,6 +298,7 @@ const list = {
       genre: "Thriller, Sci-Fi",
       release: "2022",
       rating: "4.2",
+      id: false,
     },
     {
       title: "Zmierzch Nowego Świata",
@@ -278,6 +308,7 @@ const list = {
       genre: "Sci-Fi, Akcja",
       release: "2023",
       rating: "4.3",
+      id: false,
     },
     {
       title: "Pogrzebany Wspomnieniami",
@@ -288,6 +319,7 @@ const list = {
 
       release: "2021",
       rating: "4.1",
+      id: false,
     },
     {
       title: "Tajemnicza Wiadomość",
@@ -298,6 +330,7 @@ const list = {
 
       release: "2024",
       rating: "4.5",
+      id: false,
     },
     {
       title: "Zamach na Czas",
@@ -307,6 +340,7 @@ const list = {
       genre: "Sci-Fi, Thriller",
       release: "2022",
       rating: "4.4",
+      id: false,
     },
     {
       title: "Dzieci Nocy",
@@ -316,6 +350,7 @@ const list = {
       genre: "Fantasy, Thriller",
       release: "2023",
       rating: "4.0",
+      id: false,
     },
     {
       title: "Błąd w Systemie",
@@ -325,6 +360,7 @@ const list = {
       genre: "Sci-Fi, Thriller",
       release: "2024",
       rating: "4.3",
+      id: false,
     },
     {
       title: "Zatruta Rzeka",
@@ -334,6 +370,7 @@ const list = {
       genre: "Thriller, Dramat",
       release: "2021",
       rating: "4.2",
+      id: false,
     },
     {
       title: "Złapani w Sieci",
@@ -343,6 +380,7 @@ const list = {
       genre: "Kryminał, Thriller",
       release: "2022",
       rating: "4.3",
+      id: false,
     },
     {
       title: "Świat za Kurtyną",
@@ -352,6 +390,7 @@ const list = {
       genre: "Dramat, Biograficzny",
       release: "2021",
       rating: "4.4",
+      id: false,
     },
     {
       title: "Krople Łez",
@@ -361,6 +400,7 @@ const list = {
       genre: "Dramat",
       release: "2022",
       rating: "4.1",
+      id: false,
     },
     {
       title: "Zatrzymany Czas",
@@ -370,6 +410,7 @@ const list = {
       genre: "Sci-Fi, Dramat",
       release: "2023",
       rating: "4.0",
+      id: false,
     },
     {
       title: "Złowrogie Oczy",
@@ -379,6 +420,7 @@ const list = {
       genre: "Kryminał, Thriller",
       release: "2024",
       rating: "4.5",
+      id: false,
     },
     {
       title: "Dźwięk Przeszłości",
@@ -388,6 +430,7 @@ const list = {
       genre: "Sci-Fi, Thriller",
       release: "2021",
       rating: "4.2",
+      id: false,
     },
     {
       title: "W Złotej Klatce",
@@ -397,6 +440,7 @@ const list = {
       genre: "Dramat",
       release: "2022",
       rating: "4.1",
+      id: false,
     },
     {
       title: "Wizja",
@@ -406,6 +450,7 @@ const list = {
       genre: "Sci-Fi, Thriller",
       release: "2023",
       rating: "4.3",
+      id: false,
     },
     {
       title: "Kraina Cieni",
@@ -415,6 +460,7 @@ const list = {
       genre: "Horror, Thriller",
       release: "2024",
       rating: "4.4",
+      id: false,
     },
     {
       title: "Labirynt Wspomnień",
@@ -424,6 +470,7 @@ const list = {
       genre: "Dramat, Thriller",
       release: "2021",
       rating: "4.2",
+      id: false,
     },
     {
       title: "Nieznajoma Prawda",
@@ -433,6 +480,7 @@ const list = {
       genre: "Kryminał, Thriller",
       release: "2023",
       rating: "4.4",
+      id: false,
     },
     {
       title: "Sekretna Misja",
@@ -442,6 +490,7 @@ const list = {
       genre: "Akcja, Kryminał",
       release: "2022",
       rating: "4.3",
+      id: false,
     },
     {
       title: "Tylko Jeden Krelease",
@@ -451,6 +500,7 @@ const list = {
       genre: "Dramat",
       release: "2021",
       rating: "4.0",
+      id: false,
     },
     {
       title: "Na Granicy Światów",
@@ -460,6 +510,7 @@ const list = {
       genre: "Sci-Fi, Dramat",
       release: "2024",
       rating: "4.4",
+      id: false,
     },
   ],
 };
