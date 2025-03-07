@@ -5,7 +5,7 @@ const MyNavbar = () => {
   return (
     <Navbar expand={false} bg="dark" variant="dark" className="px-3">
       <Container fluid>
-        <Navbar.Brand>Movie-rulette</Navbar.Brand>
+        <Navbar.Brand>Movie-roulette</Navbar.Brand>
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
           id="offcanvasNavbar"

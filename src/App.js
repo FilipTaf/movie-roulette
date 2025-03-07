@@ -3,18 +3,18 @@ import { BrowserRouter as Router, Routes, Route } from "react-router";
 import History from "./views/history";
 import Navibar from "./components/navbar";
 import MyNavbar from "./components/navbar";
-import Mainbody from "./components/restWebpage";
+import Mainbody from "./components/MainBody";
 
 function App() {
   return (
     <>
-    <Router>
-      <MyNavbar />
-      <Routes>
-        <Route path="/src/views/history" element={<History />} />
-      </Routes>
-    </Router>
-    <Mainbody />
+      <Router>
+        <MyNavbar />
+        <Routes>
+          <Route path="/src/views/history" element={<History />} />
+        </Routes>
+      </Router>
+      <Mainbody />
     </>
   );
 }

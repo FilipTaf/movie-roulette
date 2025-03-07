@@ -7,7 +7,6 @@ const addMovie = createAction("addMovie");
 
 const initialState = list.movielist;
 
-console.log(initialState);
 const movieReducer = createSlice({
   name: "movie",
   initialState,

@@ -463,5 +463,4 @@ const list = {
     },
   ],
 };
-//helpppp
 export default list;

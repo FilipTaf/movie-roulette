@@ -1,0 +1,23 @@
+#spinner {
+  color: red;
+  border: 1px, solid, black;
+}
+/*.Card { 
+  margin: 3rem;
+}
+#Card1,
+#Card2,
+#Card4,
+#Card5 {
+  ove
+}
+#Card3 {
+  width: 8rem;
+}
+*/
+
+.card-title {
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
