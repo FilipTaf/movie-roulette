@@ -1,5 +1,5 @@
 import React from "react";
-import MovieList from "../components/FavArray";
+import MovieList from "../components/favArray";
 
 const Favorites = () => {
   return (
