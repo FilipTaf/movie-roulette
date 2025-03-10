@@ -10,12 +10,13 @@ const movieReducer = createSlice({
     toggleMovie: (state, action) => {
       console.log("Wywołanie", action.payload);
       const movie = state.find((item) => item.title === action.payload);
-      if (movie) {
+      if (movie.favorite === false) {
         console.log("Przed zmianą: ", movie.favorite);
         movie.favorite = true;
-        console.log("Po zmianą: ", movie.favorite);
+        console.log("Po zmianie: ", movie.favorite);
+      } else if (movie.favorite === true) {
+        console.log("Już dodane do ulubionych");
       }
-      state.push(action.payload);
     },
   },
 });
