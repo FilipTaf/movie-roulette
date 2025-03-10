@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 const MovieList = () => {
   const movies = useSelector((state) => state.movies);
-  const favMovie = movies.filter((movie) => movie.id === true);
+  const favMovie = movies.filter((movie) => movie.favorite === true);
   return (
     <>
       <Table bordered hover>
