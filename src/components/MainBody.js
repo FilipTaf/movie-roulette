@@ -11,9 +11,9 @@ const Mainbody = () => {
   const movie = useSelector((state) => state.movies);
   const minRand = 0;
   const maxRand = 50;
-  // var rand =
 
   const [id, setId] = useState({
+    zeroid: Math.floor(minRand + Math.random() * (maxRand - minRand)),
     firstid: Math.floor(minRand + Math.random() * (maxRand - minRand)),
     secondid: Math.floor(minRand + Math.random() * (maxRand - minRand)),
     thirdid: Math.floor(minRand + Math.random() * (maxRand - minRand)),
@@ -55,51 +55,53 @@ const Mainbody = () => {
       </Row>
 
       <Row id="spinner">
-        <Col class="col-sm-2">
-          <Card id="Card1">
-            <Card.Body>
-              <Card.Title id="Card1title">
-                <Cardcontent index={id.firstid} />
-              </Card.Title>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col class="col-sm-2">
-          <Card id="Card2">
-            <Card.Body>
-              <Card.Title id="Card2title">
-                <Cardcontent index={id.secondid} />
-              </Card.Title>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col class="col-sm-4">
-          <Card id="Card3">
-            <Card.Body>
-              <Card.Title id="Card3title">
-                <Cardcontent index={id.thirdid} />
-              </Card.Title>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col class="col-sm-2">
-          <Card id="Card4">
-            <Card.Body>
-              <Card.Title id="Card4title">
-                <Cardcontent index={id.fourthid} />
-              </Card.Title>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col class="col-sm-2">
-          <Card id="Card5">
-            <Card.Body>
-              <Card.Title id="Card5title">
-                <Cardcontent index={id.fithid} />
-              </Card.Title>
-            </Card.Body>
-          </Card>
-        </Col>
+        <Card id="Card0">
+          <Card.Body>
+            <Card.Title id="Card0title">
+              <Cardcontent index={id.zeroid} />
+            </Card.Title>
+          </Card.Body>
+        </Card>
+
+        <Card id="Card1">
+          <Card.Body>
+            <Card.Title id="Card1title">
+              <Cardcontent index={id.firstid} />
+            </Card.Title>
+          </Card.Body>
+        </Card>
+
+        <Card id="Card2">
+          <Card.Body>
+            <Card.Title id="Card2title">
+              <Cardcontent index={id.secondid} />
+            </Card.Title>
+          </Card.Body>
+        </Card>
+
+        <Card id="Card3">
+          <Card.Body>
+            <Card.Title id="Card3title">
+              <Cardcontent index={id.thirdid} />
+            </Card.Title>
+          </Card.Body>
+        </Card>
+
+        <Card id="Card4">
+          <Card.Body>
+            <Card.Title id="Card4title">
+              <Cardcontent index={id.fourthid} />
+            </Card.Title>
+          </Card.Body>
+        </Card>
+
+        <Card id="Card5">
+          <Card.Body>
+            <Card.Title id="Card5title">
+              <Cardcontent index={id.fithid} />
+            </Card.Title>
+          </Card.Body>
+        </Card>
       </Row>
     </Container>
   );
