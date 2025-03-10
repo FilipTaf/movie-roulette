@@ -17,7 +17,6 @@ const movieReducer = createSlice({
       } else if (movie.favorite === true) {
         console.log("Już dodane do ulubionych");
       }
-      state.push(action.payload);
     },
   },
 });
