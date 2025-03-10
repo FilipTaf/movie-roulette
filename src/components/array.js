@@ -1,5 +1,4 @@
-import React, { useMemo, useEffect, useState } from "react";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import Table from "react-bootstrap/Table";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleMovie } from "../store/movieReducer";
