@@ -1,12 +1,18 @@
+import React, { useMemo, useEffect, useState } from "react";
 import React, { useEffect, useMemo, useState } from "react";
 import Table from "react-bootstrap/Table";
-import { useSelector } from "react-redux";
-import Button from "react-bootstrap/Button";
-import { Modal } from "react-bootstrap";
-import "./style.css";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleMovie } from "../store/movieReducer";
+import { Modal, Button } from "react-bootstrap";
 
 const MovieList = ({ query = "", isSearchClicked }) => {
   const movieList = useSelector((state) => state.movies);
+  const dispatch = useDispatch();
+
+  const handleToggle = (title) => {
+    console.log("Kliknieto przycisk dla ", title);
+    dispatch(toggleMovie(title));
+  };
 
   const filteredMovies = useMemo(() => {
     if (!isSearchClicked || !query || !isSearchClicked != "") {
@@ -29,7 +35,6 @@ const MovieList = ({ query = "", isSearchClicked }) => {
     setSelectedMovie(movie);
     setShow(true);
   };
-
   return (
     <>
       <Table bordered hover>
@@ -57,15 +62,20 @@ const MovieList = ({ query = "", isSearchClicked }) => {
           <Modal.Title>{selectedMovie ? selectedMovie.title : ""}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>Gatunek : {selectedMovie ? selectedMovie.genre : ""} </p>
-          <p>Reżyser : {selectedMovie ? selectedMovie.director : ""} </p>
-          <p>Opis : {selectedMovie ? selectedMovie.description : ""}</p>
+          Reżyser : {selectedMovie ? selectedMovie.director : ""}
+          Opis : {selectedMovie ? selectedMovie.description : ""}
+          Gatunek : {selectedMovie ? selectedMovie.genre : ""}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={Close}>
             Zamknij
           </Button>
-          <Button variant="primary">Dodaj do ulubionych</Button>
+          <Button
+            variant="primary"
+            onClick={() => handleToggle(selectedMovie.title)}
+          >
+            Dodaj do ulubionych
+          </Button>
         </Modal.Footer>
       </Modal>
     </>

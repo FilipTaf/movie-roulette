@@ -19,6 +19,7 @@ const MovieList = () => {
             <tr>
               <td>{movie.title}</td>
               <td>{movie.genre}</td>
+              <td>{movie.favorite ? "Tak" : "Nie"}</td>
             </tr>
           ))}
         </tbody>
