@@ -1,9 +1,16 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { delFavMovie } from "../store/movieReducer";
+import { Button } from "react-bootstrap";
 
 const MovieList = () => {
   const movies = useSelector((state) => state.movies);
+  const dispatch = useDispatch();
+  const handleToggle = (title) => {
+    console.log("Kliknieto przycisk dla ", title);
+    dispatch(delFavMovie(title));
+  };
   const favMovie = movies.filter((movie) => movie.favorite === true);
   return (
     <>
@@ -20,6 +27,15 @@ const MovieList = () => {
               <td>{movie.title}</td>
               <td>{movie.genre}</td>
               <td>{movie.favorite ? "Tak" : "Nie"}</td>
+              <td>
+                {" "}
+                <Button
+                  variant="primary"
+                  onClick={() => handleToggle(movie.title)}
+                >
+                  Usuń z ulubionych
+                </Button>
+              </td>
             </tr>
           ))}
         </tbody>

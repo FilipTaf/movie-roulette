@@ -1,7 +1,7 @@
 import React, { useMemo, useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleMovie } from "../store/movieReducer";
+import { addFavMovie } from "../store/movieReducer";
 import { Modal, Button } from "react-bootstrap";
 
 const MovieList = ({ query = "", isSearchClicked }) => {
@@ -14,7 +14,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
 
   const handleToggle = (title) => {
     console.log("Kliknieto przycisk dla ", title);
-    dispatch(toggleMovie(title));
+    dispatch(addFavMovie(title));
   };
 
   const filteredMovies = useMemo(() => {
@@ -66,7 +66,9 @@ const MovieList = ({ query = "", isSearchClicked }) => {
         </Modal.Header>
         <Modal.Body>
           Reżyser : {selectedMovie ? selectedMovie.director : ""}
+          <br />
           Opis : {selectedMovie ? selectedMovie.description : ""}
+          <br />
           Gatunek : {selectedMovie ? selectedMovie.genre : ""}
         </Modal.Body>
         <Modal.Footer>

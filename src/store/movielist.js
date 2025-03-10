@@ -8,7 +8,7 @@ const list = {
       release: "2014",
       genre: "Thriller",
       rating: "3/5",
-      favorite: true,
+      favorite: false,
     },
     {
       title: "Zagubione Wspomnienia",
@@ -18,7 +18,7 @@ const list = {
       release: "2018",
       genre: "Thriller",
       rating: "4/5",
-      favorite: true,
+      favorite: false,
     },
     {
       title: "Lśnienie Przeszłośći",
@@ -28,7 +28,7 @@ const list = {
       release: "2000",
       genre: "Przygodowy",
       rating: "4/5",
-      favorite: true,
+      favorite: false,
     },
     {
       title: "Echo w Ciemnośći",
@@ -38,7 +38,7 @@ const list = {
       release: "2020",
       genre: "Horror",
       rating: "2/5",
-      favorite: true,
+      favorite: false,
     },
     {
       title: "Miłość w Blasku Gwiazd",
@@ -48,7 +48,7 @@ const list = {
       genre: "Romans",
       release: "2024",
       rating: "4/5",
-      favorite: true,
+      favorite: false,
     },
     {
       title: "Tylko jedno Życie",
@@ -57,7 +57,7 @@ const list = {
       release: "2015",
       genre: "Dramat",
       rating: "5/5",
-      favorite: true,
+      favorite: false,
     },
     {
       title: "Sekretne Drzwi",
