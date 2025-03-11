@@ -1,5 +1,9 @@
+.logoblock {
+  height: 350px;
+  position: relative;
+}
 .rouletteWrapper {
-  margin-top: 350px;
+  margin-top: 0px;
   position: relative;
 }
 

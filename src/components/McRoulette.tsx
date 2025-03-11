@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import cl from "./roulette.module.css";
 import RouletteItem from "./RouletteItem/RouletteItem.tsx";
 import { Roulette, weaponAttributes } from "../roulette.classes.ts";
+import handleShow from "../App";
 
 interface RouletteElementParams {
   weapons: weaponAttributes[];
@@ -39,7 +40,6 @@ const McRoulette = ({
   function load() {
     let winner = weapons[Math.floor(Math.random() * weapons.length)];
 
-    console.log("weapons", weapons);
     const roulette = new Roulette({
       winner,
       weapons,
@@ -51,7 +51,6 @@ const McRoulette = ({
 
     roulette.set_weapons();
     setRouletteWeapons(roulette.weapons);
-    console.log("dupa", roulette);
 
     return roulette;
   }
@@ -64,7 +63,6 @@ const McRoulette = ({
 
     const roulette = load();
     setRouletteWeapons(roulette.allWeapons);
-    console.log("roulette", roulette);
 
     setTimeout(() => {
       setIsSpin(true);
@@ -73,12 +71,11 @@ const McRoulette = ({
     }, 1000);
   }
 
-  useEffect(() => {
-    console.log(rouletteWeapons);
-  }, [rouletteWeapons]);
-
   return (
     <div>
+      <div className="logoblock">
+        <img src="../logo.png" />
+      </div>
       <div className={cl.rouletteWrapper}>
         <div ref={rouletteContainerRef}>
           <div className={cl.evRoulette}>
