@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import cl from "./roulette.module.css";
 import RouletteItem from "./RouletteItem/RouletteItem.tsx";
 import { Roulette, weaponAttributes } from "../roulette.classes.ts";
-import handleShow from "../App";
+import handleShow from "./InfoModal.js";
 
 interface RouletteElementParams {
   weapons: weaponAttributes[];
@@ -30,6 +30,7 @@ const McRoulette = ({
     setWinHistory(winHistory.concat(rouletteWeapons[weaponPrizeId]));
     setIsSpin(false);
     setIsSpinEnd(true);
+    //handleShow();
   }
 
   function prepare() {
@@ -73,9 +74,15 @@ const McRoulette = ({
 
   return (
     <div>
-      <div className="logoblock">
-        <img src="../logo.png" />
-      </div>
+      <center>
+        <div className="logoblock">
+          <img
+            src="../logo.png"
+            height={"300px"}
+            style={{ paddingTop: " 25px", paddingBottom: "25px" }}
+          />
+        </div>
+      </center>
       <div className={cl.rouletteWrapper}>
         <div ref={rouletteContainerRef}>
           <div className={cl.evRoulette}>
