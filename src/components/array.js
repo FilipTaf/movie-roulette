@@ -3,9 +3,10 @@ import Table from "react-bootstrap/Table";
 import { useSelector, useDispatch } from "react-redux";
 import { addFavMovie } from "../store/movieReducer";
 import { Modal, Button } from "react-bootstrap";
+import { addMovie } from "../store/drawnReducer";
 
 const MovieList = ({ query = "", isSearchClicked }) => {
-  const movieList = useSelector((state) => state.movies);
+  const movieList = useSelector((state) => state.drawns.drawns);
   const dispatch = useDispatch();
 
   const handleToggle = (title) => {
@@ -13,8 +14,12 @@ const MovieList = ({ query = "", isSearchClicked }) => {
     dispatch(addFavMovie(title));
   };
 
+  const handleAddMovie = () => {
+    dispatch(addMovie());
+  };
+
   const filteredMovies = useMemo(() => {
-    if (!isSearchClicked || !query || !isSearchClicked != "") {
+    if (!isSearchClicked || !query) {
       return movieList;
     }
     return (movieList || []).filter(
@@ -24,7 +29,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
   }, [movieList, query, isSearchClicked]);
 
   const moviesToDisplay = useMemo(
-    () => filteredMovies.slice(0, 30),
+    () => filteredMovies.slice(0, 30).reverse(),
     [filteredMovies]
   );
   const [show, setShow] = useState(false);
@@ -56,6 +61,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
           ))}
         </tbody>
       </Table>
+      <Button onClick={handleAddMovie}>Dodaj film</Button>
       <Modal show={show} onHide={Close} backdrop="static" keyboard={false}>
         <Modal.Header closeButton>
           <Modal.Title>{selectedMovie ? selectedMovie.title : ""}</Modal.Title>
