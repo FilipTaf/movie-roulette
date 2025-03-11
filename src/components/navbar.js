@@ -19,7 +19,7 @@ const MyNavbar = () => {
             <Nav className="justify-content-end flex-grow-1 pe-3">
               <Nav.Link href="/src/views">Main</Nav.Link>
               <Nav.Link href="/src/views/history">History</Nav.Link>
-              <Nav.Link href="/src/views">Favorites</Nav.Link>
+              <Nav.Link href="/src/views/favorites">Favorites</Nav.Link>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

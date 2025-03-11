@@ -1,7 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import History from "./views/history";
-import Navibar from "./components/navbar";
 import MyNavbar from "./components/navbar";
 import Mainbody from "./components/MainBody";
 import { Modal, Button } from "react-bootstrap";
@@ -24,6 +23,7 @@ function App() {
         <MyNavbar />
         <Routes>
           <Route path="/src/views/history" element={<History />} />
+          <Route path="/src/views/favorites" element={<Favorites />} />
         </Routes>
       </Router>
       <Mainbody />
