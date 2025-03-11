@@ -8,7 +8,8 @@ import { addMovie } from "../store/drawnReducer";
 const MovieList = ({ query = "", isSearchClicked }) => {
   const movieList = useSelector((state) => state.drawns.drawns);
   const dispatch = useDispatch();
-
+  const [sortAZ, setSortAZ] = useState(false);
+  const [sortGenre, setSortGenre] = useState(false);
   const handleToggle = (title) => {
     console.log("Kliknieto przycisk dla ", title);
     dispatch(addFavMovie(title));
@@ -28,10 +29,27 @@ const MovieList = ({ query = "", isSearchClicked }) => {
     );
   }, [movieList, query, isSearchClicked]);
 
-  const moviesToDisplay = useMemo(
-    () => filteredMovies.slice(0, 30).reverse(),
-    [filteredMovies]
-  );
+  const moviesToDisplay = useMemo(() => {
+    let movies = filteredMovies.slice(0, 30).reverse();
+    if (sortAZ) {
+      movies = [...movies].sort((a, b) => a.title.localeCompare(b.title));
+    }
+    if (sortGenre) {
+      movies = [...movies].sort((a, b) => a.genre.localeCompare(b.genre));
+    }
+    return movies;
+  }, [filteredMovies, sortAZ, sortGenre]);
+
+  const handleSortTitle = () => {
+    setSortAZ(!sortAZ);
+    setSortGenre(false);
+  };
+
+  const handleSortGenre = () => {
+    setSortGenre(!sortGenre);
+    setSortAZ(false);
+  };
+
   const [show, setShow] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState(null);
   const Close = () => setShow(false);
@@ -44,8 +62,8 @@ const MovieList = ({ query = "", isSearchClicked }) => {
       <Table bordered hover>
         <thead>
           <tr>
-            <th>Tytuł</th>
-            <th>Gatunek</th>
+            <th onClick={handleSortTitle}>Tytuł</th>
+            <th onClick={handleSortGenre}>Gatunek</th>
             <th>Reżyser</th>
             <th>Ocena</th>
           </tr>
@@ -62,7 +80,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
         </tbody>
       </Table>
       <Button onClick={handleAddMovie}>Dodaj film</Button>
-      <Modal show={show} onHide={Close} backdrop="static" keyboard={false}>
+      <Modal show={show} backdrop="static" keyboard={false} centered>
         <Modal.Header closeButton>
           <Modal.Title>{selectedMovie ? selectedMovie.title : ""}</Modal.Title>
         </Modal.Header>

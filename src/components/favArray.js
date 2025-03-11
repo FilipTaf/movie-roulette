@@ -19,6 +19,7 @@ const MovieList = () => {
           <tr>
             <th>Title</th>
             <th>Genre</th>
+            <th>Usuń</th>
           </tr>
         </thead>
         <tbody>
@@ -26,7 +27,6 @@ const MovieList = () => {
             <tr>
               <td>{movie.title}</td>
               <td>{movie.genre}</td>
-              <td>{movie.favorite ? "Tak" : "Nie"}</td>
               <td>
                 {" "}
                 <Button
