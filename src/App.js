@@ -6,6 +6,7 @@ import Mainbody from "./components/MainBody";
 import { Modal, Button } from "react-bootstrap";
 import { useState, useMemo } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import Favorites from "./views/favorites";
 
 function App() {
   const movieList = useSelector((state) => state.movies);
