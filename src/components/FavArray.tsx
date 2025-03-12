@@ -30,15 +30,15 @@ const MovieList = ({ query = "", isSearchClicked }) => {
 
   return (
     <>
-      <Table bordered hover class="table table-dark">
+      <Table bordered hover className="table table-dark">
         <thead>
-          <tr class="table-active">
+          <tr className="table-active">
             <th>Title</th>
             <th>Genre</th>
             <th>Usuń</th>
           </tr>
         </thead>
-        <tbody class="table-group-divider table-divider-color">
+        <tbody className="table-group-divider table-divider-color">
           {moviesToDisplay.map((movie, index) => (
             <tr key={index}>
               <td>{movie.title}</td>

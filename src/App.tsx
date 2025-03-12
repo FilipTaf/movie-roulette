@@ -12,9 +12,9 @@ function App() {
       <Router>
         <MyNavbar />
         <Routes>
-          <Route path="/src/views/history" element={<History />} />
-          <Route path="/src/views/favorites" element={<Favorites />} />
-          <Route path="/src/views/roulette" element={<Mainbody />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/roulette" element={<Mainbody />} />
         </Routes>
       </Router>
     </>

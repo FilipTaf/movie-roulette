@@ -1,5 +1,5 @@
 import React from "react";
-import cl from "./RouletteItem.module.css";
+import cl from "./rouletteItem.module.css";
 
 interface rouletteItemProps {
   id: number;
