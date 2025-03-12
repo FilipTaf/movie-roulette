@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { BookmarkHeartFill, BookmarkHeart } from "react-bootstrap-icons";
 import { addFavMovie } from "../store/movieReducer";
+import React from "react";
 
 const InfoModal = ({ isShow, movieId, onHide }) => {
   const dispatch = useDispatch();

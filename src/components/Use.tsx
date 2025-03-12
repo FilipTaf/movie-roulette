@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 import Search from "./search";
-import MovieList from "./array";
+import MovieList from "./Array";
 
 const General = () => {
   const [query, setQuery] = useState("");
