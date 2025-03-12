@@ -8,8 +8,10 @@ import { addMovie } from "../store/drawnReducer";
 const MovieList = ({ query = "", isSearchClicked }) => {
   const movieList = useSelector((state) => state.drawns.drawns);
   const dispatch = useDispatch();
-  const [sortAZ, setSortAZ] = useState(false);
-  const [sortGenre, setSortGenre] = useState(false);
+  const [sortAZ, setSortAZ] = useState(true);
+  const [show, setShow] = useState(false);
+  const [selectedMovie, setSelectedMovie] = useState(null);
+
   const handleToggle = (title) => {
     console.log("Kliknieto przycisk dla ", title);
     dispatch(addFavMovie(title));
@@ -17,6 +19,10 @@ const MovieList = ({ query = "", isSearchClicked }) => {
 
   const handleAddMovie = () => {
     dispatch(addMovie());
+  };
+
+  const handleSort = () => {
+    setSortAZ((prev) => !prev);
   };
 
   const filteredMovies = useMemo(() => {
@@ -31,39 +37,32 @@ const MovieList = ({ query = "", isSearchClicked }) => {
 
   const moviesToDisplay = useMemo(() => {
     let movies = filteredMovies.slice(0, 30).reverse();
-    if (sortAZ) {
-      movies = [...movies].sort((a, b) => a.title.localeCompare(b.title));
-    }
-    if (sortGenre) {
-      movies = [...movies].sort((a, b) => a.genre.localeCompare(b.genre));
-    }
+    movies.sort((a, b) => {
+      const titleA = a.title.replace(/\s+/g, "").toLowerCase();
+      const titleB = b.title.replace(/\s+/g, "").toLowerCase();
+      return sortAZ
+        ? titleA.localeCompare(titleB)
+        : titleB.localeCompare(titleA);
+    });
+
     return movies;
-  }, [filteredMovies, sortAZ, sortGenre]);
+  }, [filteredMovies, sortAZ]);
 
-  const handleSortTitle = () => {
-    setSortAZ(!sortAZ);
-    setSortGenre(false);
-  };
+  const Test = () => {};
 
-  const handleSortGenre = () => {
-    setSortGenre(!sortGenre);
-    setSortAZ(false);
-  };
-
-  const [show, setShow] = useState(false);
-  const [selectedMovie, setSelectedMovie] = useState(null);
   const Close = () => setShow(false);
   const Show = (movie) => {
     setSelectedMovie(movie);
     setShow(true);
   };
+
   return (
     <>
       <Table bordered hover>
         <thead>
           <tr>
-            <th onClick={handleSortTitle}>Tytuł</th>
-            <th onClick={handleSortGenre}>Gatunek</th>
+            <th onClick={handleSort}>Tytuł</th>
+            <th>Gatunek</th>
             <th>Reżyser</th>
             <th>Ocena</th>
           </tr>
@@ -80,16 +79,29 @@ const MovieList = ({ query = "", isSearchClicked }) => {
         </tbody>
       </Table>
       <Button onClick={handleAddMovie}>Dodaj film</Button>
-      <Modal show={show} backdrop="static" keyboard={false} centered>
+      <Button onClick={Test}>Test</Button>
+      <Modal
+        show={show}
+        backdrop="static"
+        keyboard={false}
+        centered
+        onHide={Close}
+      >
         <Modal.Header closeButton>
           <Modal.Title>{selectedMovie ? selectedMovie.title : ""}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          Reżyser : {selectedMovie ? selectedMovie.director : ""}
-          <br />
-          Opis : {selectedMovie ? selectedMovie.description : ""}
-          <br />
-          Gatunek : {selectedMovie ? selectedMovie.genre : ""}
+          {selectedMovie ? (
+            <>
+              Reżyser : {selectedMovie.director}
+              <br />
+              Opis : {selectedMovie.description}
+              <br />
+              Gatunek : {selectedMovie.genre}
+            </>
+          ) : (
+            <p>Loading...</p>
+          )}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={Close}>
@@ -97,7 +109,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
           </Button>
           <Button
             variant="primary"
-            onClick={() => handleToggle(selectedMovie.title)}
+            onClick={() => handleToggle(selectedMovie?.title)}
           >
             Dodaj do ulubionych
           </Button>
