@@ -1,42 +1,56 @@
 import { Modal, Button } from "react-bootstrap";
-import { useState, useSelector } from "react";
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import { BookmarkHeartFill, BookmarkHeart, Book } from "react-bootstrap-icons";
 
-export default function InfoModal() {
+const InfoModal = ({ isShow, movieId }) => {
   const movieList = useSelector((state) => state.movies);
+  const [modalClose, setClose] = useState(isShow);
+  const Close = () => setClose(true);
 
-  const [show, setShow] = useState(false);
-  const Close = () => setShow(false);
-  const [selectedMovie, setSelectedMovie] = useState(null);
-  const handleShow = (movie) => {
-    setSelectedMovie(movie);
-    setShow(true);
-  };
+  const theChosenOne = movieList[movieId];
+
   return (
     <>
       <Modal
-        show={show}
+        show={!modalClose && isShow}
         onHide={Close}
         backdrop="static"
         keyboard={false}
         centered
       >
         <Modal.Header closeButton>
-          <Modal.Title>{selectedMovie ? selectedMovie.title : ""}</Modal.Title>
+          <Modal.Title>{}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          Reżyser : {selectedMovie ? selectedMovie.director : ""}
+          Tytuł : {theChosenOne ? JSON.stringify(theChosenOne.title) : ""}
           <br />
-          Opis : {selectedMovie ? selectedMovie.description : ""}
+          Reżyser : {theChosenOne ? JSON.stringify(theChosenOne.director) : ""}
           <br />
-          Gatunek : {selectedMovie ? selectedMovie.genre : ""}
+          Opis : {theChosenOne ? JSON.stringify(theChosenOne.description) : ""}
+          <br />
+          Gatunek : {theChosenOne ? JSON.stringify(theChosenOne.genre) : ""}
+          <br />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={Close}>
             Zamknij
           </Button>
-          <Button variant="primary">Dodaj do ulubionych</Button>
+          <Button variant="primary">
+            Dodaj do ulubionych{" "}
+            {theChosenOne ? (
+              theChosenOne.favorite ? (
+                <BookmarkHeartFill />
+              ) : (
+                <BookmarkHeart />
+              )
+            ) : (
+              ""
+            )}
+          </Button>
         </Modal.Footer>
       </Modal>
     </>
   );
-}
+};
+export default InfoModal;

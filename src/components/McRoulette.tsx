@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import cl from "./roulette.module.css";
 import RouletteItem from "./RouletteItem/RouletteItem.tsx";
 import { Roulette, weaponAttributes } from "../roulette.classes.ts";
-import handleShow from "./InfoModal.js";
+import InfoModal from "./InfoModal.js";
 
 interface RouletteElementParams {
   weapons: weaponAttributes[];
@@ -22,6 +22,8 @@ const McRoulette = ({
   const [isSpin, setIsSpin] = useState<boolean>(false);
   const [isSpinEnd, setIsSpinEnd] = useState<boolean>(false);
   const [winHistory, setWinHistory] = useState<weaponAttributes[]>([]);
+  const [show, setShow] = useState(false);
+  const [winner, setWinner] = useState(null);
 
   const rouletteContainerRef = useRef<HTMLDivElement>(null);
   const weaponsRef = useRef<HTMLDivElement>(null);
@@ -30,7 +32,7 @@ const McRoulette = ({
     setWinHistory(winHistory.concat(rouletteWeapons[weaponPrizeId]));
     setIsSpin(false);
     setIsSpinEnd(true);
-    //handleShow();
+    setShow(true);
   }
 
   function prepare() {
@@ -70,10 +72,12 @@ const McRoulette = ({
       setWeaponPrizeId(roulette.spin());
       setIsReplay(true);
     }, 1000);
+    return { roulette };
   }
 
   return (
     <div>
+      <InfoModal isShow={show} movieId={weaponPrizeId}></InfoModal>
       <center>
         <div className="logoblock">
           <img
