@@ -1,20 +1,18 @@
 import React, { useMemo, useState } from "react";
 import Table from "react-bootstrap/Table";
-import { useAppSelector, useAppDispatch } from "../../store/hooks";
-import { delFavMovie } from "../../store/movieReducer";
+import { useSelector, useDispatch } from "react-redux";
+import { delFavMovie } from "../store/movieReducer";
 import { Button } from "react-bootstrap";
+import "./Main.css";
 import * as Icon from "react-bootstrap-icons";
 
 const MovieList = ({ query = "", isSearchClicked }) => {
-  const movies = useAppSelector((state) => state.movies);
-  const dispatch = useAppDispatch();
+  const movies = useSelector((state) => state.movies);
+  const dispatch = useDispatch();
+  const [sortAZ, setSortAZ] = useState(true);
   const handleToggle = (title) => {
     console.log("Kliknieto przycisk dla ", title);
     dispatch(delFavMovie(title));
-  };
-  const [sortAZ, setSortAZ] = useState(true);
-  const handleSort = () => {
-    setSortAZ((prev) => !prev);
   };
 
   const favMovie = movies.filter((movie) => movie.favorite === true);
@@ -27,6 +25,10 @@ const MovieList = ({ query = "", isSearchClicked }) => {
         movie.genre && movie.genre.toLowerCase().includes(query.toLowerCase())
     );
   }, [favMovie, query, isSearchClicked]);
+
+  const handleSort = () => {
+    setSortAZ((prev) => !prev);
+  };
 
   const moviesToDisplay = useMemo(() => {
     let movies = filteredMovies.slice(0, 30).reverse();
@@ -50,13 +52,13 @@ const MovieList = ({ query = "", isSearchClicked }) => {
           className="custom-dark-table table-dark"
         >
           <thead>
-            <tr className="table-active">
+            <tr class="table-active">
               <th onClick={handleSort}>Title</th>
               <th>Genre</th>
-              <th>Delete</th>
+              <th>Usuń z ulubionych</th>
             </tr>
           </thead>
-          <tbody className="table-group-divider table-divider-color">
+          <tbody class="table-group-divider table-divider-color">
             {moviesToDisplay.map((movie, index) => (
               <tr key={index}>
                 <td>{movie.title}</td>
@@ -64,7 +66,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
                 <td>
                   {" "}
                   <Button
-                    variant="primary"
+                    variant="danger"
                     onClick={() => handleToggle(movie.title)}
                   >
                     <Icon.Trash />
