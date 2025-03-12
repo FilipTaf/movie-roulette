@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import "./Main.css";
 import { useSelector } from "react-redux";
 import cl from "../App.module.css";
@@ -8,7 +8,7 @@ const Mainbody = () => {
   const movie = useSelector((state) => state.movies);
 
   const movieCount = 50;
-  const transitionDuration = 10;
+  const transitionDuration = 3;
   return (
     <div className={cl.App}>
       <div className={cl.wrapper}>

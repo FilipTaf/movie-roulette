@@ -8,9 +8,8 @@ const drawnReducer = createSlice({
   name: "drawn",
   initialState,
   reducers: {
-    addMovie: (state) => {
-      const randomIndex = Math.floor(Math.random() * list.movielist.length);
-      const randomMovie = list.movielist[randomIndex];
+    addMovie: (state, winner) => {
+      const randomMovie = list.movielist[winner.payload];
       state.drawns = [...state.drawns, randomMovie];
     },
   },
