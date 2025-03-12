@@ -2,9 +2,8 @@ import React, { useRef, useState } from "react";
 import cl from "./roulette.module.css";
 import RouletteItem from "./RouletteItem/RouletteItem.tsx";
 import { Roulette, weaponAttributes } from "../roulette.classes.ts";
-import { useDispatch } from "react-redux";
-import { addMovie } from "../store/drawnReducer.js";
-
+import InfoModal from "./InfoModal.js";
+import setClose from "./InfoModal.js";
 interface RouletteElementParams {
   weapons: weaponAttributes[];
   weaponsCount: number;
@@ -23,16 +22,18 @@ const McRoulette = ({
   const [isSpin, setIsSpin] = useState<boolean>(false);
   const [isSpinEnd, setIsSpinEnd] = useState<boolean>(false);
   const [winHistory, setWinHistory] = useState<weaponAttributes[]>([]);
+  const [show, setShow] = useState(false);
 
   const rouletteContainerRef = useRef<HTMLDivElement>(null);
   const weaponsRef = useRef<HTMLDivElement>(null);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   function transitionEndHandler() {
     setWinHistory(winHistory.concat(rouletteWeapons[weaponPrizeId]));
-    console.log(weaponPrizeId)
-    dispatch(addMovie(weaponPrizeId))
+    console.log(weaponPrizeId);
+    dispatch(addMovie(weaponPrizeId));
     setIsSpin(false);
     setIsSpinEnd(true);
+    setShow(true);
   }
   function prepare() {
     weaponsRef.current!.style.transition = "none";
@@ -68,12 +69,24 @@ const McRoulette = ({
       setWeaponPrizeId(roulette.spin());
       setIsReplay(true);
     }, 1000);
+    return { roulette };
   }
   return (
     <div>
-      <div className="logoblock">
-        <img src="../logo.png" alt="logo"/>
-      </div>
+      <InfoModal
+        isShow={show}
+        movieId={weaponPrizeId}
+        onHide={() => setShow(false)}
+      ></InfoModal>
+      <center>
+        <div className="logoblock">
+          <img
+            src="../logo.png"
+            height={"300px"}
+            style={{ paddingTop: " 25px", paddingBottom: "25px" }}
+          />
+        </div>
+      </center>
       <div className={cl.rouletteWrapper}>
         <div ref={rouletteContainerRef}>
           <div className={cl.evRoulette}>
