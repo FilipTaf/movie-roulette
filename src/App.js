@@ -25,9 +25,9 @@ function App() {
         <Routes>
           <Route path="/src/views/history" element={<History />} />
           <Route path="/src/views/favorites" element={<Favorites />} />
+          <Route path="/src/views/roulette" element={<Mainbody />} />
         </Routes>
       </Router>
-      <Mainbody />
     </>
   );
 }
