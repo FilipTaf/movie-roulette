@@ -1,24 +1,18 @@
 import { Modal, Button } from "react-bootstrap";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { BookmarkHeartFill, BookmarkHeart, Book } from "react-bootstrap-icons";
+import { addFavMovie } from "../store/movieReducer";
 
-const InfoModal = ({ isShow, movieId }) => {
+const InfoModal = ({ isShow, movieId, onHide }) => {
+  const dispatch = useDispatch();
   const movieList = useSelector((state) => state.movies);
-  const [modalClose, setClose] = useState(isShow);
-  const Close = () => setClose(true);
 
   const theChosenOne = movieList[movieId];
 
   return (
     <>
-      <Modal
-        show={!modalClose && isShow}
-        onHide={Close}
-        backdrop="static"
-        keyboard={false}
-        centered
-      >
+      <Modal show={isShow} onHide={onHide} backdrop="static" centered>
         <Modal.Header closeButton>
           <Modal.Title>{}</Modal.Title>
         </Modal.Header>
@@ -31,12 +25,16 @@ const InfoModal = ({ isShow, movieId }) => {
           <br />
           Gatunek : {theChosenOne ? JSON.stringify(theChosenOne.genre) : ""}
           <br />
+          Ocena : {theChosenOne ? JSON.stringify(theChosenOne.rating) : ""}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={Close}>
-            Zamknij
+          <Button variant="success" onClick={onHide}>
+            Ok
           </Button>
-          <Button variant="primary">
+          <Button
+            variant="primary"
+            onClick={() => dispatch(addFavMovie(theChosenOne.title))}
+          >
             Dodaj do ulubionych{" "}
             {theChosenOne ? (
               theChosenOne.favorite ? (

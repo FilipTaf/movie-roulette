@@ -3,7 +3,7 @@ import cl from "./roulette.module.css";
 import RouletteItem from "./RouletteItem/RouletteItem.tsx";
 import { Roulette, weaponAttributes } from "../roulette.classes.ts";
 import InfoModal from "./InfoModal.js";
-
+import setClose from "./InfoModal.js";
 interface RouletteElementParams {
   weapons: weaponAttributes[];
   weaponsCount: number;
@@ -23,7 +23,6 @@ const McRoulette = ({
   const [isSpinEnd, setIsSpinEnd] = useState<boolean>(false);
   const [winHistory, setWinHistory] = useState<weaponAttributes[]>([]);
   const [show, setShow] = useState(false);
-  const [winner, setWinner] = useState(null);
 
   const rouletteContainerRef = useRef<HTMLDivElement>(null);
   const weaponsRef = useRef<HTMLDivElement>(null);
@@ -77,7 +76,11 @@ const McRoulette = ({
 
   return (
     <div>
-      <InfoModal isShow={show} movieId={weaponPrizeId}></InfoModal>
+      <InfoModal
+        isShow={show}
+        movieId={weaponPrizeId}
+        onHide={() => setShow(false)}
+      ></InfoModal>
       <center>
         <div className="logoblock">
           <img
