@@ -5,16 +5,21 @@ import { addFavMovie } from "../store/movieReducer";
 import { Modal, Button } from "react-bootstrap";
 import "./Main.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import * as Icon from "react-bootstrap-icons";
+import { BookmarkHeartFill, BookmarkHeart } from "react-bootstrap-icons";
 
 const MovieList = ({ query = "", isSearchClicked }) => {
-  const movieList = useSelector((state) => state.drawns.drawns);
+  let movieList = useSelector((state) => state.drawns.drawns);
   const dispatch = useDispatch();
   const [sortAZ, setSortAZ] = useState(false);
   const [sortGenre, setSortGenre] = useState(false);
+  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [clicked, setClicked] = useState(false);
+  const [show, setShow] = useState(false);
+
   const handleToggle = (title) => {
-    console.log("Kliknieto przycisk dla ", title);
     dispatch(addFavMovie(title));
+
+    setClicked(!selectedMovie.favorite);
   };
 
   const filteredMovies = useMemo(() => {
@@ -35,8 +40,9 @@ const MovieList = ({ query = "", isSearchClicked }) => {
     if (sortGenre) {
       movies = [...movies].sort((a, b) => a.genre.localeCompare(b.genre));
     }
+
     return movies;
-  }, [filteredMovies, sortAZ, sortGenre]);
+  }, [filteredMovies, sortAZ, sortGenre, handleToggle]);
 
   const handleSortTitle = () => {
     setSortAZ(!sortAZ);
@@ -48,12 +54,14 @@ const MovieList = ({ query = "", isSearchClicked }) => {
     setSortAZ(false);
   };
 
-  const [show, setShow] = useState(false);
-  const [selectedMovie, setSelectedMovie] = useState(null);
   const Close = () => setShow(false);
+
   const Show = (movie) => {
     setSelectedMovie(movie);
     setShow(true);
+    console.log("favorite on load", movie);
+
+    console.log("list", movieList[movie.id]);
   };
   return (
     <>
@@ -84,7 +92,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
           </tbody>
         </Table>
       </div>
-      <Modal show={show} backdrop="static" keyboard={false} centered>
+      <Modal show={show} backdrop="static" centered>
         <Modal.Header closeButton>
           <Modal.Title>{selectedMovie ? selectedMovie.title : ""}</Modal.Title>
         </Modal.Header>
@@ -96,14 +104,22 @@ const MovieList = ({ query = "", isSearchClicked }) => {
           Gatunek : {selectedMovie ? selectedMovie.genre : ""}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={Close}>
+          <Button
+            variant="secondary"
+            onClick={() => {
+              Close();
+            }}
+          >
             Zamknij
           </Button>
           <Button
             variant="primary"
-            onClick={() => handleToggle(selectedMovie.title)}
+            onClick={() => {
+              handleToggle(selectedMovie.title);
+            }}
           >
             Dodaj do ulubionych
+            {clicked ? <BookmarkHeartFill /> : <BookmarkHeart />}
           </Button>
         </Modal.Footer>
       </Modal>

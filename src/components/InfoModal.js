@@ -1,7 +1,7 @@
 import { Modal, Button } from "react-bootstrap";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { BookmarkHeartFill, BookmarkHeart, Book } from "react-bootstrap-icons";
+import { BookmarkHeartFill, BookmarkHeart } from "react-bootstrap-icons";
 import { addFavMovie } from "../store/movieReducer";
 
 const InfoModal = ({ isShow, movieId, onHide }) => {
