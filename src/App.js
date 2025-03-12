@@ -4,7 +4,6 @@ import History from "./views/history";
 import Favorites from "./views/favorites";
 import MyNavbar from "./components/navbar";
 import Mainbody from "./components/MainBody";
-import Favorites from "./views/favorites";
 
 function App() {
   return (

@@ -82,7 +82,8 @@ const McRoulette = ({
       <center>
         <div className="logoblock">
           <img
-            src="../logo.png"
+            src="/logo.png"
+            alt="logo"
             height={"300px"}
             style={{ paddingTop: " 25px", paddingBottom: "25px" }}
           />
