@@ -17,10 +17,6 @@ const MovieList = ({ query = "", isSearchClicked }) => {
     dispatch(addFavMovie(title));
   };
 
-  const handleAddMovie = () => {
-    dispatch(addMovie());
-  };
-
   const handleSort = () => {
     setSortAZ((prev) => !prev);
   };
@@ -47,8 +43,6 @@ const MovieList = ({ query = "", isSearchClicked }) => {
 
     return movies;
   }, [filteredMovies, sortAZ]);
-
-  const Test = () => {};
 
   const Close = () => setShow(false);
   const Show = (movie) => {
@@ -78,8 +72,6 @@ const MovieList = ({ query = "", isSearchClicked }) => {
           ))}
         </tbody>
       </Table>
-      <Button onClick={handleAddMovie}>Dodaj film</Button>
-      <Button onClick={Test}>Test</Button>
       <Modal
         show={show}
         backdrop="static"
