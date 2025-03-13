@@ -55,10 +55,10 @@ const MovieList = ({ query = "", isSearchClicked }) => {
       <Table bordered hover>
         <thead>
           <tr>
-            <th onClick={handleSort}>Tytuł</th>
-            <th>Gatunek</th>
-            <th>Reżyser</th>
-            <th>Ocena</th>
+            <th onClick={handleSort}>Title</th>
+            <th>Genre</th>
+            <th>Director</th>
+            <th>Rating</th>
           </tr>
         </thead>
         <tbody>
