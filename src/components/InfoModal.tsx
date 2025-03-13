@@ -1,13 +1,12 @@
 import { Modal, Button } from "react-bootstrap";
-import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useAppSelector, useAppDispatch } from "../store/hooks";
 import { BookmarkHeartFill, BookmarkHeart } from "react-bootstrap-icons";
 import { addFavMovie } from "../store/movieReducer";
 import React from "react";
 
 const InfoModal = ({ isShow, movieId, onHide }) => {
-  const dispatch = useDispatch();
-  const movieList = useSelector((state) => state.movies);
+  const dispatch = useAppDispatch();
+  const movieList = useAppSelector((state) => state.movies);
 
   const theChosenOne = movieList[movieId];
 

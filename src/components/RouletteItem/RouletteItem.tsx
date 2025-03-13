@@ -3,13 +3,13 @@ import cl from "./rouletteItem.module.css";
 
 interface rouletteItemProps {
   id: number;
-  movieName: string;
+  title: string;
 
   genre: string;
   isLoser: boolean;
 }
 
-const RouletteItem = ({ id, movieName, genre, isLoser }: rouletteItemProps) => {
+const RouletteItem = ({ id, title, genre, isLoser }: rouletteItemProps) => {
   return (
     <div
       className={cl.evWeapon}
@@ -17,7 +17,7 @@ const RouletteItem = ({ id, movieName, genre, isLoser }: rouletteItemProps) => {
     >
       <div className={`${cl.evWeaponInner}`} id={String(id)}>
         <div className={cl.evWeaponText}>
-          <p>{movieName}</p>
+          <p>{title}</p>
           <p>{genre}</p>
         </div>
       </div>

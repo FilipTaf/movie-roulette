@@ -1,19 +1,18 @@
 import { Ref } from "react";
 
 export interface weaponAttributes {
-  movieName: string;
-
+  title: string;
   genre: string;
 }
 
 export class Weapon {
   id: number;
-  movieName: string;
+  title: string;
   genre: string;
 
   constructor(id: number, attrs: weaponAttributes) {
     this.id = id;
-    this.movieName = attrs.movieName;
+    this.title = attrs.title;
     this.genre = attrs.genre;
   }
 }

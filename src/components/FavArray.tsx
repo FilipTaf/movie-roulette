@@ -1,12 +1,12 @@
 import React, { useState, useMemo } from "react";
 import Table from "react-bootstrap/Table";
-import { useSelector, useDispatch } from "react-redux";
+import { useAppSelector, useAppDispatch } from "../store/hooks";
 import { delFavMovie } from "../store/movieReducer";
 import { Button } from "react-bootstrap";
 
 const MovieList = ({ query = "", isSearchClicked }) => {
-  const movies = useSelector((state) => state.movies);
-  const dispatch = useDispatch();
+  const movies = useAppSelector((state) => state.movies);
+  const dispatch = useAppDispatch();
   const handleToggle = (title) => {
     console.log("Kliknieto przycisk dla ", title);
     dispatch(delFavMovie(title));

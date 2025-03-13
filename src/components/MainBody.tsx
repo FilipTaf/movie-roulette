@@ -1,11 +1,11 @@
 import React from "react";
 import "./Main.css";
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../store/hooks";
 import cl from "../App.module.css";
 import McRoulette from "./McRoulette.tsx";
 
 const Mainbody = () => {
-  const movie = useSelector((state) => state.movies);
+  const movie = useAppSelector((state) => state.movies);
 
   const movieCount = 50;
   const transitionDuration = 3;

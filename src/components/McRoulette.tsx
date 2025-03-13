@@ -104,7 +104,7 @@ const McRoulette = ({
                     key={i}
                     id={i}
                     isLoser={i !== weaponPrizeId && !isSpin && isSpinEnd}
-                    movieName={w["title"]}
+                    title={w["title"]}
                     genre={w["genre"]}
                   />
                 );

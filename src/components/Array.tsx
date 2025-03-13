@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import Table from "react-bootstrap/Table";
-import { useSelector, useDispatch } from "react-redux";
+import { useAppSelector, useAppDispatch } from "../store/hooks";
 import { addFavMovie } from "../store/movieReducer";
 import { Modal, Button } from "react-bootstrap";
 import "./Main.css";
@@ -8,18 +8,32 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BookmarkHeartFill, BookmarkHeart } from "react-bootstrap-icons";
 
 const MovieList = ({ query = "", isSearchClicked }) => {
-  let movieList = useSelector((state) => state.drawns.drawns);
-  const dispatch = useDispatch();
+  let movieList = useAppSelector((state) => state.drawns.drawns);
+  const dispatch = useAppDispatch();
   const [sortAZ, setSortAZ] = useState(false);
   const [sortGenre, setSortGenre] = useState(false);
-  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [selectedMovie, setSelectedMovie] = useState<Movie | undefined>(
+    undefined
+  );
   const [clicked, setClicked] = useState(false);
   const [show, setShow] = useState(false);
 
-  const handleToggle = (title) => {
-    dispatch(addFavMovie(title));
+  interface Movie {
+    id: number;
+    title: string;
+    description: string;
+    director: string;
+    release: string;
+    genre: string;
+    rating: string;
+    favorite: boolean;
+  }
 
-    setClicked(!selectedMovie.favorite);
+  const handleToggle = (title: string) => {
+    dispatch(addFavMovie(title));
+    if (selectedMovie) {
+      setClicked(!selectedMovie.favorite);
+    }
   };
 
   const filteredMovies = useMemo(() => {
@@ -27,7 +41,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
       return movieList;
     }
     return (movieList || []).filter(
-      (movie) =>
+      (movie: Movie) =>
         movie.genre && movie.genre.toLowerCase().includes(query.toLowerCase())
     );
   }, [movieList, query, isSearchClicked]);
@@ -35,10 +49,14 @@ const MovieList = ({ query = "", isSearchClicked }) => {
   const moviesToDisplay = useMemo(() => {
     let movies = filteredMovies.slice(0, 30).reverse();
     if (sortAZ) {
-      movies = [...movies].sort((a, b) => a.title.localeCompare(b.title));
+      movies = [...movies].sort((a: Movie, b: Movie) =>
+        a.title.localeCompare(b.title)
+      );
     }
     if (sortGenre) {
-      movies = [...movies].sort((a, b) => a.genre.localeCompare(b.genre));
+      movies = [...movies].sort((a: Movie, b: Movie) =>
+        a.genre.localeCompare(b.genre)
+      );
     }
 
     return movies;
@@ -81,7 +99,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
             </tr>
           </thead>
           <tbody>
-            {moviesToDisplay.map((movie, index) => (
+            {moviesToDisplay.map((movie: Movie, index) => (
               <tr key={index} onClick={() => Show(movie)}>
                 <td>{movie.title}</td>
                 <td>{movie.genre}</td>
@@ -115,7 +133,9 @@ const MovieList = ({ query = "", isSearchClicked }) => {
           <Button
             variant="primary"
             onClick={() => {
-              handleToggle(selectedMovie.title);
+              if (selectedMovie) {
+                handleToggle(selectedMovie.title);
+              }
             }}
           >
             Dodaj do ulubionych
