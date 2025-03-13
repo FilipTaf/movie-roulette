@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
-import History from "./views/history";
-import Favorites from "./views/favorites";
+import History from "./views/History";
+import Favorites from "./views/Favorites";
 import MyNavbar from "./components/navbar";
-import Mainbody from "./components/MainBody";
+import Mainbody from "./components/Roulette/MainBody";
 import React from "react";
 
 function App() {
@@ -12,9 +12,9 @@ function App() {
       <Router>
         <MyNavbar />
         <Routes>
-          <Route path="/history" element={<History />} />
-          <Route path="/favorites" element={<Favorites />} />
-          <Route path="/roulette" element={<Mainbody />} />
+          <Route path="/History" element={<History />} />
+          <Route path="/Favorites" element={<Favorites />} />
+          <Route path="/Roulette" element={<Mainbody />} />
         </Routes>
       </Router>
     </>

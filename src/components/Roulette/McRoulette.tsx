@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
 import cl from "./roulette.module.css";
-import RouletteItem from "./RouletteItem/RouletteItem.tsx";
-import { Roulette, weaponAttributes } from "../roulette.classes.ts";
-import InfoModal from "./InfoModal.js";
+import RouletteItem from "./RouletteItem.tsx";
+import { Roulette, weaponAttributes } from "./roulette.classes.ts";
+import InfoModal from "../InfoModal.js";
 import { useDispatch } from "react-redux";
-import { addMovie } from "../store/drawnReducer.js";
+import { addMovie } from "../../store/drawnReducer.js";
 interface RouletteElementParams {
   weapons: weaponAttributes[];
   weaponsCount: number;

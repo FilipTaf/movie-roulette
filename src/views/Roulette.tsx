@@ -1,5 +1,5 @@
 import React from "react";
-import Mainbody from "../components/MainBody";
+import Mainbody from "../components/Roulette/MainBody";
 
 const Main = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Main.css";
-import { useAppSelector } from "../store/hooks";
+import { useAppSelector } from "../../store/hooks.ts";
 import cl from "../App.module.css";
 import McRoulette from "./McRoulette.tsx";
 
