@@ -1,10 +1,10 @@
 import React from "react";
-import MovieList from "../components/favArray";
+import General from "../components/ToFavorite/Use";
 
 const Favorites = () => {
   return (
     <div>
-      <MovieList />
+      <General />
     </div>
   );
 };

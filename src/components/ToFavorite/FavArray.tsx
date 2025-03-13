@@ -1,8 +1,9 @@
 import React, { useMemo, useState } from "react";
 import Table from "react-bootstrap/Table";
-import { useAppSelector, useAppDispatch } from "../store/hooks";
-import { delFavMovie } from "../store/movieReducer";
+import { useAppSelector, useAppDispatch } from "../../store/hooks";
+import { delFavMovie } from "../../store/movieReducer";
 import { Button } from "react-bootstrap";
+import * as Icon from "react-bootstrap-icons";
 
 const MovieList = ({ query = "", isSearchClicked }) => {
   const movies = useAppSelector((state) => state.movies);
@@ -41,32 +42,39 @@ const MovieList = ({ query = "", isSearchClicked }) => {
 
   return (
     <>
-      <Table bordered hover className="table table-dark">
-        <thead>
-          <tr className="table-active">
-            <th onClick={handleSort}>Title</th>
-            <th>Genre</th>
-            <th>Usuń</th>
-          </tr>
-        </thead>
-        <tbody className="table-group-divider table-divider-color">
-          {moviesToDisplay.map((movie, index) => (
-            <tr key={index}>
-              <td>{movie.title}</td>
-              <td>{movie.genre}</td>
-              <td>
-                {" "}
-                <Button
-                  variant="primary"
-                  onClick={() => handleToggle(movie.title)}
-                >
-                  Usuń z ulubionych
-                </Button>
-              </td>
+      <div className="table-container">
+        <Table
+          bordered
+          hover
+          responsive
+          className="custom-dark-table table-dark"
+        >
+          <thead>
+            <tr className="table-active">
+              <th onClick={handleSort}>Title</th>
+              <th>Genre</th>
+              <th>Delete</th>
             </tr>
-          ))}
-        </tbody>
-      </Table>
+          </thead>
+          <tbody className="table-group-divider table-divider-color">
+            {moviesToDisplay.map((movie, index) => (
+              <tr key={index}>
+                <td>{movie.title}</td>
+                <td>{movie.genre}</td>
+                <td>
+                  {" "}
+                  <Button
+                    variant="primary"
+                    onClick={() => handleToggle(movie.title)}
+                  >
+                    <Icon.Trash />
+                  </Button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+      </div>
     </>
   );
 };
