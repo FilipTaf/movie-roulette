@@ -71,6 +71,28 @@ const McRoulette = ({
     }, 1000);
     return { roulette };
   }
+
+  function changeImageSource(
+    imageId: string,
+    image1: string,
+    image2: string
+  ): void {
+    const img: HTMLImageElement | null = document.getElementById(
+      imageId
+    ) as HTMLImageElement;
+
+    let currentImage: string = image1;
+
+    setInterval(() => {
+      img.src = currentImage;
+      currentImage = currentImage === image1 ? image2 : image1;
+    }, 500);
+  }
+
+  window.onload = () => {
+    changeImageSource("logo", "logo1.svg", "logo2.svg");
+  };
+
   return (
     <div>
       <InfoModal
@@ -81,9 +103,10 @@ const McRoulette = ({
       <center>
         <div className="logoblock">
           <img
-            src="/logo.png"
+            id="logo"
+            src="/logo1.svg"
             alt="logo"
-            height={"300px"}
+            height={"400px"}
             style={{ paddingTop: " 25px", paddingBottom: "25px" }}
           />
         </div>

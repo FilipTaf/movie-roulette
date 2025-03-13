@@ -4,7 +4,7 @@ import MovieList from "../components/favArray";
 const Favorites = () => {
   return (
     <div>
-      <MovieList />
+      <MovieList isSearchClicked={undefined} />
     </div>
   );
 };
