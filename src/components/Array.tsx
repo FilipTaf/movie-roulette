@@ -1,21 +1,18 @@
 import React, { useMemo, useState } from "react";
 import Table from "react-bootstrap/Table";
 import { useAppSelector, useAppDispatch } from "../store/hooks";
-import { addFavMovie } from "../store/movieReducer";
-import { Modal, Button } from "react-bootstrap";
 import "./Main.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BookmarkHeartFill, BookmarkHeart } from "react-bootstrap-icons";
+import InfoModal from "./InfoModal";
 
 const MovieList = ({ query = "", isSearchClicked }) => {
-  let movieList = useAppSelector((state) => state.drawns.drawns);
-  const dispatch = useAppDispatch();
+  let drawnList = useAppSelector((state) => state.drawns.drawns);
+  const movieList = useAppSelector((state) => state.movies);
   const [sortAZ, setSortAZ] = useState(false);
-  const [sortGenre, setSortGenre] = useState(false);
+
   const [selectedMovie, setSelectedMovie] = useState<Movie | undefined>(
     undefined
   );
-  const [clicked, setClicked] = useState(false);
   const [show, setShow] = useState(false);
 
   interface Movie {
@@ -29,58 +26,41 @@ const MovieList = ({ query = "", isSearchClicked }) => {
     favorite: boolean;
   }
 
-  const handleToggle = (title: string) => {
-    dispatch(addFavMovie(title));
-    if (selectedMovie) {
-      setClicked(!selectedMovie.favorite);
-    }
+  const handleSort = () => {
+    setSortAZ((prev) => !prev);
   };
 
   const filteredMovies = useMemo(() => {
     if (!isSearchClicked || !query) {
-      return movieList;
+      return drawnList;
     }
-    return (movieList || []).filter(
+    return (drawnList || []).filter(
       (movie: Movie) =>
         movie.genre && movie.genre.toLowerCase().includes(query.toLowerCase())
     );
-  }, [movieList, query, isSearchClicked]);
+  }, [drawnList, query, isSearchClicked]);
 
   const moviesToDisplay = useMemo(() => {
     let movies = filteredMovies.slice(0, 30).reverse();
-    if (sortAZ) {
-      movies = [...movies].sort((a: Movie, b: Movie) =>
-        a.title.localeCompare(b.title)
-      );
-    }
-    if (sortGenre) {
-      movies = [...movies].sort((a: Movie, b: Movie) =>
-        a.genre.localeCompare(b.genre)
-      );
-    }
+    movies.sort((a: Movie, b: Movie) => {
+      const titleA = a.title.replace(/\s+/g, "").toLowerCase();
+      const titleB = b.title.replace(/\s+/g, "").toLowerCase();
+      return sortAZ
+        ? titleA.localeCompare(titleB)
+        : titleB.localeCompare(titleA);
+    });
 
     return movies;
-  }, [filteredMovies, sortAZ, sortGenre, handleToggle]);
-
-  const handleSortTitle = () => {
-    setSortAZ(!sortAZ);
-    setSortGenre(false);
-  };
-
-  const handleSortGenre = () => {
-    setSortGenre(!sortGenre);
-    setSortAZ(false);
-  };
-
-  const Close = () => setShow(false);
+  }, [filteredMovies, sortAZ]);
 
   const Show = (movie) => {
     setSelectedMovie(movie);
     setShow(true);
     console.log("favorite on load", movie);
-
-    console.log("list", movieList[movie.id]);
   };
+  const movieIndex = movieList.findIndex(
+    (movie) => movie.title === selectedMovie?.title
+  );
   return (
     <>
       <div className="table-container">
@@ -92,10 +72,10 @@ const MovieList = ({ query = "", isSearchClicked }) => {
         >
           <thead>
             <tr>
-              <th onClick={handleSortTitle}>Tytuł</th>
-              <th onClick={handleSortGenre}>Gatunek</th>
-              <th>Reżyser</th>
-              <th>Ocena</th>
+              <th onClick={handleSort}>Title</th>
+              <th>Genre</th>
+              <th>Director</th>
+              <th>Rating</th>
             </tr>
           </thead>
           <tbody>
@@ -110,39 +90,11 @@ const MovieList = ({ query = "", isSearchClicked }) => {
           </tbody>
         </Table>
       </div>
-      <Modal show={show} backdrop="static" centered>
-        <Modal.Header closeButton>
-          <Modal.Title>{selectedMovie ? selectedMovie.title : ""}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          Reżyser : {selectedMovie ? selectedMovie.director : ""}
-          <br />
-          Opis : {selectedMovie ? selectedMovie.description : ""}
-          <br />
-          Gatunek : {selectedMovie ? selectedMovie.genre : ""}
-        </Modal.Body>
-        <Modal.Footer>
-          <Button
-            variant="secondary"
-            onClick={() => {
-              Close();
-            }}
-          >
-            Zamknij
-          </Button>
-          <Button
-            variant="primary"
-            onClick={() => {
-              if (selectedMovie) {
-                handleToggle(selectedMovie.title);
-              }
-            }}
-          >
-            Dodaj do ulubionych
-            {clicked ? <BookmarkHeartFill /> : <BookmarkHeart />}
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      <InfoModal
+        isShow={show}
+        movieId={movieIndex}
+        onHide={() => setShow(false)}
+      ></InfoModal>
     </>
   );
 };

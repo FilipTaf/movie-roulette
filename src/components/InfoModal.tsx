@@ -12,7 +12,7 @@ const InfoModal = ({ isShow, movieId, onHide }) => {
 
   return (
     <>
-      <Modal show={isShow} onHide={onHide} backdrop="static" centered>
+      <Modal show={isShow} onHide={onHide} centered>
         <Modal.Header closeButton>
           <Modal.Title>{}</Modal.Title>
         </Modal.Header>

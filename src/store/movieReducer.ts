@@ -8,26 +8,15 @@ const movieReducer = createSlice({
   initialState,
   reducers: {
     addFavMovie: (state, action) => {
-      console.log("Wywołanie", action.payload);
       const movie = state.find((item) => item.title === action.payload);
-      movie.favorite = !movie.favorite;
-      // if (movie.favorite === false) {
-      //   console.log("Przed zmianą: ", movie.favorite);
-      //   movie.favorite = true;
-      //   console.log("Po zmianie: ", movie.favorite);
-      // } else if (movie.favorite === true) {
-
-      //   console.log("Już dodane do ulubionych");
-      // }
+      if (movie) movie.favorite = !movie.favorite;
     },
     delFavMovie: (state, action) => {
-      console.log("Wywołanie", action.payload);
       const movie = state.find((item) => item.title === action.payload);
-      if (movie.favorite === true) {
-        console.log("Przed zmianą: ", movie.favorite);
-        movie.favorite = false;
-        console.log("Po zmianie: ", movie.favorite);
-      }
+      if (movie)
+        if (movie.favorite === true) {
+          movie.favorite = false;
+        }
     },
   },
 });
