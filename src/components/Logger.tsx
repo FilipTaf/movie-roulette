@@ -1,0 +1,48 @@
+import React, { useState } from "react";
+import { useAppSelector, useAppDispatch } from "../store/hooks.ts";
+import { login, logout } from "../store/loginReducer";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
+const Login = () => {
+    const dispatch = useAppDispatch()
+    const isAuth = useAppSelector((state) => state.auth.isAuth)
+    const [user, setUser] = useState("")
+    const [password, setPassword] = useState("")
+
+    const cUser = "admin"
+    const cPass = "guwno"
+
+    const handleLogin = () => {
+        if(user === cUser && password === cPass){
+            dispatch(login())
+        }
+    }
+
+    const handleLogout = () => {
+            dispatch(logout())
+    }
+    return (
+        <>
+        {isAuth ? (
+        <>
+            <h1>Witaj {cUser}</h1>
+            <Button onClick={handleLogout}>Logout</Button>
+        </>
+        ) : (<Form>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Login</Form.Label>
+            <Form.Control type="text" placeholder="Login" value={user} onChange={(e) => setUser(e.target.value)}/>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+        </Form.Group>
+        <Button variant="primary" onClick={handleLogin}>
+            Submit
+        </Button>
+        </Form>) };
+        </>
+    )
+}
+export default Login

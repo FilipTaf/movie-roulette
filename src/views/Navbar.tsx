@@ -25,14 +25,17 @@ const MyNavbar = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link as={Link} to="/roulette" onClick={handleClose}>
+              <Nav.Link as={Link} to="/Roulette" onClick={handleClose}>
                 Main
               </Nav.Link>
-              <Nav.Link as={Link} to="/history" onClick={handleClose}>
+              <Nav.Link as={Link} to="/History" onClick={handleClose}>
                 History
               </Nav.Link>
-              <Nav.Link as={Link} to="/favorites" onClick={handleClose}>
+              <Nav.Link as={Link} to="/Favorites" onClick={handleClose}>
                 Favorites
+              </Nav.Link>
+              <Nav.Link as={Link} to="/Account" onClick={handleClose}>
+                Account
               </Nav.Link>
             </Nav>
           </Offcanvas.Body>
