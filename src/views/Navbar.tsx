@@ -3,53 +3,86 @@ import { Navbar, Nav, Container, Offcanvas, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { logout } from "../store/loginReducer";
 import { useAppDispatch, useAppSelector } from "../store/hooks.ts";
+import "../components/main.css";
 
 const MyNavbar = () => {
   const [show, setShow] = useState(false);
-  const isAuth = useAppSelector((state) => state.auth.isAuth)
+  const isAuth = useAppSelector((state) => state.auth.isAuth);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
   const handleLogout = () => {
-    dispatch(logout())
-}
-
+    dispatch(logout());
+  };
 
   return (
-    <Navbar expand={false} bg="dark" variant="dark" className="px-3">
-      <Container fluid>
-        <Navbar.Brand>Movie-roulette</Navbar.Brand>
-        <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow} />
-        <Navbar.Offcanvas
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-          placement="end"
-          show={show}
-          onHide={handleClose}
-        >
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title id="offcanvasNavbarLabel">Menu</Offcanvas.Title>
-          </Offcanvas.Header>
-          <Offcanvas.Body>
-            <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link as={Link} to="/Roulette" onClick={handleClose}>
-                Main
-              </Nav.Link>
-              <Nav.Link as={Link} to="/History" onClick={handleClose}>
-                History
-              </Nav.Link>
-              <Nav.Link as={Link} to="/Favorites" onClick={handleClose}>
-                Favorites
-              </Nav.Link>
-              <Nav.Link as={Link} to="/Account" onClick={handleClose}>
-                Account
-              </Nav.Link>
-              {isAuth ? (<Button onClick={handleLogout}>Logout</Button>) : ("")}   
-            </Nav>
-          </Offcanvas.Body>
-        </Navbar.Offcanvas>
-      </Container>
-    </Navbar>
+    <>
+      <Navbar expand={false} variant="light" className="nav">
+        <Container fluid>
+          <Navbar.Brand>
+            <h1>Movie-roulette</h1>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow} />
+          <Navbar.Offcanvas
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+            placement="end"
+            show={show}
+            onHide={handleClose}
+          >
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title id="offcanvasNavbarLabel">
+                <h1 className="ultra">Movie roulette</h1>
+                <img src="https://i.pinimg.com/originals/79/67/b7/7967b7455ad792c2ed7dac1dcc9ebffe.gif"></img>
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Nav.Link
+                  className="ultra"
+                  as={Link}
+                  to="/Roulette"
+                  onClick={handleClose}
+                >
+                  Main
+                </Nav.Link>
+                <Nav.Link
+                  className="ultra"
+                  as={Link}
+                  to="/History"
+                  onClick={handleClose}
+                >
+                  History
+                </Nav.Link>
+                <Nav.Link
+                  className="ultra"
+                  as={Link}
+                  to="/Favorites"
+                  onClick={handleClose}
+                >
+                  Favorites
+                </Nav.Link>
+                <Nav.Link
+                  className="ultra"
+                  as={Link}
+                  to="/Account"
+                  onClick={handleClose}
+                >
+                  Account
+                </Nav.Link>
+                {isAuth ? (
+                  <Button className="ultra" onClick={handleLogout}>
+                    Logout
+                  </Button>
+                ) : (
+                  ""
+                )}
+              </Nav>
+            </Offcanvas.Body>
+          </Navbar.Offcanvas>
+        </Container>
+      </Navbar>
+    </>
   );
 };
 

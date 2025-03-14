@@ -1,5 +1,5 @@
 #spinner {
-  color: red;
+  color: rgb(189, 34, 38);
   border: 1px, solid, black;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -88,4 +88,41 @@
 
 center {
   padding-top: 100px;
+}
+
+.modal-header {
+  background-color: #7a7676;
+}
+
+.modal-footer {
+  background-color: #7a7676;
+}
+
+.offcanvas-body {
+  background-color: #333333;
+  color: white;
+}
+
+.offcanvas-header {
+  color: white;
+  background-color: rgb(189, 34, 38);
+}
+
+h1 {
+  text-align: center;
+}
+
+@font-face {
+  font-family: ultra;
+  src: url(../../public/Casino.otf);
+}
+
+.ultra {
+  font-family: ultra;
+  font-size: 25px;
+}
+
+.nav {
+  background-color: rgb(189, 34, 38);
+  font-family: ultra;
 }

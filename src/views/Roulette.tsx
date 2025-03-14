@@ -5,7 +5,7 @@ import { useAppSelector } from "../store/hooks";
 const Main = () => {
   const isAuth = useAppSelector((state) => state.auth.isAuth);
   return (
-    <div>
+    <div className="ultra">
       {isAuth ? (
         <Mainbody />
       ) : (

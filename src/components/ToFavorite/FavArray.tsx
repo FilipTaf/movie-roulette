@@ -55,7 +55,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
             <tr className="table-active">
               <th onClick={handleSort}>Title</th>
               <th>Genre</th>
-              <th>Usuń z ulubionych</th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody className="table-group-divider table-divider-color">

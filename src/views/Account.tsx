@@ -3,7 +3,7 @@ import Logger from "../components/Logger";
 
 const Account = () => {
   return (
-    <div>
+    <div className="ultra">
       <Logger />
     </div>
   );
