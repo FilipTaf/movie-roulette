@@ -18,7 +18,6 @@
   width: 0;
   opacity: 0;
 }
-
 .card-title {
   text-align: center;
   margin-top: 6rem;
@@ -63,4 +62,30 @@
 
 .custom-dark-table tbody tr {
   transition: background 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login {
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(9px);
+  color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+}
+
+.LoginPage {
+  height: 94vh;
+  background: url("/kasyno.jpg") no-repeat;
+  background-size: cover;
+}
+
+center {
+  padding-top: 100px;
 }

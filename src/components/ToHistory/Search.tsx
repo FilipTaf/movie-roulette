@@ -5,12 +5,10 @@ import * as Icon from "react-bootstrap-icons";
 
 const Search = ({ onSearch }) => {
   const [query, setQuery] = useState("");
-
   const handleSubmit = (e) => {
     e.preventDefault();
     onSearch(query);
   };
-
   return (
     <Form className="d-flex" onSubmit={handleSubmit}>
       <FormControl
