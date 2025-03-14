@@ -1,14 +1,14 @@
 import React, { useMemo, useState } from "react";
 import Table from "react-bootstrap/Table";
-import { useSelector, useDispatch } from "react-redux";
-import { delFavMovie } from "../store/movieReducer";
+import { useAppSelector, useAppDispatch } from "../../store/hooks";
+import { delFavMovie } from "../../store/movieReducer";
 import { Button } from "react-bootstrap";
-import "./Main.css";
+import "../Main.css";
 import * as Icon from "react-bootstrap-icons";
 
 const MovieList = ({ query = "", isSearchClicked }) => {
-  const movies = useSelector((state) => state.movies);
-  const dispatch = useDispatch();
+  const movies = useAppSelector((state) => state.movies);
+  const dispatch = useAppDispatch();
   const [sortAZ, setSortAZ] = useState(true);
   const handleToggle = (title) => {
     console.log("Kliknieto przycisk dla ", title);
@@ -52,13 +52,13 @@ const MovieList = ({ query = "", isSearchClicked }) => {
           className="custom-dark-table table-dark"
         >
           <thead>
-            <tr class="table-active">
+            <tr className="table-active">
               <th onClick={handleSort}>Title</th>
               <th>Genre</th>
               <th>Usuń z ulubionych</th>
             </tr>
           </thead>
-          <tbody class="table-group-divider table-divider-color">
+          <tbody className="table-group-divider table-divider-color">
             {moviesToDisplay.map((movie, index) => (
               <tr key={index}>
                 <td>{movie.title}</td>
