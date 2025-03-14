@@ -1,4 +1,5 @@
 import React from "react";
+// @ts-ignore
 import cl from "./rouletteItem.module.css";
 
 interface rouletteItemProps {

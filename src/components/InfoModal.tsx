@@ -4,11 +4,15 @@ import { BookmarkHeartFill, BookmarkHeart } from "react-bootstrap-icons";
 import { addFavMovie } from "../store/movieReducer";
 import React from "react";
 
-const InfoModal = ({ isShow, movieId, onHide }) => {
+const InfoModal = ({ isShow, movieId, onHide, table }) => {
   const dispatch = useAppDispatch();
   const movieList = useAppSelector((state) => state.movies);
-  const theChosenOne = movieList[movieId];
 
+  const theChosenOne = table ? table[movieId] : movieList[movieId];
+  const movieIndex = movieList.findIndex(
+    (movie) => movie.title === theChosenOne?.title
+  );
+  const forFavoriteIcon = movieList[movieIndex];
   return (
     <>
       <Modal show={isShow} onHide={onHide} centered>
@@ -48,8 +52,8 @@ const InfoModal = ({ isShow, movieId, onHide }) => {
             onClick={() => dispatch(addFavMovie(theChosenOne.title))}
           >
             Dodaj do ulubionych{" "}
-            {theChosenOne ? (
-              theChosenOne.favorite ? (
+            {forFavoriteIcon ? (
+              forFavoriteIcon.favorite ? (
                 <BookmarkHeartFill />
               ) : (
                 <BookmarkHeart />

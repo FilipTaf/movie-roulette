@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+// @ts-ignore
 import cl from "./roulette.module.css";
 import RouletteItem from "./RouletteItem.tsx";
 import { Roulette, weaponAttributes } from "./roulette.classes.ts";
@@ -42,6 +43,7 @@ const McRoulette = ({
 
   function load() {
     let winner = weapons[Math.floor(Math.random() * weapons.length)];
+
     const roulette = new Roulette({
       winner,
       weapons,
@@ -50,8 +52,10 @@ const McRoulette = ({
       weaponsCount: weaponsCount,
       transitionDuration: transitionDuration,
     });
+
     roulette.set_weapons();
     setRouletteWeapons(roulette.weapons);
+
     return roulette;
   }
 
@@ -62,13 +66,16 @@ const McRoulette = ({
     setIsSpin(true);
 
     const roulette = load();
-    setRouletteWeapons(roulette.allWeapons);
+
+    setRouletteWeapons(roulette.weapons);
 
     setTimeout(() => {
       setIsSpin(true);
       setWeaponPrizeId(roulette.spin());
+
       setIsReplay(true);
     }, 1000);
+
     return { roulette };
   }
 
@@ -78,6 +85,7 @@ const McRoulette = ({
         isShow={show}
         movieId={weaponPrizeId}
         onHide={() => setShow(false)}
+        table={rouletteWeapons}
       ></InfoModal>
       <center>
         <div className="logoblock">

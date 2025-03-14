@@ -9,6 +9,7 @@ const drawnReducer = createSlice({
   reducers: {
     addMovie: (state, winner) => {
       const randomMovie = list.movielist[winner.payload];
+      //@ts-ignore
       state.drawns = [...state.drawns, randomMovie];
     },
   },
