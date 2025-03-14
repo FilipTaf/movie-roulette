@@ -9,6 +9,7 @@ const list = {
       genre: "Thriller",
       rating: "3/5",
       favorite: false,
+      img: "data:image/jpeg;base64,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",
     },
     {
       title: "Zagubione Wspomnienia",
@@ -19,6 +20,7 @@ const list = {
       genre: "Thriller",
       rating: "4/5",
       favorite: false,
+      img: "https://dinoanimals.com/wp-content/uploads/2016/02/Pallass_cat.jpg",
     },
     {
       title: "Lśnienie Przeszłośći",
@@ -29,6 +31,7 @@ const list = {
       genre: "Przygodowy",
       rating: "4/5",
       favorite: false,
+      img: "https://i.pinimg.com/550x/8f/78/e2/8f78e22a64771667314778d497131d0d.jpg",
     },
     {
       title: "Echo w Ciemnośći",
@@ -39,6 +42,7 @@ const list = {
       genre: "Horror",
       rating: "2/5",
       favorite: false,
+      img: "https://mf.b37mrtl.ru/rbthmedia/images/2023.03/original/641b502f85ab4d52f4621750.jpg",
     },
     {
       title: "Miłość w Blasku Gwiazd",
@@ -49,6 +53,7 @@ const list = {
       release: "2024",
       rating: "4/5",
       favorite: false,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Wnx1k7iR-FQ8X-zydXhn1Elfxq8akAs2Rg&s",
     },
     {
       title: "Tylko jedno Życie",
@@ -58,6 +63,7 @@ const list = {
       genre: "Dramat",
       rating: "5/5",
       favorite: false,
+      img: "https://m.media-amazon.com/images/I/51guHn3tq4L.jpg",
     },
     {
       title: "Sekretne Drzwi",
@@ -67,6 +73,7 @@ const list = {
       genre: "Sci-Fi",
       rating: "4/5",
       favorite: false,
+      img: "https://i.ytimg.com/vi/kqarmDGymBY/maxresdefault.jpg",
     },
     {
       title: "Wielki Skok",
@@ -77,6 +84,7 @@ const list = {
       release: "2020",
       rating: "3/5",
       favorite: false,
+      img: "https://preview.redd.it/all-manuls-considering-service-in-the-russian-army-please-dm-v0-c25ge7g7es0a1.png?auto=webp&s=af04dfeeadccf56684e0da9c13fbbf3b7b2ac6f3",
     },
     {
       title: "Ziemia Bez Prawa",
@@ -87,6 +95,7 @@ const list = {
       release: "2013",
       rating: "4/5",
       favorite: false,
+      img: "https://preview.redd.it/manuls-kitten-edition-v0-kvk2bicl2hfa1.jpg?width=320&format=pjpg&auto=webp&s=1aa741faf4eaf3a1bff922d885d1f303f4d79a77",
     },
     {
       title: "Tajemnicza Wyspa",
@@ -97,6 +106,7 @@ const list = {
       release: "2015",
       rating: "2/5",
       favorite: false,
+      img: "https://cdn.manulization.com/images/9FyLkPjW4se5I7NT_mw-800.webp",
     },
     {
       title: "Ostatni Lot",
@@ -107,6 +117,7 @@ const list = {
       release: "2018",
       rating: "4/5",
       favorite: false,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZqO7uR68L2qTih1u70mwbDau1Y5L-yR2zhg&s",
     },
     {
       title: "W Sieci Kłamstw",
@@ -117,6 +128,7 @@ const list = {
       release: "2020",
       rating: "4/5",
       favorite: false,
+      img: "https://preview.redd.it/say-hello-to-oliver-one-of-the-manuls-in-japan-v0-49dlg19s0d4b1.jpg?width=640&crop=smart&auto=webp&s=715ca3dc5342c6a1ff9875bb27bc3449bfe32916",
     },
     {
       title: "Na Skraju Przepaści",
@@ -127,6 +139,7 @@ const list = {
       release: "2016",
       rating: "1/5",
       favorite: false,
+      img: "https://i.pinimg.com/736x/a0/19/64/a01964a3feccf0c99c3ca1fd139af2bc.jpg",
     },
     {
       title: "Oczy Ciemności",
@@ -137,6 +150,7 @@ const list = {
       release: "2013",
       rating: "4/5",
       favorite: false,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC8aaTyG2KYwuUuVR6y7_YJRtQil4khOv0cA&s",
     },
     {
       title: "Między Światami",
@@ -147,6 +161,7 @@ const list = {
       release: "2018",
       rating: "2/5",
       favorite: false,
+      img: "https://i.redd.it/9i9qvyaqjw8a1.jpg",
     },
     {
       title: "Wysoka Gra",
@@ -157,6 +172,7 @@ const list = {
       release: "2025",
       rating: "5/5",
       favorite: false,
+      img: "https://preview.redd.it/tall-boi-grusha-v0-b8e2fvni762c1.jpg?width=1080&crop=smart&auto=webp&s=ec1811cac07bde3e68de7bea40e58df6d3537c04",
     },
     {
       title: "Czas Przemian",
@@ -167,6 +183,7 @@ const list = {
       release: "2012",
       rating: "3/5",
       favorite: false,
+      img: "https://www.zoo-ostrava.cz/images_news/3451_1.jpg",
     },
     {
       title: "Ucieczka z Piekła",
@@ -177,6 +194,7 @@ const list = {
       release: "2010",
       rating: "4/5",
       favorite: false,
+      img: "https://zoo.wroclaw.pl/wp-content/uploads/2021/12/manul.webp",
     },
     {
       title: "Złodziejka",
@@ -187,6 +205,7 @@ const list = {
       release: "2015",
       rating: "2/5",
       favorite: false,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqanmulIuPQNPFYekjiE5ara3xuu_gE2fCsA&s",
     },
     {
       title: "Cisza Przed Burzą",
@@ -197,6 +216,7 @@ const list = {
       release: "2023",
       rating: "4.2",
       favorite: false,
+      img: "https://cdn.galleries.smcloud.net/t/galleries/gf-8ysh-ji7d-j75h_manul-z-poznanskiego-zoo-jest-najpiekniejszy-na-swiecie-magellan-nie-mial-sobie-rownych-1920x1080-nocrop.jpg",
     },
     {
       title: "Podziemne Miasto",
@@ -207,6 +227,7 @@ const list = {
       release: "2024",
       rating: "4.5",
       favorite: false,
+      img: "https://i.ytimg.com/vi/95KwOYZ_fC8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBkFXg03_pU6tOx1v0VkZ-pUqZkdA",
     },
     {
       title: "Zatrzymany Czas",
@@ -217,6 +238,7 @@ const list = {
       release: "2022",
       rating: "4.0",
       favorite: false,
+      img: "https://img.wprost.pl/img/poznan-manul-mania-zdyskwalifikowany-mateusz-morawiecki-zabral-glos/9a/fb/132eeda05a0c7xx2f05ff5511fc7.webp",
     },
     {
       title: "Kroki w Ciemności",
@@ -227,6 +249,7 @@ const list = {
       release: "2021",
       rating: "4.3",
       favorite: false,
+      img: "https://bi.im-g.pl/im/7a/83/18/z25704058AMP,Manul.jpg",
     },
     {
       title: "Złudne Piękno",
@@ -237,6 +260,7 @@ const list = {
       release: "2022",
       rating: "4.1",
       favorite: false,
+      img: "https://www.earthrangers.com/public/content/wildwire/RingedSeal_FeaturedImage.jpg",
     },
     {
       title: "Ostatni Dzień Lata",
@@ -247,6 +271,7 @@ const list = {
       release: "2020",
       rating: "4.0",
       favorite: false,
+      img: "https://i.chzbgr.com/full/10364186624/h111EA100",
     },
     {
       title: "Cień Wspomnień",
@@ -257,6 +282,7 @@ const list = {
       release: "2021",
       rating: "4.4",
       favorite: false,
+      img: "https://i0.wp.com/i.pinimg.com/564x/6d/81/db/6d81db707fc9f96224f0afa0bb5f0cd7.jpg?w=1180&ssl=1",
     },
     {
       title: "Tajemnica Skrzyni",
@@ -267,6 +293,7 @@ const list = {
       release: "2023",
       rating: "4.2",
       favorite: false,
+      img: "https://m.media-amazon.com/images/I/51BlS3bfO6L.jpg",
     },
     {
       title: "Upadek Ikony",
@@ -277,6 +304,7 @@ const list = {
       release: "2022",
       rating: "4.3",
       favorite: false,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAVXsuOuRK2Ra3Fal1LBbztMn3Q2wCuIIkVQ&s",
     },
     {
       title: "Złota Rzeka",
@@ -287,6 +315,7 @@ const list = {
       release: "2021",
       rating: "4.4",
       favorite: false,
+      img: "https://pbs.twimg.com/profile_images/1768444401037058048/J5u5RC3B_400x400.jpg",
     },
     {
       title: "Wspomnienie Tego Dnia",
@@ -297,6 +326,7 @@ const list = {
       release: "2022",
       rating: "4.2",
       favorite: false,
+      img: "https://preview.redd.it/2doci4h74se81.jpg?width=640&crop=smart&auto=webp&s=afbd22a20a2874e8a8bfbfca603325111549b3c6",
     },
     {
       title: "Zmierzch Nowego Świata",
@@ -307,6 +337,7 @@ const list = {
       release: "2023",
       rating: "4.3",
       favorite: false,
+      img: "https://64.media.tumblr.com/68959ce25cbf08d7ddb9903609ddf4f6/00a04069216df202-87/s1280x1920/67fe7946261f101f7271a14f893570d8cc7115c7.png",
     },
     {
       title: "Pogrzebany Wspomnieniami",
@@ -317,6 +348,7 @@ const list = {
       release: "2021",
       rating: "4.1",
       favorite: false,
+      img: "https://img.joemonster.org/images/vad/img_52252/43baf38b01e4f64b770d45604778a4eb.jpg",
     },
     {
       title: "Tajemnicza Wiadomość",
@@ -327,6 +359,7 @@ const list = {
       release: "2024",
       rating: "4.5",
       favorite: false,
+      img: "https://static01.nyt.com/images/2024/09/26/multimedia/24styles-moodeng-bite-bfmh/24styles-moodeng-bite-bfmh-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
     },
     {
       title: "Zamach na Czas",
@@ -337,6 +370,7 @@ const list = {
       release: "2022",
       rating: "4.4",
       favorite: false,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwOPkdIODBsdncXlP1QSOb8sEzEXekTwW2Ag&s",
     },
     {
       title: "Dzieci Nocy",
@@ -347,6 +381,7 @@ const list = {
       release: "2023",
       rating: "4.0",
       favorite: false,
+      img: "https://plndesign.pl/wp-content/uploads/2025/01/palac-kultury-i-nauki-foto-bianca-fazacas-unsplash-plndesign.jpg",
     },
     {
       title: "Błąd w Systemie",
@@ -357,6 +392,7 @@ const list = {
       release: "2024",
       rating: "4.3",
       favorite: false,
+      img: "https://pbs.twimg.com/media/GM6FvIaWUAETvaX.jpg",
     },
     {
       title: "Zatruta Rzeka",
@@ -367,6 +403,7 @@ const list = {
       release: "2021",
       rating: "4.2",
       favorite: false,
+      img: "https://i.pinimg.com/236x/3c/a2/e9/3ca2e93f4fd079363b42f8d8114b4e82.jpg",
     },
     {
       title: "Złapani w Sieci",
@@ -377,6 +414,7 @@ const list = {
       release: "2022",
       rating: "4.3",
       favorite: false,
+      img: "https://i.pinimg.com/736x/95/ed/cc/95edccc0e5c4bb3a866a07eb8b2cf19e.jpg",
     },
     {
       title: "Świat za Kurtyną",
@@ -387,6 +425,7 @@ const list = {
       release: "2021",
       rating: "4.4",
       favorite: false,
+      img: "https://preview.redd.it/x6bbw0ig8fu61.jpg?width=640&crop=smart&auto=webp&s=46766e7e008d8c2fb5914a2bf11a8017d167290a",
     },
     {
       title: "Krople Łez",
@@ -397,6 +436,7 @@ const list = {
       release: "2022",
       rating: "4.1",
       favorite: false,
+      img: "https://preview.redd.it/uni-the-cat-v0-bcqh4egtg40c1.jpg?width=640&crop=smart&auto=webp&s=a872636b5172aefa188065947477f5d809f2ab35",
     },
     {
       title: "Zatrzymany Czas",
@@ -407,6 +447,7 @@ const list = {
       release: "2023",
       rating: "4.0",
       favorite: false,
+      img: "https://i.ytimg.com/vi/441WknFOshc/maxresdefault.jpg",
     },
     {
       title: "Złowrogie Oczy",
@@ -417,6 +458,7 @@ const list = {
       release: "2024",
       rating: "4.5",
       favorite: false,
+      img: "https://media.tenor.com/VqKvFGe5XyYAAAAe/uni-uni-cat.png",
     },
     {
       title: "Dźwięk Przeszłości",
@@ -427,6 +469,7 @@ const list = {
       release: "2021",
       rating: "4.2",
       favorite: false,
+      img: "https://i.pinimg.com/736x/ca/54/dc/ca54dc3b957f1d9ad5833ad72e5b7d69.jpg",
     },
     {
       title: "W Złotej Klatce",
@@ -437,6 +480,7 @@ const list = {
       release: "2022",
       rating: "4.1",
       favorite: false,
+      img: "https://preview.redd.it/movn6i1pu4p91.jpg?width=640&crop=smart&auto=webp&s=6c812401084fecf340e11774167fff17e9455c19",
     },
     {
       title: "Wizja",
@@ -447,6 +491,7 @@ const list = {
       release: "2023",
       rating: "4.3",
       favorite: false,
+      img: "https://i.pinimg.com/736x/59/11/bf/5911bf3118417fc66fb7d584ed7bd805.jpg",
     },
     {
       title: "Kraina Cieni",
@@ -457,6 +502,7 @@ const list = {
       release: "2024",
       rating: "4.4",
       favorite: false,
+      img: "https://s.yimg.com/ny/api/res/1.2/TCT9Apr87l_YmpkhOHdYQg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTExOTc-/https://media.zenfs.com/en/usa_today_news_641/7ac61114d64bdebc453f4ad361becff8",
     },
     {
       title: "Labirynt Wspomnień",
@@ -467,6 +513,7 @@ const list = {
       release: "2021",
       rating: "4.2",
       favorite: false,
+      img: "https://soranews24.com/wp-content/uploads/sites/3/2022/06/chara_license2022_02-1.png?w=640",
     },
     {
       title: "Nieznajoma Prawda",
@@ -477,6 +524,7 @@ const list = {
       release: "2023",
       rating: "4.4",
       favorite: false,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBp5po0q_pfukHbWtQqtYetI00zVDxeBa5LA&s",
     },
     {
       title: "Sekretna Misja",
@@ -487,6 +535,7 @@ const list = {
       release: "2022",
       rating: "4.3",
       favorite: false,
+      img: "https://i.cbc.ca/1.4352399.1507841022!/cpImage/httpImage/image.jpg_gen/derivatives/16x9_1180/super-fat-cat.jpg?im=Resize%3D780",
     },
     {
       title: "Tylko Jeden Krelease",
@@ -497,6 +546,7 @@ const list = {
       release: "2021",
       rating: "4.0",
       favorite: false,
+      img: "https://i.redd.it/7es6x2wzdae91.jpg",
     },
     {
       title: "Na Granicy Światów",
@@ -507,6 +557,7 @@ const list = {
       release: "2024",
       rating: "4.4",
       favorite: false,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTma_4wSzJK0BomCz4exbxgAyC1X5J_2db4Vw&s",
     },
   ],
 };

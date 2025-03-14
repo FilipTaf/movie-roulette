@@ -3,7 +3,6 @@ import list from "./movielist";
 import drawnList from "./drawnList";
 
 const initialState = drawnList;
-
 const drawnReducer = createSlice({
   name: "drawn",
   initialState,

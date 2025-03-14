@@ -3,17 +3,20 @@ import { Ref } from "react";
 export interface weaponAttributes {
   title: string;
   genre: string;
+  img: string;
 }
 
 export class Weapon {
   id: number;
   title: string;
   genre: string;
+  img: string;
 
   constructor(id: number, attrs: weaponAttributes) {
     this.id = id;
     this.title = attrs.title;
     this.genre = attrs.genre;
+    this.img = attrs.img;
   }
 }
 

@@ -11,7 +11,6 @@ const MovieList = ({ query = "", isSearchClicked }) => {
   const dispatch = useAppDispatch();
   const [sortAZ, setSortAZ] = useState(true);
   const handleToggle = (title) => {
-    console.log("Kliknieto przycisk dla ", title);
     dispatch(delFavMovie(title));
   };
 

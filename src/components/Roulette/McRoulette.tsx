@@ -107,6 +107,7 @@ const McRoulette = ({
                     isLoser={i !== weaponPrizeId && !isSpin && isSpinEnd}
                     title={w["title"]}
                     genre={w["genre"]}
+                    img={w["img"]}
                   />
                 );
               })}

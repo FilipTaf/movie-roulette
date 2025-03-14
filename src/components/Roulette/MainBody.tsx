@@ -9,6 +9,7 @@ const Mainbody = () => {
 
   const movieCount = 50;
   const transitionDuration = 3;
+
   return (
     <div className={cl.App}>
       <div className={cl.wrapper}>
