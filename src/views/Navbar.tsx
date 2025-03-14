@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import { Navbar, Nav, Container, Offcanvas } from "react-bootstrap";
+import { Navbar, Nav, Container, Offcanvas, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { logout } from "../store/loginReducer";
+import { useAppDispatch } from "../store/hooks.ts";
 
 const MyNavbar = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const dispatch = useAppDispatch()
+  const handleLogout = () => {
+    dispatch(logout())
+}
 
   return (
     <Navbar expand={false} bg="dark" variant="dark" className="px-3">
@@ -37,6 +43,7 @@ const MyNavbar = () => {
               <Nav.Link as={Link} to="/Account" onClick={handleClose}>
                 Account
               </Nav.Link>
+              <Button onClick={handleLogout}>Logout</Button>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

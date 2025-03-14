@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useAppSelector, useAppDispatch } from "../store/hooks.ts";
-import { login, logout } from "../store/loginReducer";
+import { login } from "../store/loginReducer";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
@@ -19,15 +19,12 @@ const Login = () => {
         }
     }
 
-    const handleLogout = () => {
-            dispatch(logout())
-    }
+
     return (
         <>
         {isAuth ? (
         <>
             <h1>Witaj {cUser}</h1>
-            <Button onClick={handleLogout}>Logout</Button>
         </>
         ) : (<Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
