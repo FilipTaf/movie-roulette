@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, FormControl, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import * as Icon from "react-bootstrap-icons";
 
 const Search = ({ onSearch }) => {
   const [query, setQuery] = useState("");
@@ -20,7 +21,7 @@ const Search = ({ onSearch }) => {
         onChange={(e) => setQuery(e.target.value)}
       />
       <Button variant="primary" type="submit">
-        Szukaj
+        <Icon.Search />
       </Button>
     </Form>
   );
