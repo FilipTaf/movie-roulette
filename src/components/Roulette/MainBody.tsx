@@ -1,7 +1,7 @@
 import React from "react";
-import "./Main.css";
-import { useAppSelector } from "../store/hooks";
-import cl from "../App.module.css";
+import "../main.css";
+import { useAppSelector } from "../../store/hooks.ts";
+import cl from "../../App.module.css";
 import McRoulette from "./McRoulette.tsx";
 
 const Mainbody = () => {

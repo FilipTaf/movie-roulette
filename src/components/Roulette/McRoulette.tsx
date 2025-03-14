@@ -1,10 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import cl from "./roulette.module.css";
-import RouletteItem from "./RouletteItem/RouletteItem.tsx";
-import { Roulette, weaponAttributes } from "../roulette.classes.ts";
-import InfoModal from "./InfoModal.js";
+import RouletteItem from "./RouletteItem.tsx";
+import { Roulette, weaponAttributes } from "./roulette.classes.ts";
+import InfoModal from "../InfoModal.js";
 import { useDispatch } from "react-redux";
-import { addMovie } from "../store/drawnReducer.js";
+import { addMovie } from "../../store/drawnReducer.js";
 interface RouletteElementParams {
   weapons: weaponAttributes[];
   weaponsCount: number;
@@ -88,10 +88,9 @@ const McRoulette = ({
       currentImage = currentImage === image1 ? image2 : image1;
     }, 500);
   }
-
-  window.onload = () => {
+  useEffect(() => {
     changeImageSource("logo", "logo1.svg", "logo2.svg");
-  };
+  });
 
   return (
     <div>

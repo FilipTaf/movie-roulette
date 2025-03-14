@@ -1,9 +1,7 @@
 import React, { useMemo, useState } from "react";
 import Table from "react-bootstrap/Table";
-import { useAppSelector, useAppDispatch } from "../store/hooks";
-import "./Main.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import InfoModal from "./InfoModal";
+import { useAppSelector } from "../../store/hooks";
+import InfoModal from "../InfoModal";
 
 const MovieList = ({ query = "", isSearchClicked }) => {
   let drawnList = useAppSelector((state) => state.drawns.drawns);
@@ -71,7 +69,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
           className="custom-dark-table table-dark"
         >
           <thead>
-            <tr>
+            <tr className="table-active">
               <th onClick={handleSort}>Title</th>
               <th>Genre</th>
               <th>Director</th>
