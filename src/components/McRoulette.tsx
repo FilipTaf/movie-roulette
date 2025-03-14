@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import cl from "./roulette.module.css";
 import RouletteItem from "./RouletteItem/RouletteItem.tsx";
 import { Roulette, weaponAttributes } from "../roulette.classes.ts";
@@ -88,10 +88,9 @@ const McRoulette = ({
       currentImage = currentImage === image1 ? image2 : image1;
     }, 500);
   }
-
-  window.onload = () => {
+  useEffect(() => {
     changeImageSource("logo", "logo1.svg", "logo2.svg");
-  };
+  });
 
   return (
     <div>
