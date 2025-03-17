@@ -2,18 +2,30 @@ import { Ref } from "react";
 
 export interface weaponAttributes {
   title: string;
+  director: string;
+  description: string;
   genre: string;
+  img: string;
+  rating: string;
 }
 
 export class Weapon {
   id: number;
   title: string;
+  description: string;
+  director: string;
   genre: string;
+  img: string;
+  rating: string;
 
   constructor(id: number, attrs: weaponAttributes) {
     this.id = id;
     this.title = attrs.title;
     this.genre = attrs.genre;
+    this.img = attrs.img;
+    this.director = attrs.director;
+    this.description = attrs.description;
+    this.rating = attrs.rating;
   }
 }
 
@@ -89,6 +101,7 @@ export class Roulette {
         createdWeapons.push(new Weapon(i, this.allWeapons[j]));
         j = j === weapon_actors_len - 1 ? 0 : j + 1;
       }
+
       this.shuffle(createdWeapons);
       return createdWeapons;
     };
