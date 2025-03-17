@@ -31,7 +31,7 @@ const McRoulette = ({
   const dispatch = useDispatch();
   function transitionEndHandler() {
     setWinHistory(winHistory.concat(rouletteWeapons[weaponPrizeId]));
-    dispatch(addMovie(weaponPrizeId));
+    dispatch(addMovie(rouletteWeapons[weaponPrizeId].title));
     setIsSpin(false);
     setIsSpinEnd(true);
     setShow(true);

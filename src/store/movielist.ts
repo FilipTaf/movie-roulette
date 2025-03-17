@@ -59,6 +59,7 @@ const list = {
       title: "Tylko jedno Życie",
       description:
         "Po tragicznej śmierci matki, młoda dziewczyna musi poradzić sobie z samotnością i odkrywać tajemnice przeszłości",
+      director: "Piotr Borkowski",
       release: "2015",
       genre: "Dramat",
       rating: "5/5",
@@ -69,6 +70,7 @@ const list = {
       title: "Sekretne Drzwi",
       description:
         "Mężczyzna, który odkrywa portal do innego wymiaru, staje przed dylematem, czy wrócić do rzeczywistości, czy zostać w nowym świecie.",
+      director: "Piotr Borkowski",
       release: "2020",
       genre: "Sci-Fi",
       rating: "4/5",
