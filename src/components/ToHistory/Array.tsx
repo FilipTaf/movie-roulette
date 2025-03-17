@@ -54,7 +54,6 @@ const MovieList = ({ query = "", isSearchClicked }) => {
   const Show = (movie) => {
     setSelectedMovie(movie);
     setShow(true);
-    console.log("favorite on load", movie);
   };
   const movieIndex = movieList.findIndex(
     (movie) => movie.title === selectedMovie?.title

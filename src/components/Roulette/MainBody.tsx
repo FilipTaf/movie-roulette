@@ -1,6 +1,7 @@
 import React from "react";
 import "../main.css";
 import { useAppSelector } from "../../store/hooks.ts";
+// @ts-ignore
 import cl from "../../App.module.css";
 import McRoulette from "./McRoulette.tsx";
 
@@ -9,10 +10,12 @@ const Mainbody = () => {
 
   const movieCount = 50;
   const transitionDuration = 3;
+
   return (
     <div className={cl.App}>
       <div className={cl.wrapper}>
         <McRoulette
+          //@ts-ignore
           weapons={movie}
           weaponsCount={movieCount}
           transitionDuration={transitionDuration}
