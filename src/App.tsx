@@ -8,12 +8,6 @@ import Main from "./views/Roulette";
 import React from "react";
 import { useAppSelector } from "./store/hooks";
 
-fetch("https://catfact.ninja/fact")
-.then((res) => res.json())
-.then((data) => {
-    console.log(data)
-})
-
 function App() {
     const isAuth = useAppSelector((state) => state.auth.isAuth)
   return (

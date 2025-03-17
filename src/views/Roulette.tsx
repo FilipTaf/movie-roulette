@@ -1,13 +1,17 @@
 import React from "react";
 import Mainbody from "../components/Roulette/MainBody";
 import { useAppSelector } from "../store/hooks";
+import CatFact from "../components/CatFact";
 
 const Main = () => {
   const isAuth = useAppSelector((state) => state.auth.isAuth);
   return (
     <div className="ultra">
       {isAuth ? (
-        <Mainbody />
+        <>
+          <Mainbody />
+          <CatFact/>
+        </>
       ) : (
         <center>
           <div className="login center-margin">
