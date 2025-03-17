@@ -4,6 +4,8 @@ import { login } from "../store/loginReducer";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router";
+import * as Icon from "react-bootstrap-icons";
+
 
 const Login = () => {
   const dispatch = useAppDispatch();
@@ -29,7 +31,7 @@ const Login = () => {
           <>
             <center>
               <div className="login">
-                <h1>Witaj {cUser}</h1>
+                <h1>Witaj {cUser} <Icon.PersonRaisedHand/></h1>
               </div>
             </center>
           </>

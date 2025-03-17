@@ -58,7 +58,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
               <th>Delete</th>
             </tr>
           </thead>
-          <tbody className="table-group-divider table-divider-color">
+          <tbody>
             {moviesToDisplay.map((movie, index) => (
               <tr key={index}>
                 <td>{movie.title}</td>
