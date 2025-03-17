@@ -33,7 +33,6 @@ const MyNavbar = () => {
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">
                 <h1 className="ultra">Movie roulette</h1>
-                <img src="https://i.pinimg.com/originals/79/67/b7/7967b7455ad792c2ed7dac1dcc9ebffe.gif"></img>
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>

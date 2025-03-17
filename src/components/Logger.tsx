@@ -30,6 +30,9 @@ const Login = () => {
             <center>
               <div className="login">
                 <h1>Witaj {cUser}</h1>
+                <p>
+                  <img src="https://i.pinimg.com/originals/79/67/b7/7967b7455ad792c2ed7dac1dcc9ebffe.gif"></img>
+                </p>
               </div>
             </center>
           </>
