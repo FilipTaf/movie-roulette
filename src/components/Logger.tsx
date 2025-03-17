@@ -31,7 +31,7 @@ const Login = () => {
             <center>
               <div className="login">
                 <h1>
-                  Witaj {cUser} <Icon.PersonRaisedHand />
+                  Welcome {cUser} <Icon.PersonRaisedHand />
                 </h1>
                 <img
                   className="image"
