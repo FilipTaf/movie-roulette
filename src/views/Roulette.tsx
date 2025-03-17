@@ -10,7 +10,7 @@ const Main = () => {
         <Mainbody />
       ) : (
         <center>
-          <div className="login">
+          <div className="login center-margin">
             <h1>You must be logged in</h1>
           </div>
         </center>

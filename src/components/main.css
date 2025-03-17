@@ -84,10 +84,11 @@
   height: 94vh;
   background: url("/kasyno.jpg") no-repeat;
   background-size: cover;
+  padding-top: 100px;
 }
 
-center {
-  padding-top: 100px;
+.center-margin {
+  margin-top: 100px;
 }
 
 .modal-header {

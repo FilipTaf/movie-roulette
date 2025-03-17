@@ -9,7 +9,7 @@ const Favorites = () => {
       {isAuth ? (
         <MovieList isSearchClicked={undefined} />
       ) : (
-        <center className="ultra">
+        <center className="ultra center-margin">
           <div className="login">
             <h1>You must be logged in</h1>
           </div>
