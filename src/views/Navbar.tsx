@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { logout } from "../store/loginReducer";
 import { useAppDispatch, useAppSelector } from "../store/hooks.ts";
 import "../components/main.css";
+import * as Icon from "react-bootstrap-icons";
 
 const MyNavbar = () => {
   const [show, setShow] = useState(false);
@@ -43,7 +44,7 @@ const MyNavbar = () => {
                   to="/Roulette"
                   onClick={handleClose}
                 >
-                  Main
+                  <Icon.Hypnotize/> Main
                 </Nav.Link>
                 <Nav.Link
                   className="ultra"
@@ -51,7 +52,7 @@ const MyNavbar = () => {
                   to="/History"
                   onClick={handleClose}
                 >
-                  History
+                  <Icon.Backpack4Fill/> History
                 </Nav.Link>
                 <Nav.Link
                   className="ultra"
@@ -59,7 +60,7 @@ const MyNavbar = () => {
                   to="/Favorites"
                   onClick={handleClose}
                 >
-                  Favorites
+                  <Icon.Box2HeartFill/> Favorites
                 </Nav.Link>
                 <Nav.Link
                   className="ultra"
@@ -67,7 +68,7 @@ const MyNavbar = () => {
                   to="/Account"
                   onClick={handleClose}
                 >
-                  Account
+                  <Icon.PersonCircle/> Account
                 </Nav.Link>
                 {isAuth ? (
                   <Button className="ultra" onClick={handleLogout}>
