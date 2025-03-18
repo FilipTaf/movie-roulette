@@ -91,6 +91,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
         isShow={show}
         movieId={movieIndex}
         onHide={() => setShow(false)}
+        table={false}
       ></InfoModal>
     </>
   );
