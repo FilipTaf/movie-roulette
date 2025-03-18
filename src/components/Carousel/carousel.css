@@ -11,3 +11,7 @@
 .carousel-caption {
   background: rgba(0, 0, 0, 0.5);
 }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  border: 1px dotted black;
+}
