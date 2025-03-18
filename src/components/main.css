@@ -92,11 +92,17 @@
 }
 
 .modal-header {
-  background-color: #7a7676;
+  background-color: #282930;
 }
 
 .modal-footer {
-  background-color: #7a7676;
+  background-color: #282930;
+}
+.modal-body {
+  background-color: #282930;
+}
+.modal-content {
+  background-color: #282930;
 }
 
 .offcanvas-body {

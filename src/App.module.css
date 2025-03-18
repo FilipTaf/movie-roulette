@@ -1,5 +1,7 @@
 body {
-  background-color: #1a1b22;
+  /*background-color: #282930;*/
+
+  background-image: url("./public/BG3.png");
 }
 
 .App {
