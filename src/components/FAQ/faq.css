@@ -1,0 +1,12 @@
+.accordion-item,
+.accordion-header {
+  background-color: black;
+  color: white;
+}
+.accordion {
+  --bs-accordion-bg: black;
+  --bs-accordion-btn-color: white;
+  --bs-accordion-active-color: white;
+  --bs-accordion-active-bg: rgb(92, 90, 90);
+  width: 96%;
+}
