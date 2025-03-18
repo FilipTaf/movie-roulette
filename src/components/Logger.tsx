@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useAppSelector, useAppDispatch } from "../store/hooks.ts";
-import { login } from "../store/loginReducer";
+import { login, loginAdmin } from "../store/loginReducer";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router";
@@ -10,6 +10,7 @@ import Spinner from "react-bootstrap/Spinner";
 const Login = () => {
   const dispatch = useAppDispatch();
   const isAuth = useAppSelector((state) => state.auth.isAuth);
+  const isAdmin = useAppSelector((state) => state.auth.isAdmin);
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -18,8 +19,17 @@ const Login = () => {
   const cUser = "admin";
   const cPass = "guwno";
 
+  const sUser = "user";
+  const sPass = "slayer";
+
   const handleLogin = () => {
     if (user === cUser && password === cPass) {
+      setIsLoading(true);
+      setTimeout(() => {
+        navigate("../Roulette"), dispatch(loginAdmin()), setIsLoading(false);
+      }, 3000);
+    }
+    if (user === sUser && password === sPass) {
       setIsLoading(true);
       setTimeout(() => {
         navigate("../Roulette"), dispatch(login()), setIsLoading(false);
@@ -42,7 +52,7 @@ const Login = () => {
               </Spinner>
             </div>
           </center>
-        ) : isAuth ? (
+        ) : isAdmin ? (
           <>
             <center>
               <div className="login">
@@ -56,6 +66,18 @@ const Login = () => {
               </div>
             </center>
           </>
+        ) : isAuth ? (
+          <center>
+            <div className="login">
+              <h1>
+                Welcome {sUser} <Icon.PersonRaisedHand />
+              </h1>
+              <img
+                className="image"
+                src="https://i.pinimg.com/originals/79/67/b7/7967b7455ad792c2ed7dac1dcc9ebffe.gif"
+              ></img>
+            </div>
+          </center>
         ) : (
           <center>
             <div className="login">
