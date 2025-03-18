@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router";
 import * as Icon from "react-bootstrap-icons";
+import Spinner from "react-bootstrap/Spinner";
 
 const Login = () => {
   const dispatch = useAppDispatch();
@@ -12,21 +13,36 @@ const Login = () => {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
 
   const cUser = "admin";
   const cPass = "guwno";
 
   const handleLogin = () => {
     if (user === cUser && password === cPass) {
-      dispatch(login());
-      navigate("../Roulette");
+      setIsLoading(true);
+      setTimeout(() => {
+        navigate("../Roulette"), dispatch(login()), setIsLoading(false);
+      }, 3000);
     }
   };
 
   return (
     <>
       <div className="LoginPage">
-        {isAuth ? (
+        {isLoading ? (
+          <center>
+            <div className="login">
+              <img
+                className="image"
+                src="https://i.pinimg.com/originals/79/67/b7/7967b7455ad792c2ed7dac1dcc9ebffe.gif"
+              ></img>
+              <Spinner animation="border" role="status">
+                <span className="visually-hidden">Ładowanie...</span>
+              </Spinner>
+            </div>
+          </center>
+        ) : isAuth ? (
           <>
             <center>
               <div className="login">
