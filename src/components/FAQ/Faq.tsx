@@ -49,11 +49,7 @@ const Faq = () => {
               wind whispers secrets to ze trees. Non! One simply enjoys ze
               marvels of fate. And so, when you spin ze wheel, you may find not
               only a film to delight your senses, but also a morsel of wisdom
-              about our feline overlords. C’est magnifique, non? 👍 🔥 have a
-              website with a movie roulette and i wanted to write a FAQ where
-              the question is "Why was the random cat fact added to the
-              website?". could you write a anwser as a 16th century aristocrat
-              without one tooth and a french accent
+              about our feline overlords. C’est magnifique, non?
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
