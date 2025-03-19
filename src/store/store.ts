@@ -2,6 +2,7 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import movieReducer from "./movieReducer";
 import drawnReducer from "./drawnReducer";
 import loginReducer from "./loginReducer";
+import registerReducer from "./registerReducer";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
   movies: movieReducer,
   drawns: drawnReducer,
   auth: loginReducer,
+  register: registerReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

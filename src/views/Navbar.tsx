@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Container, Offcanvas, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { logout } from "../store/loginReducer";
+import { logout } from "../store/loginReducer.ts";
 import { useAppDispatch, useAppSelector } from "../store/hooks.ts";
 import "../components/main.css";
 import * as Icon from "react-bootstrap-icons";
