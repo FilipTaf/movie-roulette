@@ -33,20 +33,30 @@ const Login = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    if (codeMail.test(loginValue) && codePass.test(password)) {
-      setIsLoading(true);
-      setTimeout(() => {
-        dispatch(addUser({ mail: loginValue, password, role }));
-        setLogin("");
-        setPassword("");
-        setIsLoading(false);
-        setIsSelectRegister(false);
-        setIsSelectLogin(true);
-        dispatch(login(role));
-        setRole("");
-        navigate("../Account");
-      }, 1000);
-    } else alert("Wprowadź poprawne dane");
+    const user = users.find((user) => user.mail === loginValue);
+    if (!user) {
+      if (codeMail.test(loginValue) && codePass.test(password)) {
+        setIsLoading(true);
+        setTimeout(() => {
+          dispatch(addUser({ mail: loginValue, password, role }));
+          setLogin("");
+          setPassword("");
+          setIsLoading(false);
+          setIsSelectRegister(false);
+          setIsSelectLogin(true);
+          dispatch(login());
+          navigate("../Roulette");
+        }, 1000);
+      } else {
+        alert("Wprowadź poprawne dane");
+      }
+    } else {
+      alert("Jest już konto o takim emailu, przenoszę do logowania");
+      setIsSelectRegister(false);
+      setIsSelectLogin(true);
+      setIsLoading(false);
+      setPassword("");
+    }
   };
 
   const handleLogin = (e) => {
@@ -106,10 +116,14 @@ const Login = () => {
             <div className="login">
               <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Login</Form.Label>
+                  <Form.Label>
+                    <h1>Log In</h1>
+                  </Form.Label>
+                  <hr />
+                  <Form.Label>Email</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="Login"
+                    placeholder="Email"
                     value={loginValue}
                     onChange={(e) => setLogin(e.target.value)}
                   />
@@ -134,6 +148,10 @@ const Login = () => {
             <div className="login">
               <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>
+                    <h1>Register</h1>
+                  </Form.Label>
+                  <hr />
                   <Form.Label>E-Mail</Form.Label>
                   <Form.Control
                     type="text"
