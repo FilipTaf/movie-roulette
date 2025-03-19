@@ -44,7 +44,7 @@ const Login = () => {
           setIsLoading(false);
           setIsSelectRegister(false);
           setIsSelectLogin(true);
-          dispatch(login());
+          dispatch(login(role));
           navigate("../Roulette");
         }, 1000);
       } else {
