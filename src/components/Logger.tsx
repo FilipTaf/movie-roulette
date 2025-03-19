@@ -52,25 +52,11 @@ const Login = () => {
               </Spinner>
             </div>
           </center>
-        ) : isAdmin ? (
-          <>
-            <center>
-              <div className="login">
-                <h1>
-                  Welcome {cUser} <Icon.PersonRaisedHand />
-                </h1>
-                <img
-                  className="image"
-                  src="https://i.pinimg.com/originals/79/67/b7/7967b7455ad792c2ed7dac1dcc9ebffe.gif"
-                ></img>
-              </div>
-            </center>
-          </>
         ) : isAuth ? (
           <center>
             <div className="login">
               <h1>
-                Welcome {sUser} <Icon.PersonRaisedHand />
+                Welcome {isAdmin ? cUser : sUser} <Icon.PersonRaisedHand />
               </h1>
               <img
                 className="image"
