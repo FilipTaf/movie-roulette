@@ -3,12 +3,12 @@ import General from "../components/ToHistory/Use";
 import { useAppSelector } from "../store/hooks";
 
 const History = () => {
-  const isAuth = useAppSelector((state) => state.auth.isAuth);
-  const isAdmin = useAppSelector((state) => state.auth.isAdmin);
+  const isAuth = useAppSelector((state) => state.auth.admin);
+
   return (
     <div>
       {isAuth ? (
-        isAdmin ? (
+        isAuth == "admin" ? (
           <General />
         ) : (
           <center className="ultra center-margin">

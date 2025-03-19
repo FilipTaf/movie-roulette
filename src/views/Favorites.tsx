@@ -3,7 +3,7 @@ import MovieList from "../components/ToFavorite/FavArray";
 import { useAppSelector } from "../store/hooks";
 
 const Favorites = () => {
-  const isAuth = useAppSelector((state) => state.auth.isAuth);
+  const isAuth = useAppSelector((state) => state.auth.admin);
   return (
     <div>
       {isAuth ? (

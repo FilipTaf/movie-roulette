@@ -1,22 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 interface AuthState {
-  isAuth: boolean;
+  admin: string;
 }
 
 const initialState: AuthState = {
-  isAuth: false,
+  admin: "",
 };
 
 const loginSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    login: (state) => {
-      state.isAuth = true;
+    login: (state, action) => {
+      state.admin = action.payload;
     },
     logout: (state) => {
-      state.isAuth = false;
+      state.admin = "";
     },
   },
 });

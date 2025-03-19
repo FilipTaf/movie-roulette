@@ -8,7 +8,7 @@ import * as Icon from "react-bootstrap-icons";
 
 const MyNavbar = () => {
   const [show, setShow] = useState(false);
-  const isAuth = useAppSelector((state) => state.auth.isAuth);
+  const isAuth = useAppSelector((state) => state.auth.admin);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const dispatch = useAppDispatch();
@@ -44,7 +44,7 @@ const MyNavbar = () => {
                   to="/Roulette"
                   onClick={handleClose}
                 >
-                  <Icon.Hypnotize/> Main
+                  <Icon.Hypnotize /> Main
                 </Nav.Link>
                 <Nav.Link
                   className="ultra"
@@ -52,7 +52,7 @@ const MyNavbar = () => {
                   to="/History"
                   onClick={handleClose}
                 >
-                  <Icon.Backpack4Fill/> History
+                  <Icon.Backpack4Fill /> History
                 </Nav.Link>
                 <Nav.Link
                   className="ultra"
@@ -60,7 +60,7 @@ const MyNavbar = () => {
                   to="/Favorites"
                   onClick={handleClose}
                 >
-                  <Icon.Box2HeartFill/> Favorites
+                  <Icon.Box2HeartFill /> Favorites
                 </Nav.Link>
                 <Nav.Link
                   className="ultra"
@@ -68,7 +68,7 @@ const MyNavbar = () => {
                   to="/Account"
                   onClick={handleClose}
                 >
-                  <Icon.PersonCircle/> Account
+                  <Icon.PersonCircle /> Account
                 </Nav.Link>
                 {isAuth ? (
                   <Button className="ultra" onClick={handleLogout}>

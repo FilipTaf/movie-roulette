@@ -9,7 +9,7 @@ import React from "react";
 import { useAppSelector } from "./store/hooks";
 
 function App() {
-  const isAuth = useAppSelector((state) => state.auth.isAuth);
+  const isAuth = useAppSelector((state) => state.auth.admin);
   return (
     <>
       <Router>
@@ -20,12 +20,7 @@ function App() {
           ) : (
             <Route path="/" element={<Account />} />
           )}
-          <Route
-            path="/History"
-            element={
-              isAuth ? <History /> : <Navigate replace to={"/Account"} />
-            }
-          />
+          <Route path="/History" element={<History />} />
           <Route path="/Favorites" element={<Favorites />} />
           <Route path="/Roulette" element={<Main />} />
           <Route path="/Account" element={<Account />} />

@@ -11,8 +11,8 @@ import Spinner from "react-bootstrap/Spinner";
 const Login = () => {
   const dispatch = useAppDispatch();
   const users = useAppSelector((state) => state.register.users);
-  const isAuth = useAppSelector((state) => state.auth.isAuth);
-  const isAdmin = useAppSelector((state) => state.auth.isAdmin);
+  const isAuth = useAppSelector((state) => state.auth.admin);
+
   const [loginValue, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("user");
@@ -42,7 +42,8 @@ const Login = () => {
         setIsLoading(false);
         setIsSelectRegister(false);
         setIsSelectLogin(true);
-        dispatch(login());
+        dispatch(login(role));
+        setRole("");
         navigate("../Account");
       }, 1000);
     } else alert("Wprowadź poprawne dane");
@@ -58,7 +59,7 @@ const Login = () => {
 
     if (user) {
       setTimeout(() => {
-        dispatch(login());
+        dispatch(login(user.role));
         setIsLoading(false);
         navigate("../Roulette");
       }, 1000);
