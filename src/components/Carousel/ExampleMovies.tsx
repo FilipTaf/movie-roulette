@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import "./carousel.css";
+import "./carousel.scss";
 import { useAppSelector } from "../../store/hooks";
 
 const ExampleMovies = () => {
@@ -15,7 +15,7 @@ const ExampleMovies = () => {
 
   return (
     <>
-      <h1 style={{ marginTop: "100px", color: "white" }} id="Example">
+      <h1 style={{ marginTop: "100px", color: "black" }} id="Example">
         Example Movies
       </h1>
       <center>

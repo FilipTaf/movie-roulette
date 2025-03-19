@@ -1,6 +1,8 @@
+@import "palette.scss";
+
 #spinner {
-  color: rgb(189, 34, 38);
-  border: 1px, solid, black;
+  color: $secColorred;
+  border: 1px, solid, $theBlack;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -46,8 +48,8 @@
 .custom-dark-table {
   border-radius: 8px;
   overflow: hidden;
-  background-color: #1e1e1e;
-  color: #e0e0e0;
+  background-color: $secBGcolor;
+  color: $theBlack;
 }
 
 .custom-dark-table thead {
@@ -91,47 +93,26 @@
   margin-top: 100px;
 }
 
-.modal-header {
-  background-color: #282930;
-}
-
-.modal-footer {
-  background-color: #282930;
-}
-.modal-body {
-  background-color: #282930;
-}
-.modal-content {
-  background-color: #282930;
+.modal-header,.modal-footer,.modal-body,.modal-content {
+  background-color: $theBlack;
 }
 
 .offcanvas-body {
-  background-color: #333333;
-  color: white;
+  background-color: $secBGcolor;
+  color: $theBlack;
 }
 
 .offcanvas-header {
   color: white;
-  background-color: rgb(189, 34, 38);
-}
-
-h1 {
-  text-align: center;
-}
-
-@font-face {
-  font-family: ultra;
-  src: url(../../public/Casino.otf);
-}
-
-.ultra {
-  font-family: ultra;
-  font-size: 25px;
+  background-color: $secColoryellow;
 }
 
 .nav {
-  background-color: rgb(189, 34, 38);
-  font-family: ultra;
+  background-color: $secBGcolor;
+  @include blockstyle;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  @include FontBold
 }
 
 .image {
@@ -145,4 +126,8 @@ h1 {
   border: 5px solid black;
   border-radius: 15px;
   text-align: center;
+}
+.showIcon{
+  @include blockstyleSmall;
+  margin: 0.2rem
 }

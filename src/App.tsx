@@ -1,3 +1,4 @@
+import "./components/palette.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import History from "./views/History";
@@ -7,11 +8,15 @@ import MyNavbar from "./views/Navbar";
 import Main from "./views/Roulette";
 import React from "react";
 import { useAppSelector } from "./store/hooks";
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap');
+</style>
 
 function App() {
     const isAuth = useAppSelector((state) => state.auth.isAuth)
   return (
     <>
+    <div className="THEwebsite">
       <Router>
         <MyNavbar />
         <Routes>
@@ -22,6 +27,8 @@ function App() {
           <Route path="/Account" element={<Account />} />
         </Routes>
       </Router>
+
+    </div>
     </>
   );
 }

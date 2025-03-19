@@ -3,7 +3,7 @@ import Table from "react-bootstrap/Table";
 import { useAppSelector, useAppDispatch } from "../../store/hooks";
 import { delFavMovie } from "../../store/movieReducer";
 import { Button } from "react-bootstrap";
-import "../Main.css";
+import "../main.scss";
 import * as Icon from "react-bootstrap-icons";
 
 const MovieList = ({ query = "", isSearchClicked }) => {

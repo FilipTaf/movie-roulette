@@ -3,7 +3,7 @@ import { Navbar, Nav, Container, Offcanvas, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { logout } from "../store/loginReducer";
 import { useAppDispatch, useAppSelector } from "../store/hooks.ts";
-import "../components/main.css";
+import "../components/main.scss";
 import * as Icon from "react-bootstrap-icons";
 
 const MyNavbar = () => {
@@ -20,10 +20,10 @@ const MyNavbar = () => {
     <>
       <Navbar expand={false} variant="light" className="nav">
         <Container fluid>
-          <Navbar.Brand>
-            <h1>Movie-roulette</h1>
+          <Navbar.Brand className="">
+            Movie-roulette
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow} />
+          <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow} className="showIcon"/>
           <Navbar.Offcanvas
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
@@ -33,7 +33,7 @@ const MyNavbar = () => {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">
-                <h1 className="ultra">Movie roulette</h1>
+                <h1 className="Bigtext">Movie roulette</h1>
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>

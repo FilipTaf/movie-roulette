@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 // @ts-ignore
-import cl from "./roulette.module.css";
+import cl from "./roulette.module.scss";
 import RouletteItem from "./RouletteItem.tsx";
 import { Roulette, weaponAttributes } from "./roulette.classes.ts";
 import InfoModal from "../InfoModal.js";
@@ -81,7 +81,7 @@ const McRoulette = ({
   }
 
   return (
-    <div>
+    <div >
       <InfoModal
         isShow={show}
         movieId={weaponPrizeId}
@@ -94,13 +94,14 @@ const McRoulette = ({
             id="logo"
             src="/Baner.gif"
             alt="logo"
-            height={"400px"}
-            style={{ paddingTop: " 25px", paddingBottom: "25px" }}
+            
+            style={{ paddingTop: " 1rem", paddingBottom: "1rem" }}
           />
         </div>
       </center>
-      <div className={cl.rouletteWrapper}>
-        <div ref={rouletteContainerRef}>
+      <div className={cl.rollerpoller}>
+      <div className={cl.rouletteWrapper} >
+        <div ref={rouletteContainerRef} >
           <div className={cl.evRoulette}>
             <div className={cl.evTarget}></div>
             <div
@@ -123,12 +124,14 @@ const McRoulette = ({
             </div>
           </div>
         </div>
+
         <button className={cl.button} disabled={isSpin} onClick={play}>
           {!isSpin ? "Roll" :     
           <Spinner animation="border" role="status" size="sm">
             <span className="visually-hidden">Loading...</span>
           </Spinner>}
         </button>
+      </div>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import Faq from "../components/FAQ/Faq.tsx";
 const Main = () => {
   const isAuth = useAppSelector((state) => state.auth.isAuth);
   return (
-    <div className="ultra">
+    <div style={{paddingLeft: "2rem", paddingRight: "2rem"}}>
       {isAuth ? (
         <>
           <Mainbody />

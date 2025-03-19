@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./main.css";
+import "./main.scss";
 
 const CatFact = () => {
     const [catFact, setCatFact] = useState("")

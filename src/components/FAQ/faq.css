@@ -1,7 +1,6 @@
 .accordion-item,
 .accordion-header {
   background-color: #31333b;
-  color: white;
 }
 .accordion {
   --bs-accordion-bg: #282930;
