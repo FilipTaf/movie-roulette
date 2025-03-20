@@ -1,6 +1,5 @@
 const userList = {
-    users: [],
-  };
-  
-  export default userList;
-  
+  users: [],
+};
+
+export default userList;

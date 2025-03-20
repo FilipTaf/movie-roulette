@@ -1,5 +1,5 @@
 import userList from "./userList";
-import { createSlice, PayloadAction  } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface User {
   mail: string;
@@ -7,11 +7,11 @@ interface User {
   role: string;
 }
 
-interface UserState{
+interface UserState {
   users: User[];
 }
 
-const initialState: UserState = {users: [...userList.users]};
+const initialState: UserState = { users: [...userList.users] };
 
 const registerReducer = createSlice({
   name: "register",
@@ -19,7 +19,7 @@ const registerReducer = createSlice({
   reducers: {
     addUser: (state, action: PayloadAction<User>) => {
       state.users.push(action.payload);
-    }
+    },
   },
 });
 

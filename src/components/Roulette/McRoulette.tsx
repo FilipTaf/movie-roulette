@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 // @ts-ignore
 import cl from "./roulette.module.css";
 import RouletteItem from "./RouletteItem.tsx";
@@ -6,7 +6,7 @@ import { Roulette, weaponAttributes } from "./roulette.classes.ts";
 import InfoModal from "../InfoModal.js";
 import { useDispatch } from "react-redux";
 import { addMovie } from "../../store/drawnReducer.js";
-import Spinner from 'react-bootstrap/Spinner'
+import Spinner from "react-bootstrap/Spinner";
 interface RouletteElementParams {
   weapons: weaponAttributes[];
   weaponsCount: number;
@@ -124,10 +124,13 @@ const McRoulette = ({
           </div>
         </div>
         <button className={cl.button} disabled={isSpin} onClick={play}>
-          {!isSpin ? "Roll" :     
-          <Spinner animation="border" role="status" size="sm">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>}
+          {!isSpin ? (
+            "Roll"
+          ) : (
+            <Spinner animation="border" role="status" size="sm">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
+          )}
         </button>
       </div>
     </div>
