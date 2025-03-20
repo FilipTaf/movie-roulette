@@ -7,38 +7,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.card {
-  width: 303px;
-  display: inline-block;
-  animation-name: spin;
-  animation-duration: 4s;
-}
-#Card0 {
-  border: 0;
-  padding: 0;
-  height: 100;
-  width: 0;
-  opacity: 0;
-}
-.card-title {
-  text-align: center;
-  margin-top: 6rem;
-  margin-bottom: 6rem;
-}
 
-@keyframes spin {
-  0% {
-    height: 100px;
-    width: 100px;
-    opacity: 100%;
-    left: 0px;
-    top: 0px;
-  }
-  100% {
-    left: 400px;
-    top: 0px;
-  }
-}
 .table-container {
   padding: 20px;
   border-radius: 4px;
@@ -93,7 +62,10 @@
   margin-top: 100px;
 }
 
-.modal-header,.modal-footer,.modal-body,.modal-content {
+.modal-header,
+.modal-footer,
+.modal-body,
+.modal-content {
   background-color: $theBlack;
 }
 
@@ -112,7 +84,7 @@
   @include blockstyle;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  @include FontBold
+  @include FontBold;
 }
 
 .image {
@@ -126,7 +98,7 @@
   padding: 1rem;
   background-color: $secBGcolor;
 }
-.showIcon{
+.showIcon {
   @include blockstyleSmall;
-  margin: 0.2rem
+  margin: 0.2rem;
 }

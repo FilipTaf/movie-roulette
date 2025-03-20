@@ -1,11 +1,6 @@
-.accordion-item,
-.accordion-header {
-  background-color: #31333b;
-}
-.accordion {
-  --bs-accordion-bg: #282930;
-  --bs-accordion-btn-color: white;
-  --bs-accordion-active-color: white;
-  --bs-accordion-active-bg: rgb(92, 90, 90);
-  width: 96%;
+@import "../palette.scss";
+.card {
+  @include blockstyleSmall;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
 }
