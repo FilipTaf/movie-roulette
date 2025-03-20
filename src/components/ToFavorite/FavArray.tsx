@@ -5,6 +5,7 @@ import { delFavMovie } from "../../store/movieReducer";
 import { Button } from "react-bootstrap";
 import "../Main.css";
 import * as Icon from "react-bootstrap-icons";
+import InfoModal from "../InfoModal";
 
 const MovieList = ({ query = "", isSearchClicked }) => {
   const movies = useAppSelector((state) => state.movies);
@@ -13,7 +14,20 @@ const MovieList = ({ query = "", isSearchClicked }) => {
   const handleToggle = (title) => {
     dispatch(delFavMovie(title));
   };
-
+  const [show, setShow] = useState(false);
+  const [selectedMovie, setSelectedMovie] = useState<Movie | undefined>(
+    undefined
+  );
+  interface Movie {
+    id: number;
+    title: string;
+    description: string;
+    director: string;
+    release: string;
+    genre: string;
+    rating: string;
+    favorite: boolean;
+  }
   const favMovie = movies.filter((movie) => movie.favorite === true);
   const filteredMovies = useMemo(() => {
     if (!isSearchClicked || !query) {
@@ -41,6 +55,15 @@ const MovieList = ({ query = "", isSearchClicked }) => {
     return movies;
   }, [filteredMovies, sortAZ]);
 
+  const movieIndex = movies.findIndex(
+    (movie) => movie.title === selectedMovie?.title
+  );
+
+  const Show = (movie) => {
+    setSelectedMovie(movie);
+    setShow(true);
+  };
+
   return (
     <>
       <div className="table-container">
@@ -59,7 +82,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
           </thead>
           <tbody>
             {moviesToDisplay.map((movie, index) => (
-              <tr key={index}>
+              <tr key={index} onClick={() => Show(movie)}>
                 <td>{movie.title}</td>
                 <td>{movie.genre}</td>
                 <td>
@@ -76,6 +99,12 @@ const MovieList = ({ query = "", isSearchClicked }) => {
           </tbody>
         </Table>
       </div>
+      <InfoModal
+        isShow={show}
+        movieId={movieIndex}
+        onHide={() => setShow(false)}
+        table={false}
+      ></InfoModal>
     </>
   );
 };
