@@ -19,7 +19,7 @@ const ExampleMovies = () => {
         Example Movies
       </h1>
       <center>
-        <Carousel>
+        <Carousel >
           <Carousel.Item
             style={{
               backgroundImage: "url(" + movieList[chosenMovies[0]].img + ")",
@@ -52,6 +52,7 @@ const ExampleMovies = () => {
           </Carousel.Item>
         </Carousel>
       </center>
+
     </>
   );
 };

@@ -1,11 +1,10 @@
 @import "../palette.scss";
 
 .carousel {
-  height: 300px;
-  width: 96%;
   margin-bottom: 100px;
-  @include blockstyle;
   overflow: hidden;
+  @include blockstyle;
+  background-color: $secBGcolor ;
 }
 .carousel-item {
   height: 300px;
@@ -14,8 +13,6 @@
 .carousel-caption {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
+  color: white;
 }
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  border: 1px dotted black;
-}
+

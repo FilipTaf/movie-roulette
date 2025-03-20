@@ -121,11 +121,10 @@
 }
 
 .fact {
-  color: white;
-  margin: 30px;
-  border: 5px solid black;
-  border-radius: 15px;
-  text-align: center;
+  @include blockstyle;
+  @include FontNormal;
+  padding: 1rem;
+  background-color: $secBGcolor;
 }
 .showIcon{
   @include blockstyleSmall;

@@ -1,6 +1,6 @@
 import React from "react";
 import { Accordion } from "react-bootstrap";
-import "./faq.css";
+import "./faq.scss";
 const Faq = () => {
   return (
     <>
