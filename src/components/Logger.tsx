@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router";
 import * as Icon from "react-bootstrap-icons";
 import Spinner from "react-bootstrap/Spinner";
+import { setupListeners } from "@reduxjs/toolkit/query";
 
 const Login = () => {
   const dispatch = useAppDispatch();
@@ -29,6 +30,12 @@ const Login = () => {
 
   const handleSelectRegister = () => {
     setIsSelectRegister(true);
+  };
+  const handleReturn = () => {
+    setIsSelectLogin(false);
+    setIsSelectRegister(false);
+    setLogin("");
+    setPassword("");
   };
 
   const handleRegister = (e) => {
@@ -139,8 +146,11 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </Form.Group>
+                <Button onClick={handleReturn} style={{ margin: "1rem" }}>
+                  Return
+                </Button>
                 <Button variant="primary" type="submit">
-                  Submit
+                  Login
                 </Button>
               </Form>
             </div>
@@ -193,8 +203,11 @@ const Login = () => {
                     onChange={() => setRole("user")}
                   />
                 </Form.Group>
+                <Button onClick={handleReturn} style={{ margin: "1rem" }}>
+                  Return
+                </Button>
                 <Button variant="primary" type="submit">
-                  Submit
+                  Create account
                 </Button>
               </Form>
             </div>
@@ -202,6 +215,7 @@ const Login = () => {
         ) : (
           <center>
             <Button onClick={handleSelectLogin}>Log In</Button>
+            <br />
             <Button onClick={handleSelectRegister}>Create Account</Button>
           </center>
         )}
