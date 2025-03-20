@@ -3,7 +3,7 @@ import Table from "react-bootstrap/Table";
 import { useAppSelector, useAppDispatch } from "../../store/hooks";
 import { delFavMovie } from "../../store/movieReducer";
 import { Button } from "react-bootstrap";
-import "../Main.css";
+import "../main.scss";
 import * as Icon from "react-bootstrap-icons";
 import InfoModal from "../InfoModal";
 
@@ -67,12 +67,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
   return (
     <>
       <div className="table-container">
-        <Table
-          bordered
-          hover
-          responsive
-          className="custom-dark-table table-dark"
-        >
+        <Table bordered hover responsive>
           <thead>
             <tr className="table-active">
               <th onClick={handleSort}>Title</th>

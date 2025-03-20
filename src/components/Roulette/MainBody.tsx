@@ -1,9 +1,10 @@
 import React from "react";
-import "../main.css";
+//import "../main.scss";
 import { useAppSelector } from "../../store/hooks.ts";
 // @ts-ignore
 import cl from "../../App.module.css";
 import McRoulette from "./McRoulette.tsx";
+
 
 const Mainbody = () => {
   const movie = useAppSelector((state) => state.movies);

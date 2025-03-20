@@ -1,0 +1,7 @@
+@import "../palette.scss";
+.cardgroupper {
+  @include blockstyle;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  background-color: $secColoryellow;
+}

@@ -4,10 +4,11 @@ import { useAppSelector } from "../store/hooks";
 import CatFact from "../components/CatFact";
 import ExampleMovies from "../components/Carousel/ExampleMovies.tsx";
 import Faq from "../components/FAQ/Faq.tsx";
+
 const Main = () => {
   const isAuth = useAppSelector((state) => state.auth.admin);
   return (
-    <div className="ultra">
+    <div style={{paddingLeft: "2rem", paddingRight: "2rem"}}>
       {isAuth ? (
         <>
           <Mainbody />

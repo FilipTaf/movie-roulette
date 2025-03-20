@@ -3,12 +3,17 @@ import { Navbar, Nav, Container, Offcanvas, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { logout } from "../store/loginReducer.ts";
 import { useAppDispatch, useAppSelector } from "../store/hooks.ts";
-import "../components/main.css";
+import "../components/main.scss";
 import * as Icon from "react-bootstrap-icons";
 
 const MyNavbar = () => {
   const [show, setShow] = useState(false);
+<<<<<<< HEAD
   const isAuth = useAppSelector((state) => state.auth.admin);
+=======
+  //ts-ignore
+  const isAuth = useAppSelector((state) => state.auth.isAuth);
+>>>>>>> fixing-the-css
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const dispatch = useAppDispatch();
@@ -20,10 +25,10 @@ const MyNavbar = () => {
     <>
       <Navbar expand={false} variant="light" className="nav">
         <Container fluid>
-          <Navbar.Brand>
-            <h1>Movie-roulette</h1>
+          <Navbar.Brand className="">
+            Movie-roulette
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow} />
+          <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow} className="showIcon"/>
           <Navbar.Offcanvas
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
@@ -33,7 +38,7 @@ const MyNavbar = () => {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">
-                <h1 className="ultra">Movie roulette</h1>
+                <h2 className="Bigtext">Movie roulette</h2>
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
@@ -71,7 +76,7 @@ const MyNavbar = () => {
                   <Icon.PersonCircle /> Account
                 </Nav.Link>
                 {isAuth ? (
-                  <Button className="ultra" onClick={handleLogout}>
+                  <Button variant="danger" onClick={handleLogout}>
                     Logout
                   </Button>
                 ) : (

@@ -1,0 +1,17 @@
+@import "../palette.scss";
+
+.carousel {
+  margin-bottom: 100px;
+  overflow: hidden;
+  @include blockstyle;
+  background-color: $secColorblue;
+}
+.carousel-item {
+  height: 300px;
+  background-size: 100% 100%;
+}
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  color: white;
+}

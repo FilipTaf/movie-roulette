@@ -1,0 +1,132 @@
+@import "../palette.scss";
+
+.logoblock {
+  width: 10rem;
+  position: relative;
+  float: left;
+}
+.rollerpoller {
+  @include blockstyle;
+  margin: 0px;
+  padding: 1rem;
+  background-color: $secColorred;
+}
+/*
+.rouletteWrapper {
+  margin-top: 0px;
+  position: relative;
+}
+*/
+
+.history {
+  position: absolute;
+  top: 10px;
+}
+
+.evRoulette {
+  @include blockstyleSmall;
+  margin: 0 auto;
+  width: 70rem;
+  font-family: sans-serif;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background-color: $theBlack;
+}
+
+.evTarget {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 3px;
+  height: 200px;
+  background: $secColorred;
+  z-index: 2;
+}
+
+.evWeapons {
+  height: 200px;
+  white-space: nowrap;
+  position: relative;
+  left: 0;
+}
+
+.evWeapon {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+
+.evWeaponInner {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.evWeaponInner img {
+  width: 120px;
+  height: 90px;
+  position: absolute;
+  top: 0;
+  left: 35px;
+}
+/*
+.evWeaponText {
+  position: absolute;
+  top: 90px;
+  left: 5px;
+  width: 185px;
+  height: 50px;
+  background: #242531;
+}*/
+.evWeaponText {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  width: 185px;
+  height: 100%;
+  background: $theBlack;
+}
+/*
+.ev-weapon-textp p :not(#title) {
+  height: 15px;
+  line-height: 15px;
+  color: #e4e4e4;
+  font-size: 12px;
+  margin: 0;
+  padding: 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+*/
+.evWeaponText p {
+  height: 15px;
+  line-height: 15px;
+  color: white;
+  font-size: 12px;
+  margin: 0;
+  padding: 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ev-weapon-text p:first-child {
+  margin-top: 10px;
+}
+
+.button {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  padding: 5px 120px;
+  background-color: $secColorgreen;
+  color: #fff;
+  @include blockstyleSmall;
+  margin: 30px auto 0;
+
+  &:disabled {
+    background-color: #7fbc8c;
+    color: rgba(#fff, 0.6);
+  }
+}

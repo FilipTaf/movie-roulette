@@ -1,6 +1,6 @@
 import React from "react";
 // @ts-ignore
-import cl from "./rouletteItem.module.css";
+import cl from "./roulette.module.scss";
 
 interface rouletteItemProps {
   id: number;

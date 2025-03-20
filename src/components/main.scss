@@ -1,0 +1,121 @@
+@import "palette.scss";
+
+#spinner {
+  color: $secColorred;
+  border: 1px, solid, $theBlack;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.table-container {
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+  background-color: $secColorblue;
+}
+
+.custom-dark-table {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: $secBGcolor;
+  color: $theBlack;
+}
+
+.custom-dark-table thead {
+  background-color: $secColorred;
+  color: #ffffff;
+}
+
+.custom-dark-table thead th {
+  padding: 12px;
+  font-size: 16px;
+}
+
+.custom-dark-table tbody tr {
+  transition: background 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login {
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(9px);
+  color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+}
+
+.LoginPage {
+  height: 94vh;
+  background: url("/kasyno.jpg") no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+}
+
+.center-margin {
+  margin-top: 100px;
+}
+
+.modal-header,
+.modal-footer,
+.modal-body,
+.modal-content {
+  background-color: $theBlack;
+}
+
+.nav {
+  background-color: $secColorred;
+  @include blockstyle;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  @include FontBold;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.fact {
+  @include blockstyle;
+  @include FontNormal;
+  padding: 1rem;
+  background-color: $secColorpurple;
+}
+.showIcon {
+  @include blockstyleSmall;
+  margin: 0.2rem;
+}
+footer {
+  @include blockstyle();
+  margin: 0rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  background-color: $mainBGcolor;
+  -webkit-box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
+  @include FontNormal();
+  color: $mainBGcolor;
+  background-color: $theBlack;
+}
+.offcanvas-body {
+  @include FontNormal;
+  background-color: $secBGcolor;
+  color: $theBlack;
+}
+
+.offcanvas-header {
+  color: $theBlack;
+  background-color: $mainBGcolor;
+}
+.Bigtext {
+  @include FontBold;
+}
