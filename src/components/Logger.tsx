@@ -20,7 +20,7 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSelectLogin, setIsSelectLogin] = useState(false);
   const [isSelectRegister, setIsSelectRegister] = useState(false);
-  const codeMail = /^[a-zA-Z]{2,}@[a-zA-Z]{2,}.[a-zA-Z]{2,}$/;
+  const codeMail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
   const codePass = /^(?=.*[A-Z])(?=.*[^\w\s]).+$/;
 
   const handleSelectLogin = () => {
