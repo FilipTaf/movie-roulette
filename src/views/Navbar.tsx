@@ -8,12 +8,7 @@ import * as Icon from "react-bootstrap-icons";
 
 const MyNavbar = () => {
   const [show, setShow] = useState(false);
-<<<<<<< HEAD
   const isAuth = useAppSelector((state) => state.auth.admin);
-=======
-  //ts-ignore
-  const isAuth = useAppSelector((state) => state.auth.isAuth);
->>>>>>> fixing-the-css
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const dispatch = useAppDispatch();
@@ -25,10 +20,12 @@ const MyNavbar = () => {
     <>
       <Navbar expand={false} variant="light" className="nav">
         <Container fluid>
-          <Navbar.Brand className="">
-            Movie-roulette
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow} className="showIcon"/>
+          <Navbar.Brand className="">Movie-roulette</Navbar.Brand>
+          <Navbar.Toggle
+            aria-controls="offcanvasNavbar"
+            onClick={handleShow}
+            className="showIcon"
+          />
           <Navbar.Offcanvas
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
