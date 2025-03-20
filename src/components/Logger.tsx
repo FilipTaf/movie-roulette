@@ -48,10 +48,12 @@ const Login = () => {
           navigate("../Roulette");
         }, 1000);
       } else {
-        alert("Wprowadź poprawne dane");
+        alert("Enter correct detalis");
       }
     } else {
-      alert("Jest już konto o takim emailu, przenoszę do logowania");
+      alert(
+        "There is already an account with this e-mail, I'm moving it to login"
+      );
       setIsSelectRegister(false);
       setIsSelectLogin(true);
       setIsLoading(false);
@@ -75,7 +77,7 @@ const Login = () => {
       }, 1000);
     } else {
       setTimeout(() => {
-        alert("Invalid login or password");
+        alert("Invalid e-mail or password");
         setIsLoading(false);
       }, 1000);
     }
