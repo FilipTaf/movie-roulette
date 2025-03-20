@@ -50,11 +50,12 @@
   color: #fff;
   border-radius: 12px;
   padding: 30px 40px;
+  @include blockstyle;
+  background-color: $secColorgreen;
 }
 
 .LoginPage {
   height: 94vh;
-  background: url("/kasyno.jpg") no-repeat;
   background-size: cover;
   padding-top: 100px;
 }
