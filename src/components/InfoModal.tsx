@@ -15,34 +15,27 @@ const InfoModal = ({ isShow, movieId, onHide, table }) => {
   const forFavoriteIcon = movieList[movieIndex];
   return (
     <>
-      <Modal show={isShow} onHide={onHide} centered>
-        <Modal.Header closeButton>
-          <Modal.Title>{}</Modal.Title>
+      <Modal show={isShow} onHide={onHide} centered style={{ color: "white" }}>
+        <Modal.Header>
+          <Modal.Title>{theChosenOne?.title}</Modal.Title>
         </Modal.Header>
-        {theChosenOne ? (
-          <Modal.Body
-            style={{
-              backgroundImage: "url(" + theChosenOne.img + ")",
-              backgroundPosition: "center",
-              backgroundSize: "100% 100%",
-              backgroundRepeat: "no-repeat",
-            }}
-          >
-            <div style={{ background: "rgba(0,0,0,0.3)", color: "white" }}>
-              Tytuł : {theChosenOne.title}
-              <br />
-              Reżyser : {theChosenOne.director}
-              <br />
-              Opis : {theChosenOne.description}
-              <br />
-              Gatunek : {theChosenOne.genre}
-              <br />
-              Ocena : {theChosenOne.rating}
-            </div>
-          </Modal.Body>
-        ) : (
-          ""
-        )}
+        <Modal.Body>
+          <div>
+            <img
+              style={{ width: "100%", height: "300px" }}
+              src={theChosenOne?.img}
+            />
+            <br />
+            <b>Reżyser</b> : {theChosenOne?.director}
+            <br />
+            <b> Opis</b> : {theChosenOne?.description}
+            <br />
+            <b>Gatunek</b> : {theChosenOne?.genre}
+            <br />
+            <b> Ocena</b> : {theChosenOne?.rating}
+          </div>
+        </Modal.Body>
+
         <Modal.Footer>
           <Button variant="success" onClick={onHide}>
             Ok
@@ -52,14 +45,10 @@ const InfoModal = ({ isShow, movieId, onHide, table }) => {
             onClick={() => dispatch(addFavMovie(theChosenOne.title))}
           >
             Dodaj do ulubionych{" "}
-            {forFavoriteIcon ? (
-              forFavoriteIcon.favorite ? (
-                <BookmarkHeartFill />
-              ) : (
-                <BookmarkHeart />
-              )
+            {forFavoriteIcon?.favorite ? (
+              <BookmarkHeartFill />
             ) : (
-              ""
+              <BookmarkHeart />
             )}
           </Button>
         </Modal.Footer>
