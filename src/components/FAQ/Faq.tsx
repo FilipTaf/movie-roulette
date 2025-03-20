@@ -4,8 +4,8 @@ import "./faq.scss";
 const Faq = () => {
   return (
     <>
-      <h1>FAQ</h1>
       <center className="cardgroupper">
+        <h1>FAQ</h1>
         <CardGroup>
           <Card style={{ width: "18rem" }}>
             <Card.Body>

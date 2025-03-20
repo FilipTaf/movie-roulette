@@ -12,6 +12,7 @@
   padding: 20px;
   border-radius: 4px;
   text-align: center;
+  background-color: $secColorblue;
 }
 
 .custom-dark-table {
@@ -22,7 +23,7 @@
 }
 
 .custom-dark-table thead {
-  background-color: #333;
+  background-color: $secColorred;
   color: #ffffff;
 }
 
@@ -69,10 +70,8 @@
   background-color: $theBlack;
 }
 
-
-
 .nav {
-  background-color: $secBGcolor;
+  background-color: $secColorred;
   @include blockstyle;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -88,13 +87,13 @@
   @include blockstyle;
   @include FontNormal;
   padding: 1rem;
-  background-color: $secBGcolor;
+  background-color: $secColorpurple;
 }
 .showIcon {
   @include blockstyleSmall;
   margin: 0.2rem;
 }
-footer{
+footer {
   @include blockstyle();
   margin: 0rem;
   margin-left: 4rem;
@@ -114,10 +113,9 @@ footer{
 }
 
 .offcanvas-header {
-
   color: $theBlack;
   background-color: $mainBGcolor;
 }
-.Bigtext{
+.Bigtext {
   @include FontBold;
 }

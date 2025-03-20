@@ -3,59 +3,60 @@
 </style>*/
 
 @mixin FontNormal {
-    font-family: "Work Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 @mixin FontBold {
-    font-family: "Work Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal; 
-  }
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
 
-$mainBGcolor: #FCEEE3;
-$secBGcolor: #F9F5F2;
+//$mainBGcolor: #3a3734;
+$mainBGcolor: #fceee3;
+$secBGcolor: #f9f5f2;
 $theBlack: rgba(0, 0, 0, 1);
-$secColorblue: #88CEEB;
-$secColorgreen: #91ED91;
-$secColoryellow: #F4D839;
-$secColorred: #FF7A5C;
-$secColorpurple: #A488EF;
+$secColorblue: #88ceeb;
+$secColorgreen: #91ed91;
+$secColoryellow: #f4d839;
+$secColorred: #ff7a5c;
+$secColorpurple: #a488ef;
 
 @mixin blockstyle {
-    border: 3px $theBlack solid;    
-    -webkit-box-shadow: 8px 8px 0px -2px rgba(0, 0, 0, 0.745);
-    -moz-box-shadow: 8px 8px 0px -2px rgba(0, 0, 0, 0.745);
-    box-shadow: 8px 8px 0px -2px rgba(0, 0, 0, 0.745);
-    margin: 2rem;
-    padding: 1rem;
-    border-radius: 5px;
-  }
-
-  @mixin blockstyleSmall {
-    border: 2px $theBlack solid;    
-    -webkit-box-shadow: 4px 4px 0px -1px rgba(0, 0, 0, 0.745);
-    -moz-box-shadow: 4px 4px 0px -1px rgba(0, 0, 0, 0.745);
-    box-shadow: 4px 4px 0px -1px rgba(0, 0, 0, 0.745);
-    margin: 0.5rem;
-    border-radius: 5px;
-  }
-
-body{
-    background-color: $secBGcolor;
+  border: 3px $theBlack solid;
+  -webkit-box-shadow: 8px 8px 0px -2px rgba(0, 0, 0, 0.745);
+  -moz-box-shadow: 8px 8px 0px -2px rgba(0, 0, 0, 0.745);
+  box-shadow: 8px 8px 0px -2px rgba(0, 0, 0, 0.745);
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 5px;
 }
-.THEwebsite{
-    background-color: $mainBGcolor;
-    @include blockstyle();
-    margin: 0.5rem;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    -webkit-box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
-    box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
-    @include FontNormal();
-    margin-bottom: 0%;
+
+@mixin blockstyleSmall {
+  border: 2px $theBlack solid;
+  -webkit-box-shadow: 4px 4px 0px -1px rgba(0, 0, 0, 0.745);
+  -moz-box-shadow: 4px 4px 0px -1px rgba(0, 0, 0, 0.745);
+  box-shadow: 4px 4px 0px -1px rgba(0, 0, 0, 0.745);
+  margin: 0.5rem;
+  border-radius: 5px;
+}
+
+body {
+  background-color: $secBGcolor;
+}
+.THEwebsite {
+  background-color: $mainBGcolor;
+  @include blockstyle();
+  margin: 0.5rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  -webkit-box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
+  @include FontNormal();
+  margin-bottom: 0%;
 }

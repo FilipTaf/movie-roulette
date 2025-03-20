@@ -4,7 +4,7 @@
   margin-bottom: 100px;
   overflow: hidden;
   @include blockstyle;
-  background-color: $secBGcolor ;
+  background-color: $secColorblue;
 }
 .carousel-item {
   height: 300px;
@@ -15,4 +15,3 @@
   border-radius: 20px;
   color: white;
 }
-

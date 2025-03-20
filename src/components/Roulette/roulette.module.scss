@@ -3,13 +3,13 @@
 .logoblock {
   width: 10rem;
   position: relative;
-  float: left
+  float: left;
 }
-.rollerpoller{
+.rollerpoller {
   @include blockstyle;
   margin: 0px;
   padding: 1rem;
-  background-color: $secBGcolor;
+  background-color: $secColorred;
 }
 /*
 .rouletteWrapper {
@@ -36,7 +36,7 @@
 
 .evTarget {
   position: absolute;
-  top: 0; 
+  top: 0;
   left: 50%;
   width: 3px;
   height: 200px;
@@ -55,15 +55,12 @@
   display: inline-block;
   width: 200px;
   height: 200px;
-
 }
 
 .evWeaponInner {
   width: 200px;
   height: 200px;
   position: relative;
-
-
 }
 
 .evWeaponInner img {
@@ -88,7 +85,7 @@
   left: 5px;
   width: 185px;
   height: 100%;
-  background: $theBlack
+  background: $theBlack;
 }
 /*
 .ev-weapon-textp p :not(#title) {
@@ -129,7 +126,7 @@
   margin: 30px auto 0;
 
   &:disabled {
-    background-color: #7FBC8C;
+    background-color: #7fbc8c;
     color: rgba(#fff, 0.6);
   }
 }

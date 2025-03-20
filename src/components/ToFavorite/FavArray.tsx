@@ -44,12 +44,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
   return (
     <>
       <div className="table-container">
-        <Table
-          bordered
-          hover
-          responsive
-          className="custom-dark-table table-dark"
-        >
+        <Table bordered hover responsive>
           <thead>
             <tr className="table-active">
               <th onClick={handleSort}>Title</th>
