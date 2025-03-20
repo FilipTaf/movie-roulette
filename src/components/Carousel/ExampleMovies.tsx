@@ -15,9 +15,11 @@ const ExampleMovies = () => {
 
   return (
     <>
-      <h1 style={{ marginTop: "100px", color: "black" }} id="Example">
+      <center>
+      <h1 style={{ marginTop: "3rem", color: "black" }} id="Example">
         Example Movies
       </h1>
+      </center>
       <center>
         <Carousel >
           <Carousel.Item

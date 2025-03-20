@@ -92,10 +92,10 @@ const McRoulette = ({
         <div className="logoblock">
           <img
             id="logo"
-            src="/Baner.gif"
+            src="/newlogo.svg"
             alt="logo"
             
-            style={{ paddingTop: " 1rem", paddingBottom: "1rem" }}
+            style={{ paddingTop: " 0.5rem", paddingBottom: "0.5rem" , width:"35rem"}}
           />
         </div>
       </center>

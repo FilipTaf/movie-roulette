@@ -23,12 +23,13 @@ $secColorblue: #88CEEB;
 $secColorgreen: #91ED91;
 $secColoryellow: #F4D839;
 $secColorred: #FF7A5C;
+$secColorpurple: #A488EF;
 
 @mixin blockstyle {
     border: 3px $theBlack solid;    
-    -webkit-box-shadow: 8px 8px 0px -2px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 8px 8px 0px -2px rgba(0, 0, 0, 1);
-    box-shadow: 8px 8px 0px -2px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 8px 8px 0px -2px rgba(0, 0, 0, 0.745);
+    -moz-box-shadow: 8px 8px 0px -2px rgba(0, 0, 0, 0.745);
+    box-shadow: 8px 8px 0px -2px rgba(0, 0, 0, 0.745);
     margin: 2rem;
     padding: 1rem;
     border-radius: 5px;
@@ -36,9 +37,9 @@ $secColorred: #FF7A5C;
 
   @mixin blockstyleSmall {
     border: 2px $theBlack solid;    
-    -webkit-box-shadow: 4px 4px 0px -1px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 4px 4px 0px -1px rgba(0, 0, 0, 1);
-    box-shadow: 4px 4px 0px -1px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 4px 4px 0px -1px rgba(0, 0, 0, 0.745);
+    -moz-box-shadow: 4px 4px 0px -1px rgba(0, 0, 0, 0.745);
+    box-shadow: 4px 4px 0px -1px rgba(0, 0, 0, 0.745);
     margin: 0.5rem;
     border-radius: 5px;
   }
@@ -55,5 +56,6 @@ body{
     -webkit-box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
     -moz-box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
     box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
-    @include FontNormal()
+    @include FontNormal();
+    margin-bottom: 0%;
 }

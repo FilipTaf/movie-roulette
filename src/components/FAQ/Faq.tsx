@@ -5,7 +5,7 @@ const Faq = () => {
   return (
     <>
       <h1>FAQ</h1>
-      <center>
+      <center className="cardgroupper">
         <CardGroup>
           <Card style={{ width: "18rem" }}>
             <Card.Body>

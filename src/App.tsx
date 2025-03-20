@@ -5,6 +5,7 @@ import History from "./views/History";
 import Favorites from "./views/Favorites";
 import Account from "./views/Account";
 import MyNavbar from "./views/Navbar";
+import Footer from "./views/Footer";
 import Main from "./views/Roulette";
 import React from "react";
 import { useAppSelector } from "./store/hooks";
@@ -27,8 +28,8 @@ function App() {
           <Route path="/Account" element={<Account />} />
         </Routes>
       </Router>
-
     </div>
+    <Footer />
     </>
   );
 }

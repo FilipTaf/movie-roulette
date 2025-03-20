@@ -8,6 +8,7 @@ import * as Icon from "react-bootstrap-icons";
 
 const MyNavbar = () => {
   const [show, setShow] = useState(false);
+  //ts-ignore
   const isAuth = useAppSelector((state) => state.auth.isAuth);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -33,7 +34,7 @@ const MyNavbar = () => {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">
-                <h1 className="Bigtext">Movie roulette</h1>
+                <h2 className="Bigtext">Movie roulette</h2>
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
@@ -71,7 +72,7 @@ const MyNavbar = () => {
                   <Icon.PersonCircle/> Account
                 </Nav.Link>
                 {isAuth ? (
-                  <Button className="ultra" onClick={handleLogout}>
+                  <Button variant="danger" onClick={handleLogout}>
                     Logout
                   </Button>
                 ) : (

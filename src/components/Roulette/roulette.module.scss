@@ -1,7 +1,7 @@
 @import "../palette.scss";
 
 .logoblock {
-  width: 50%;
+  width: 10rem;
   position: relative;
   float: left
 }
@@ -24,9 +24,9 @@
 }
 
 .evRoulette {
-  @include blockstyle;
+  @include blockstyleSmall;
   margin: 0 auto;
-  width: 80rem;
+  width: 70rem;
   font-family: sans-serif;
   height: 200px;
   overflow: hidden;
