@@ -19,7 +19,7 @@
 .evRoulette {
   @include blockstyleSmall;
   margin: 0 auto;
-  width: 70rem;
+  width: 76rem;
   font-family: sans-serif;
   height: 200px;
   overflow: hidden;
@@ -67,7 +67,7 @@
 .evWeaponText {
   position: absolute;
   bottom: 0;
-  left: -45px;
+  left: -4.5rem;
   width: 185px;
   height: 100%;
   background: $theBlack;
