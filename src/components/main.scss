@@ -1,7 +1,7 @@
 @import "palette.scss";
 
-h1{
-  @include FontBold
+h1 {
+  @include FontBold;
 }
 
 #spinner {
@@ -78,14 +78,11 @@ h1{
 .nav {
   //background-color: $secColorred;
   //@include blockstyle;
-  margin-top: 0;
-  margin-left: 0;
   padding-left: 3rem;
   padding-right: 3rem;
   @include FontBold;
   z-index: 1000;
   width: 100%;
-
 }
 
 .navSticky {
@@ -103,9 +100,9 @@ h1{
   position: fixed;
   width: 100%;
   z-index: 1000;
-  left: 0px;
-  top: 0px;
-  transition: bottom 2s;
+  top: 0;
+  left: 0;
+  transition: all 0.2s;
 }
 
 .image {
