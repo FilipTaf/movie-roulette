@@ -1,4 +1,3 @@
-
 @mixin FontNormal {
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
@@ -47,12 +46,13 @@ body {
 .THEwebsite {
   background-color: $mainBGcolor;
   @include blockstyle();
-  margin: 0.5rem;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  border-radius: 0;
+  margin: 0;
   -webkit-box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
   -moz-box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
   box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
   @include FontNormal();
-  margin-bottom: 0%;
+
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
