@@ -2,8 +2,9 @@ import React, { useMemo, useState } from "react";
 import Table from "react-bootstrap/Table";
 import { useAppSelector, useAppDispatch } from "../../store/hooks";
 import { delFavMovie } from "../../store/movieReducer";
-import { Button } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import "../main.scss";
+import styles from "./table.module.scss";
 import * as Icon from "react-bootstrap-icons";
 import InfoModal from "../InfoModal";
 
@@ -66,7 +67,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
 
   return (
     <>
-      <div className="table-container">
+      <Container className={styles.tableContainer}>
         <Table bordered hover responsive>
           <thead>
             <tr className="table-active">
@@ -93,7 +94,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
             ))}
           </tbody>
         </Table>
-      </div>
+      </Container>
       <InfoModal
         isShow={show}
         movieId={movieIndex}
