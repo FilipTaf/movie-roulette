@@ -4,11 +4,15 @@ import { useAppSelector } from "../store/hooks";
 import CatFact from "../components/CatFact";
 import ExampleMovies from "../components/Carousel/ExampleMovies.tsx";
 import Faq from "../components/FAQ/Faq.tsx";
+import MyNavbar from "./Navbar";
+
 
 const Main = () => {
   const isAuth = useAppSelector((state) => state.auth.admin);
   return (
-    <div style={{paddingLeft: "2rem", paddingRight: "2rem"}}>
+    <div >
+      <MyNavbar />
+      <div style={{paddingLeft: "2rem", paddingRight: "2rem"}}>
       {isAuth ? (
         <>
           <Mainbody />
@@ -23,6 +27,7 @@ const Main = () => {
           </div>
         </center>
       )}
+      </div>
     </div>
   );
 };
