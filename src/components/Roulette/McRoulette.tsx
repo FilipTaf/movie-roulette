@@ -95,7 +95,7 @@ const McRoulette = ({
             src="/newlogo.svg"
             alt="logo"
             
-            style={{ paddingTop: " 0.5rem", paddingBottom: "0.5rem" , width:"35rem"}}
+            style={{ paddingTop: " 0.5rem", paddingBottom: "0.5rem" , width:"48rem"}}
           />
         </div>
       </center>

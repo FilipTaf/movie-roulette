@@ -93,12 +93,12 @@
   display: block;
   padding: 5px 120px;
   background-color: $secColorgreen;
-  color: #fff;
+  color: $theBlack;
   @include blockstyleSmall;
   margin: 30px auto 0;
 
   &:disabled {
     background-color: #7fbc8c;
-    color: rgba(#fff, 0.6);
+    color: rgba($theBlack, 0.6);
   }
 }
