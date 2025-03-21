@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar, Nav, Container, Offcanvas, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { logout } from "../store/loginReducer.ts";
@@ -15,10 +15,22 @@ const MyNavbar = () => {
   const handleLogout = () => {
     dispatch(logout());
   };
+  const [sticky, setSticky] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setSticky(window.scrollY >= 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
   return (
     <>
-      <Navbar expand={false} variant="light" className="nav">
+      <Navbar
+        expand={false}
+        variant="light"
+        className={sticky ? "navSticky" : "nav"}
+      >
         <Container fluid>
           <Navbar.Brand className="">Movie-roulette</Navbar.Brand>
           <Navbar.Toggle

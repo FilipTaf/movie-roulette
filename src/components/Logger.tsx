@@ -214,9 +214,11 @@ const Login = () => {
           </center>
         ) : (
           <center>
-            <Button onClick={handleSelectLogin}>Log In</Button>
-            <br />
-            <Button onClick={handleSelectRegister}>Create Account</Button>
+            <div className="login">
+              <Button onClick={handleSelectLogin}>Log In</Button>
+              <br />
+              <Button onClick={handleSelectRegister}>Create Account</Button>
+            </div>
           </center>
         )}
       </div>

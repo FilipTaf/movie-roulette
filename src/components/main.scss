@@ -59,9 +59,9 @@ h1{
 }
 
 .LoginPage {
-  height: 94vh;
+  height: 32.2rem;
   background-size: cover;
-  padding-top: 100px;
+  padding: 0;
 }
 
 .center-margin {
@@ -78,9 +78,31 @@ h1{
 .nav {
   background-color: $secColorred;
   @include blockstyle;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0;
+  margin-left: 0;
   @include FontBold;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navSticky {
+  background-color: $secColorred;
+  @include blockstyle;
+  -webkit-box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0);
+  border-radius: 0%;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  margin: 0;
+  @include FontBold;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  left: 0px;
+  top: 0px;
+  transition: bottom 2s;
 }
 
 .image {
