@@ -88,17 +88,19 @@ const McRoulette = ({
         onHide={() => setShow(false)}
         table={rouletteWeapons}
       ></InfoModal>
-      <center>
+      <center className= {cl.abovelogoblock}>
         <div className="logoblock">
           <img
             id="logo"
             src="/newlogo.svg"
             alt="logo"
             
-            style={{ paddingTop: " 0.5rem", paddingBottom: "0.5rem" , width:"48rem"}}
+            style={{ paddingBottom: "1.5rem" , width:"48rem",  top: "-5rem"}}
           />
         </div>
       </center>
+      {/*i dont want to talk about all of these div. Somebody should do something about it because i dont know how to do it with out them*/}
+      <div className={cl.aboverollerpoller}>  
       <div className={cl.rollerpoller}>
       <div className={cl.rouletteWrapper} >
         <div ref={rouletteContainerRef} >
@@ -124,7 +126,6 @@ const McRoulette = ({
             </div>
           </div>
         </div>
-
         <button className={cl.button} disabled={isSpin} onClick={play}>
           {!isSpin ? (
             "Roll"
@@ -134,6 +135,7 @@ const McRoulette = ({
             </Spinner>
           )}
         </button>
+      </div>
       </div>
       </div>
     </div>

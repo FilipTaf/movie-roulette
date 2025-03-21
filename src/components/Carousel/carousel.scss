@@ -1,10 +1,16 @@
 @import "../palette.scss";
-
+.maindivcar{
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 0rem;
+  background-color: $mainBGcolor; 
+  padding-bottom: 3rem;
+}
 .carousel {
-  margin-bottom: 100px;
   overflow: hidden;
   @include blockstyle;
   background-color: $secColorblue;
+  margin: 0px;
 }
 .carousel-item {
   height: 300px;

@@ -3,7 +3,6 @@ import "../components/main.scss";
 import * as Icon from "react-bootstrap-icons";
 
 const Footer = () => {
-//© 2025 Skavi
   return (
     <>
       <footer>

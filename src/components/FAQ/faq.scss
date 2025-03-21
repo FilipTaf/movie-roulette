@@ -1,25 +1,30 @@
 @import "../palette.scss";
 .cardgroupper {
-  @include blockstyle;
-  margin-left: 0.7rem;
-  margin-right: 0.7rem;
+  //@include blockstyle;
+  border-top: 2px $theBlack solid;
+  padding: 3rem;
   background-color: $secColoryellow;
-}
-.cards{
-  border: 2px $theBlack solid;
-  border-radius: 25px;
 }
 #card1{
   background-color: $secColorgreen;
+  border-radius: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 #card2{
   background-color: $secColorred;
+  border-radius: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 #card3{
   background-color: $secColorblue;
+  border-radius: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .card-img-top{
-  width: 10rem;
+  width: 6rem;
   margin: 0.5rem;
   margin-bottom: 2rem;
 }

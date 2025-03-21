@@ -1,15 +1,30 @@
 @import "../palette.scss";
-
+.abovelogoblock{
+  padding: 3rem;
+  padding-top: 1rem;
+  background-color: $secBGcolor;
+}
 .logoblock {
   width: 10rem;
   position: relative;
   float: left;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  background-color: $secBGcolor; 
+}
+.aboverollerpoller{
+  background-color: $mainBGcolor;
+  border-top: 2px $theBlack solid;
 }
 .rollerpoller {
   @include blockstyle;
   margin: 0px;
   padding: 1rem;
   background-color: $secColorred;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  position: relative;
+  top: -5rem;
 }
 .history {
   position: absolute;

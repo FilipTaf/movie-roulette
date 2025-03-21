@@ -11,7 +11,9 @@
   font-weight: 900;
   font-style: normal;
 }
+//$mainBGcolor: #1ABC9C;
 
+//the first color palette
 $mainBGcolor: #fceee3;
 $secBGcolor: #f9f5f2;
 $theBlack: rgba(0, 0, 0, 1);
@@ -41,11 +43,9 @@ $secColorpurple: #a488ef;
 }
 
 body {
-  background-color: $secBGcolor;
+  background-color:   $secBGcolor;
 }
 .THEwebsite {
-  background-color: $mainBGcolor;
+  background-color: $secBGcolor;
   @include FontNormal();
-  padding-left: 3rem;
-  padding-right: 3rem;
 }

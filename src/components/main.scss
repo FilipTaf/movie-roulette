@@ -78,8 +78,8 @@ h1 {
 .nav {
   //background-color: $secColorred;
   //@include blockstyle;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
   @include FontBold;
   z-index: 1000;
   width: 100%;
@@ -109,11 +109,17 @@ h1 {
   width: 100%;
   height: 100%;
 }
-
+.abovefact{
+  padding: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;  
+  background-color: $mainBGcolor;
+}
 .fact {
   @include blockstyle;
   @include FontNormal;
   padding: 1rem;
+  margin: 0px;
   background-color: $secColorpurple;
 }
 .showIcon {
