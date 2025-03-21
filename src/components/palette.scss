@@ -1,6 +1,3 @@
-/* <style>
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap');
-</style>*/
 
 @mixin FontNormal {
   font-family: "Work Sans", sans-serif;
@@ -16,7 +13,6 @@
   font-style: normal;
 }
 
-//$mainBGcolor: #3a3734;
 $mainBGcolor: #fceee3;
 $secBGcolor: #f9f5f2;
 $theBlack: rgba(0, 0, 0, 1);

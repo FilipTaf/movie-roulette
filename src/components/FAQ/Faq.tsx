@@ -7,9 +7,9 @@ const Faq = () => {
       <center className="cardgroupper">
         <h1>FAQ</h1>
         <CardGroup>
-          <Card style={{ width: "18rem" }}>
+          <Card className="cards" id="card1">
             <Card.Body>
-              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Img variant="top" src="../public/mark.svg" />
               <Card.Title>Why would I use this site ?</Card.Title>
               <Card.Text>
                 Arrr, ye ever found yerself in a bind, not knowin' what to
@@ -24,9 +24,9 @@ const Faq = () => {
             </Card.Body>
           </Card>
 
-          <Card style={{ width: "18rem" }}>
+          <Card className="cards" id="card2">
             <Card.Body>
-              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Img variant="top" src="../public/cat.svg" />
               <Card.Title>Why is there fact about a cat ? </Card.Title>
               <Card.Text>
                 You see, life, she is like a roulette—one moment, you spin and
@@ -44,9 +44,9 @@ const Faq = () => {
             </Card.Body>
           </Card>
 
-          <Card style={{ width: "18rem" }}>
+          <Card className="cards" id="card3">
             <Card.Body>
-              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Img variant="top" src="../public/movie.svg" />
               <Card.Title>Where did you get the movies ?</Card.Title>
               <Card.Text>
                 The films within our esteemed roulette are procured from a grand

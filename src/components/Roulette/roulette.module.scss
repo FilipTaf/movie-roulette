@@ -11,13 +11,6 @@
   padding: 1rem;
   background-color: $secColorred;
 }
-/*
-.rouletteWrapper {
-  margin-top: 0px;
-  position: relative;
-}
-*/
-
 .history {
   position: absolute;
   top: 10px;
@@ -70,15 +63,7 @@
   top: 0;
   left: 35px;
 }
-/*
-.evWeaponText {
-  position: absolute;
-  top: 90px;
-  left: 5px;
-  width: 185px;
-  height: 50px;
-  background: #242531;
-}*/
+
 .evWeaponText {
   position: absolute;
   bottom: 0;
@@ -87,19 +72,6 @@
   height: 100%;
   background: $theBlack;
 }
-/*
-.ev-weapon-textp p :not(#title) {
-  height: 15px;
-  line-height: 15px;
-  color: #e4e4e4;
-  font-size: 12px;
-  margin: 0;
-  padding: 0 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-*/
 .evWeaponText p {
   height: 15px;
   line-height: 15px;
