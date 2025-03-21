@@ -81,62 +81,59 @@ const McRoulette = ({
   }
 
   return (
-    <div >
+    <div>
       <InfoModal
         isShow={show}
         movieId={weaponPrizeId}
         onHide={() => setShow(false)}
         table={rouletteWeapons}
       ></InfoModal>
-      <center className= {cl.abovelogoblock}>
+      <center className={cl.abovelogoblock}>
         <div className="logoblock">
           <img
             id="logo"
             src="/newlogo.svg"
             alt="logo"
-            
-            style={{ paddingBottom: "1.5rem" , width:"48rem",  top: "-5rem"}}
+            style={{ paddingBottom: "1.5rem", width: "48rem", top: "-5rem" }}
           />
         </div>
       </center>
       {/*i dont want to talk about all of these div. Somebody should do something about it because i dont know how to do it with out them*/}
-      <div className={cl.aboverollerpoller}>  
-      <div className={cl.rollerpoller}>
-      <div className={cl.rouletteWrapper} >
-        <div ref={rouletteContainerRef} >
-          <div className={cl.evRoulette}>
-            <div className={cl.evTarget}></div>
-            <div
-              ref={weaponsRef}
-              className={cl.evWeapons}
-              onTransitionEnd={transitionEndHandler}
-            >
-              {rouletteWeapons.map((w, i) => {
-                return (
-                  <RouletteItem
-                    key={i}
-                    id={i}
-                    isLoser={i !== weaponPrizeId && !isSpin && isSpinEnd}
-                    title={w["title"]}
-                    genre={w["genre"]}
-                    img={w["img"]}
-                  />
-                );
-              })}
+      <div className={cl.aboverollerpoller}>
+        <div className={cl.rollerpoller}>
+          <div ref={rouletteContainerRef}>
+            <div className={cl.evRoulette}>
+              <div className={cl.evTarget}></div>
+              <div
+                ref={weaponsRef}
+                className={cl.evWeapons}
+                onTransitionEnd={transitionEndHandler}
+              >
+                {rouletteWeapons.map((w, i) => {
+                  return (
+                    <RouletteItem
+                      key={i}
+                      id={i}
+                      isLoser={i !== weaponPrizeId && !isSpin && isSpinEnd}
+                      title={w["title"]}
+                      genre={w["genre"]}
+                      img={w["img"]}
+                    />
+                  );
+                })}
+              </div>
             </div>
           </div>
+          <button className={cl.button} disabled={isSpin} onClick={play}>
+            {!isSpin ? (
+              "Roll"
+            ) : (
+              <Spinner animation="border" role="status" size="sm">
+                <span className="visually-hidden">Loading...</span>
+              </Spinner>
+            )}
+          </button>
         </div>
-        <button className={cl.button} disabled={isSpin} onClick={play}>
-          {!isSpin ? (
-            "Roll"
-          ) : (
-            <Spinner animation="border" role="status" size="sm">
-              <span className="visually-hidden">Loading...</span>
-            </Spinner>
-          )}
-        </button>
-      </div>
-      </div>
       </div>
     </div>
   );

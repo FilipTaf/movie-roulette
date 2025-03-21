@@ -14,7 +14,7 @@ const list = {
     {
       title: "Zagubione Wspomnienia",
       description:
-        "Młody mężczyzna budzi się bez pamięci i musi odkryć, cp stało się z hegi życiem, podczas gyd ktoś nieustannie stara się go zabić",
+        "Młody mężczyzna budzi się bez pamięci i musi odkryć, co stało się z jego życiem, podczas gdy ktoś nieustannie stara się go zabić",
       director: "Adam Kowalski",
       release: "2018",
       genre: "Thriller",
@@ -80,7 +80,7 @@ const list = {
     {
       title: "Wielki Skok",
       description:
-        "Grupa przestępców planuje favoriteealny napad na bank, ale wszystko favoritezie nie tak, jak miało.",
+        "Grupa przestępców planuje idealny napad na bank, ale wszystko idzie nie tak, jak miało.",
       director: "Piotr Borkowski",
       genre: "Kryminał",
       release: "2020",
@@ -322,7 +322,7 @@ const list = {
     {
       title: "Wspomnienie Tego Dnia",
       description:
-        "Mężczyzna zaczyna wfavoritezieć w snach fragmenty swojego przyszłego życia, co prowadzi go do podejmowania ryzykownych decyzji.",
+        "Mężczyzna zaczyna widzieć w snach fragmenty swojego przyszłego życia, co prowadzi go do podejmowania ryzykownych decyzji.",
       director: "Tomasz Kaczmarek",
       genre: "Thriller",
       release: "2022",
@@ -333,7 +333,7 @@ const list = {
     {
       title: "Zmierzch Nowego Świata",
       description:
-        "W świecie przyszłości, gdzie technologia rządzi życiem, młody favoriteealista stara się walczyć z systemem.",
+        "W świecie przyszłości, gdzie technologia rządzi życiem, młody idealista stara się walczyć z systemem.",
       director: "Krzysztof Wysocki",
       genre: "Sci-Fi",
       release: "2023",
@@ -344,7 +344,7 @@ const list = {
     {
       title: "Pogrzebany Wspomnieniami",
       description:
-        "Mężczyzna zmaga się z traumą po śmierci ukochanej osoby, aż pewnego dnia zaczyna wfavoritezieć ją w swoich snach.",
+        "Mężczyzna zmaga się z traumą po śmierci ukochanej osoby, aż pewnego dnia zaczyna widzieć ją w swoich snach.",
       director: "Aleksandra Lis",
       genre: "Dramat",
       release: "2021",
