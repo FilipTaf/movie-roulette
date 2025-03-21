@@ -1,5 +1,9 @@
 @import "palette.scss";
 
+h1{
+  @include FontBold
+}
+
 #spinner {
   color: $secColorred;
   border: 1px, solid, $theBlack;

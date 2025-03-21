@@ -14,7 +14,7 @@ const CatFact = () => {
   return (
     <div className="fact">
       <h1>Fact About Cats:</h1>
-      <h3>{catFact}</h3>
+      <h4>{catFact}</h4>
     </div>
   );
 };

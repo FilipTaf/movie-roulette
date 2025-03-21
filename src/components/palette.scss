@@ -24,9 +24,9 @@ $secColorpurple: #a488ef;
 
 @mixin blockstyle {
   border: 3px $theBlack solid;
-  -webkit-box-shadow: 8px 8px 0px -2px rgba(0, 0, 0, 0.745);
-  -moz-box-shadow: 8px 8px 0px -2px rgba(0, 0, 0, 0.745);
-  box-shadow: 8px 8px 0px -2px rgba(0, 0, 0, 0.745);
+  -webkit-box-shadow: 8px 8px 1px -2px rgba(0, 0, 0, 0.745);
+  -moz-box-shadow: 8px 8px 1px -2px rgba(0, 0, 0, 0.745);
+  box-shadow: 8px 8px 1px -2px rgba(0, 0, 0, 0.745);
   margin: 2rem;
   padding: 1rem;
   border-radius: 5px;
@@ -34,9 +34,9 @@ $secColorpurple: #a488ef;
 
 @mixin blockstyleSmall {
   border: 2px $theBlack solid;
-  -webkit-box-shadow: 4px 4px 0px -1px rgba(0, 0, 0, 0.745);
-  -moz-box-shadow: 4px 4px 0px -1px rgba(0, 0, 0, 0.745);
-  box-shadow: 4px 4px 0px -1px rgba(0, 0, 0, 0.745);
+  -webkit-box-shadow: 4px 4px 1px -1px rgba(0, 0, 0, 0.745);
+  -moz-box-shadow: 4px 4px 1px -1px rgba(0, 0, 0, 0.745);
+  box-shadow: 4px 4px 1px -1px rgba(0, 0, 0, 0.745);
   margin: 0.5rem;
   border-radius: 5px;
 }
