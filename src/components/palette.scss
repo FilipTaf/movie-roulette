@@ -48,4 +48,5 @@ body {
 .THEwebsite {
   background-color: $secBGcolor;
   @include FontNormal();
+  min-height: 42.3rem;
 }
