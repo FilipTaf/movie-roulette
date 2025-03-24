@@ -72,19 +72,32 @@ const Login = () => {
     e.preventDefault();
     setIsLoading(true);
 
+    const userlogin = users.find(
+      (user) => user.mail === loginValue
+    );
+    const userpass = users.find(
+      (user) =>  user.password === password
+    );
     const user = users.find(
-      (user) => user.mail === loginValue && user.password === password
+      (user) =>  user.mail === loginValue && user.password === password
     );
 
-    if (user) {
+    if (userlogin) {
+      if (userpass) {
+        setTimeout(() => {
+          dispatch(login(user?.role));
+          setIsLoading(false);
+          navigate("../Roulette");
+        }, 1000);
+      }else{
+        setTimeout(() => {
+          alert("Invalid password");
+          setIsLoading(false);
+        }, 1000);
+      }
+    }else{
       setTimeout(() => {
-        dispatch(login(user.role));
-        setIsLoading(false);
-        navigate("../Roulette");
-      }, 1000);
-    } else {
-      setTimeout(() => {
-        alert("Invalid e-mail or password");
+        alert("Invalid e-mail");
         setIsLoading(false);
       }, 1000);
     }
