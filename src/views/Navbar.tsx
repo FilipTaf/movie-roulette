@@ -24,6 +24,9 @@ const MyNavbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   });
+  /*
+  (e) => {e.currentTarget.blur()}
+  */
   return (
     <>
       <Navbar
@@ -35,7 +38,10 @@ const MyNavbar = () => {
           <Navbar.Brand className="">Movie-roulette</Navbar.Brand>
           <Navbar.Toggle
             aria-controls="offcanvasNavbar"
-            onClick={handleShow}
+            onClick={function(e){
+              handleShow();
+              e.currentTarget.blur()
+            }}
             className="showIcon"
           />
           <Navbar.Offcanvas

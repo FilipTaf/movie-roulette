@@ -6,22 +6,29 @@
   background-color: $secColoryellow;
 }
 #card1 {
+  @include blockstyle;
   background-color: $secColorgreen;
-  border-radius: 25px;
+  border-radius: 5px;
   margin-left: 5px;
   margin-right: 5px;
+  padding-bottom: 1rem;
 }
 #card2 {
+  @include blockstyle;
   background-color: $secColorred;
-  border-radius: 25px;
+  border-radius: 5px;
   margin-left: 5px;
   margin-right: 5px;
+  padding-bottom: 1rem;
+ 
 }
 #card3 {
+  @include blockstyle;
   background-color: $secColorblue;
-  border-radius: 25px;
+  border-radius: 5px;
   margin-left: 5px;
   margin-right: 5px;
+  padding-bottom: 1rem;
 }
 .card-img-top {
   width: 6rem;
@@ -30,4 +37,20 @@
 }
 .card-title {
   @include FontBold;
+}
+.cards {
+  transition: all 0.4s;
+  height: 32rem;
+  align-items: center;
+  flex-direction: row;
+}
+
+.cards:hover {
+  transform: translate3D(0, -1px, 0) scale(1.03); 
+}
+.darker {
+  filter: brightness(50%);
+  transition: all 0.4s;
+  height: 32rem;
+
 }

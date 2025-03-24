@@ -98,7 +98,7 @@ const McRoulette = ({
           />
         </div>
       </center>
-      {/*i dont want to talk about all of these div. Somebody should do something about it because i dont know how to do it with out them*/}
+      {/*i dont want to talk about all of these div. Somebody should do something about it because i dont know how to do it without them*/}
       <div className={cl.aboverollerpoller}>
         <div className={cl.rollerpoller}>
           <div ref={rouletteContainerRef}>

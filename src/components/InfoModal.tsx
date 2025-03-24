@@ -20,7 +20,7 @@ const InfoModal = ({ isShow, movieId, onHide, table }) => {
           <Modal.Title>{theChosenOne?.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <div>
+          <div> 
             <img
               style={{ width: "100%", height: "300px" }}
               src={theChosenOne?.img}

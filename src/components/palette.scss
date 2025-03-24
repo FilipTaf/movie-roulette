@@ -13,8 +13,9 @@
 }
 //$mainBGcolor: #1ABC9C;
 
-//the first color palette
-$mainBGcolor: #fceee3;
+//first color palette
+
+$mainBGcolor: #ffe3cc;
 $secBGcolor: #f9f5f2;
 $theBlack: rgba(0, 0, 0, 1);
 $secColorblue: #88ceeb;
@@ -49,4 +50,7 @@ body {
   background-color: $secBGcolor;
   @include FontNormal();
   min-height: 42.3rem;
+}
+.button:hover{
+  transform: translate3D(0, -1px, 0) scale(1.03); 
 }
