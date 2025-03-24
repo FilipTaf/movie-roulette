@@ -85,7 +85,7 @@ const Faq = () => {
           <div className="col-sm-4">
             <Card
               id="card3"
-              className={isHovered3 ? "cards" : "darker"}
+              className={isHovered3 ? "cards" : " cards darker"}
               onMouseOver={handleHoverCard3}
               onMouseOut={handleOut}
             >
