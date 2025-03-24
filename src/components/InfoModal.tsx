@@ -15,14 +15,14 @@ const InfoModal = ({ isShow, movieId, onHide, table }) => {
   const forFavoriteIcon = movieList[movieIndex];
   return (
     <>
-      <Modal show={isShow} onHide={onHide} centered style={{ color: "white" }}>
+      <Modal show={isShow} onHide={onHide} centered>
         <Modal.Header>
           <Modal.Title>{theChosenOne?.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div> 
             <img
-              style={{ width: "100%", height: "300px" }}
+              style={{ width: "100%", height: "300px", paddingBottom: "1rem" }}
               src={theChosenOne?.img}
             />
             <br />
@@ -35,14 +35,20 @@ const InfoModal = ({ isShow, movieId, onHide, table }) => {
             <b> Ocena</b> : {theChosenOne?.rating}
           </div>
         </Modal.Body>
-
         <Modal.Footer>
-          <Button variant="success" onClick={onHide}>
+          <Button
+            variant="success"
+            onClick={onHide}
+            className="modalButtons"
+            id="ok"
+          >
             Ok
           </Button>
           <Button
             variant="primary"
             onClick={() => dispatch(addFavMovie(theChosenOne.title))}
+            className="modalButtons"
+            id="favorite"
           >
             Dodaj do ulubionych{" "}
             {forFavoriteIcon?.favorite ? (
