@@ -1,0 +1,26 @@
+@import "palette.scss";
+
+.block {
+  margin: 30px;
+  height: 150px;
+}
+
+.Text {
+  text-align: center;
+  background-color: $secBGcolor;
+  @include FontBold;
+  width: 50%;
+  float: left;
+}
+
+.Forms {
+  text-align: center;
+  background-color: $secBGcolor;
+  @include FontBold;
+  width: 50%;
+  float: right;
+}
+
+.button {
+  font-size: 20px;
+}

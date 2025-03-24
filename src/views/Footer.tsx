@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../components/main.scss";
-import * as Icon from "react-bootstrap-icons";
 
 const Footer = () => {
   return (
