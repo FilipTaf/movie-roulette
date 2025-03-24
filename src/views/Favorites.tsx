@@ -1,11 +1,13 @@
 import React from "react";
 import MovieList from "../components/ToFavorite/FavArray";
 import { useAppSelector } from "../store/hooks";
+import MyNavbar from "./Navbar";
 
 const Favorites = () => {
   const isAuth = useAppSelector((state) => state.auth.admin);
   return (
     <div>
+      <MyNavbar />
       {isAuth ? (
         <MovieList isSearchClicked={undefined} />
       ) : (

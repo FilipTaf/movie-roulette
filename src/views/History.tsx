@@ -1,12 +1,15 @@
 import React from "react";
 import General from "../components/ToHistory/Use";
 import { useAppSelector } from "../store/hooks";
+import MyNavbar from "./Navbar";
+
 
 const History = () => {
   const isAuth = useAppSelector((state) => state.auth.admin);
 
   return (
     <div>
+      <MyNavbar />
       {isAuth ? (
         isAuth == "admin" ? (
           <General />

@@ -12,9 +12,11 @@ const CatFact = () => {
   }, []);
 
   return (
-    <div className="fact">
-      <h1>Fact About Cats:</h1>
-      <h4>{catFact}</h4>
+    <div className="abovefact">
+      <div className="fact">
+        <h1>Fact About Cats:</h1>
+        <h4>{catFact}</h4>
+      </div>
     </div>
   );
 };

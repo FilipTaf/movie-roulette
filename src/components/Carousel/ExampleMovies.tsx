@@ -14,14 +14,9 @@ const ExampleMovies = () => {
   }
 
   return (
-    <>
+    <div className="maindivcar">
       <center>
-      <h1 style={{ marginTop: "3rem", color: "black" }} id="Example">
-        Example Movies
-      </h1>
-      </center>
-      <center>
-        <Carousel >
+        <Carousel>
           <Carousel.Item
             style={{
               backgroundImage: "url(" + movieList[chosenMovies[0]].img + ")",
@@ -54,8 +49,7 @@ const ExampleMovies = () => {
           </Carousel.Item>
         </Carousel>
       </center>
-
-    </>
+    </div>
   );
 };
 
