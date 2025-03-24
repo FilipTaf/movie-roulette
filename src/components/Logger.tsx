@@ -7,7 +7,6 @@ import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router";
 import * as Icon from "react-bootstrap-icons";
 import Spinner from "react-bootstrap/Spinner";
-import { setupListeners } from "@reduxjs/toolkit/query";
 
 const Login = () => {
   const dispatch = useAppDispatch();
@@ -216,6 +215,7 @@ const Login = () => {
           <center>
             <div className="login">
               <Button onClick={handleSelectLogin}>Log In</Button>
+              <br />
               <br />
               <Button onClick={handleSelectRegister}>Create Account</Button>
             </div>
