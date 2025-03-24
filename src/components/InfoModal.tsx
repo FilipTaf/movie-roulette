@@ -20,9 +20,9 @@ const InfoModal = ({ isShow, movieId, onHide, table }) => {
           <Modal.Title>{theChosenOne?.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <div> 
+          <div>
             <img
-              style={{ width: "100%", height: "300px", paddingBottom: "1rem" }}
+              style={{ width: "100%", height: "18rem", paddingBottom: "1rem" }}
               src={theChosenOne?.img}
             />
             <br />
@@ -50,7 +50,7 @@ const InfoModal = ({ isShow, movieId, onHide, table }) => {
             className="modalButtons"
             id="favorite"
           >
-            Dodaj do ulubionych{" "}
+            Add to favorite{" "}
             {forFavoriteIcon?.favorite ? (
               <BookmarkHeartFill />
             ) : (

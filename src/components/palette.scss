@@ -51,14 +51,15 @@ body {
   @include FontNormal();
   min-height: 42.3rem;
 }
-.button:hover{
-  transform: translate3D(0, -1px, 0) scale(1.03); 
+.button:hover {
+  transform: translate3D(0, -1px, 0) scale(1.03);
   transition: all 0.4s;
 }
-.btn{
+.btn {
   margin: 1rem;
 }
-.btn:hover{
-  transform: translate3D(0, -1px, 0) scale(1.03); 
+.btn:hover {
+  transform: translate3D(0, -1px, 0) scale(1.03);
   transition: all 0.4s;
+  --bs-btn-hover-border-color: black;
 }

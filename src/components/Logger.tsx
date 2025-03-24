@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router";
 import * as Icon from "react-bootstrap-icons";
 import Spinner from "react-bootstrap/Spinner";
+import "./main.scss";
 
 const Login = () => {
   const dispatch = useAppDispatch();
@@ -123,11 +124,12 @@ const Login = () => {
           <center>
             <div className="login">
               <Form onSubmit={handleLogin}>
+                <Form.Label>
+                  <h1>Log In</h1>
+                </Form.Label>
+                <br />
+
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>
-                    <h1>Log In</h1>
-                  </Form.Label>
-                  <hr />
                   <Form.Label>Email</Form.Label>
                   <Form.Control
                     type="text"
@@ -145,10 +147,14 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </Form.Group>
-                <Button onClick={handleReturn} style={{ margin: "1rem" }}>
+                <Button
+                  className="loginButtons"
+                  onClick={handleReturn}
+                  style={{ margin: "1rem" }}
+                >
                   Return
                 </Button>
-                <Button variant="primary" type="submit">
+                <Button className="loginButtons" type="submit">
                   Login
                 </Button>
               </Form>
@@ -158,11 +164,10 @@ const Login = () => {
           <center>
             <div className="login">
               <Form onSubmit={handleRegister}>
+                <Form.Label>
+                  <h1>Register</h1>
+                </Form.Label>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>
-                    <h1>Register</h1>
-                  </Form.Label>
-                  <hr />
                   <Form.Label>E-Mail</Form.Label>
                   <Form.Control
                     type="text"
@@ -202,10 +207,14 @@ const Login = () => {
                     onChange={() => setRole("user")}
                   />
                 </Form.Group>
-                <Button onClick={handleReturn} style={{ margin: "1rem" }}>
+                <Button
+                  className="loginButtons"
+                  onClick={handleReturn}
+                  style={{ margin: "1rem" }}
+                >
                   Return
                 </Button>
-                <Button variant="primary" type="submit">
+                <Button className="loginButtons" type="submit">
                   Create account
                 </Button>
               </Form>
@@ -214,10 +223,17 @@ const Login = () => {
         ) : (
           <center>
             <div className="login">
-              <Button onClick={handleSelectLogin}>Log In</Button>
+              <Button className="loginButtons" onClick={handleSelectLogin}>
+                Log In
+              </Button>
               <br />
-              <br />
-              <Button onClick={handleSelectRegister}>Create Account</Button>
+              <Button
+                className="loginButtons"
+                onClick={handleSelectRegister}
+                style={{ marginTop: "" }}
+              >
+                Create Account
+              </Button>
             </div>
           </center>
         )}

@@ -79,9 +79,9 @@ const MovieList = ({ query = "", isSearchClicked }) => {
           </thead>
           <tbody>
             {moviesToDisplay.map((movie, index) => (
-              <tr key={index} onClick={() => Show(movie)}>
-                <td>{movie.title}</td>
-                <td>{movie.genre}</td>
+              <tr key={index}>
+                <td onClick={() => Show(movie)}>{movie.title}</td>
+                <td onClick={() => Show(movie)}>{movie.genre}</td>
                 <td>
                   {" "}
                   <Button

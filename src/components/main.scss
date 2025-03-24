@@ -44,7 +44,7 @@ h1 {
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(9px);
-  color: #fff;
+  color: $theBlack;
   border-radius: 12px;
   padding: 30px 40px;
   @include blockstyle;
@@ -115,12 +115,12 @@ h1 {
   margin: 0px;
   background-color: $secColorpurple;
 }
-.showIcon { 
+.showIcon {
   @include blockstyleSmall;
   margin: 0.2rem;
-  &:hover{
-    transform: translate3D(0, -1px, 0) scale(1.03); 
-    transition: all 0.4s; 
+  &:hover {
+    transform: translate3D(0, -1px, 0) scale(1.03);
+    transition: all 0.4s;
   }
 }
 footer {
@@ -139,9 +139,8 @@ footer {
   @include FontNormal;
   background-color: $secBGcolor;
   color: $theBlack;
-  
 }
-.hate{
+.hate {
   padding-left: 1rem;
 }
 
@@ -153,13 +152,10 @@ footer {
   @include FontBold;
 }
 
-.modal-body,
-.modal-content {
-  background-color: $secBGcolor;
-}
 .modal-body {
   @include blockstyleSmall;
   margin-bottom: 0;
+  background-color: $secBGcolor;
 }
 .modal-content {
   @include blockstyle;
@@ -193,6 +189,7 @@ footer {
   height: 1rem;
   padding: 1.5rem;
   background-color: $secColoryellow;
+  border: 0;
 }
 
 .modal-footer {
@@ -200,6 +197,11 @@ footer {
   flex-direction: row;
   float: left;
   background-color: $secColoryellow;
+  border: 0;
+}
+
+.loginButtons {
+  @include blockstyleSmall;
 }
 
 #favorite {
