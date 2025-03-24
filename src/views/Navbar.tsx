@@ -57,7 +57,7 @@ const MyNavbar = () => {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3">
+              <Nav className="justify-content-end flex-grow-1 pe-3 hate">
                 <Nav.Link
                   className="ultra"
                   as={Link}

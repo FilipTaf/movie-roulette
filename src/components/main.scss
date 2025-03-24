@@ -2,7 +2,6 @@
 
 h1 {
   @include FontBold;
-  padding-bottom: 1rem;
 }
 
 #spinner {
@@ -116,9 +115,13 @@ h1 {
   margin: 0px;
   background-color: $secColorpurple;
 }
-.showIcon {
+.showIcon { 
   @include blockstyleSmall;
   margin: 0.2rem;
+  &:hover{
+    transform: translate3D(0, -1px, 0) scale(1.03); 
+    transition: all 0.4s; 
+  }
 }
 footer {
   @include blockstyle();
@@ -136,6 +139,10 @@ footer {
   @include FontNormal;
   background-color: $secBGcolor;
   color: $theBlack;
+  
+}
+.hate{
+  padding-left: 1rem;
 }
 
 .offcanvas-header {
