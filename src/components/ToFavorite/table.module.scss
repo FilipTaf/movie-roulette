@@ -1,0 +1,26 @@
+@import "../palette.scss";
+
+.tableContainer {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba($theBlack, 0.1);
+  background-color: $mainBGcolor;
+  text-align: center;
+}
+
+.tableContainer thead th {
+  background-color: $secColorblue;
+  color: $theBlack;
+  padding: 12px;
+  font-weight: bold;
+}
+.tableContainer thead tr {
+  border: 2px solid darken($secColorblue, 40%);
+}
+.tableContainer tbody tr {
+  border: 2px solid darken($secColorblue, 30%);
+}
+
+.tableContainer td {
+  background-color: lighten($secColorblue, 20%);
+}

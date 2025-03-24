@@ -1,7 +1,7 @@
 @import "palette.scss";
 
-h1{
-  @include FontBold
+h1 {
+  @include FontBold;
 }
 
 #spinner {
@@ -10,13 +10,6 @@ h1{
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-}
-
-.table-container {
-  padding: 20px;
-  border-radius: 4px;
-  text-align: center;
-  background-color: $secColorblue;
 }
 
 .custom-dark-table {
