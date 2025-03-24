@@ -201,19 +201,3 @@ footer {
 #ok {
   background-color: $secColorgreen;
 }
-
-.cards {
-  transition: all 0.4s;
-  height: 32rem;
-  align-items: center;
-  flex-direction: row;
-}
-
-.cards:hover {
-  transform: translate3D(0, -1px, 0) scale(1.03);
-}
-.darker {
-  filter: brightness(50%);
-  transition: all 0.4s;
-  height: 32rem;
-}
