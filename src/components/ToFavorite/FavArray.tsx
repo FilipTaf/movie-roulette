@@ -4,6 +4,7 @@ import { useAppSelector, useAppDispatch } from "../../store/hooks";
 import { delFavMovie } from "../../store/movieReducer";
 import { Button, Container } from "react-bootstrap";
 import "../main.scss";
+//@ts-ignore
 import styles from "./table.module.scss";
 import * as Icon from "react-bootstrap-icons";
 import InfoModal from "../InfoModal";

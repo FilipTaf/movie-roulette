@@ -2,6 +2,9 @@ import React, { useMemo, useState } from "react";
 import Table from "react-bootstrap/Table";
 import { useAppSelector } from "../../store/hooks";
 import InfoModal from "../InfoModal";
+//@ts-ignore
+import styles from "../ToFavorite/table.module.scss";
+import { Container } from "react-bootstrap";
 
 const MovieList = ({ query = "", isSearchClicked }) => {
   let drawnList = useAppSelector((state) => state.drawns.drawns);
@@ -60,7 +63,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
   );
   return (
     <>
-      <div className="table-container">
+      <Container className={styles.tableContainer}>
         <Table bordered hover responsive>
           <thead>
             <tr className="table-active">
@@ -81,7 +84,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
             ))}
           </tbody>
         </Table>
-      </div>
+      </Container>
       <InfoModal
         isShow={show}
         movieId={movieIndex}
