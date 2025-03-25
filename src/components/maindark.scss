@@ -89,29 +89,8 @@ h1 {
   filter: saturate(4);
   overflow: hidden;
 }
-.navSticky {
-  background-color: $secColorred;
-  @include blockstyle;
-  -webkit-box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0);
-  -moz-box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0);
-  box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0);
-  border-radius: 0%;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  margin: 0;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  @include FontBold;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  transition: all 0.2s;
-}
 
-.darknavSticky {
+.navSticky {
   background-color: #4b4b4a;
   @include blockstyle;
   -webkit-box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0);
@@ -136,26 +115,15 @@ h1 {
   width: 100%;
   height: 100%;
 }
+
 .abovefact {
-  padding: 2rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  background-color: $mainBGcolor;
-}
-.darkabovefact {
   padding: 2rem;
   padding-left: 5rem;
   padding-right: 5rem;
   background-color: $darkmainBGcolor;
 }
+
 .fact {
-  @include blockstyle;
-  @include FontNormal;
-  padding: 1rem;
-  margin: 0px;
-  background-color: $secColorpurple;
-}
-.darkfact {
   @include blockstyle;
   @include FontNormal;
   padding: 1rem;
@@ -184,24 +152,19 @@ footer {
 }
 .offcanvas-body {
   @include FontNormal;
-  background-color: $secBGcolor;
+  background-color: $darksecBGcolor;
   color: $theBlack;
 }
-.darkoff {
-  @include FontNormal;
-  background-color: $darksecBGcolor;
-}
+
 .hate {
   padding-left: 1rem;
 }
 
 .offcanvas-header {
   color: $theBlack;
-  background-color: $secColorgreen;
-}
-.darkoffhead {
   background-color: $darksecColorgreen;
 }
+
 .Bigtext {
   @include FontBold;
 }

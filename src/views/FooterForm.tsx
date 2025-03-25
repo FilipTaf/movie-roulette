@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
@@ -8,6 +8,7 @@ import emailjs from "@emailjs/browser";
 import styles from "../components/forms.module.scss";
 import "../components/forms.module.scss";
 import * as Icon from "react-bootstrap-icons";
+import { ThemeContext } from "../ThemeContext";
 
 const FooterForm = () => {
   const Send = (e) => {
@@ -19,16 +20,21 @@ const FooterForm = () => {
       "8KlHuXhbV40jr6enq"
     );
   };
+  const { theme } = useContext(ThemeContext);
+
   return (
     <>
-      <div className={styles.block}>
-        <div className={styles.Text}>
+      <div className={theme == "light" ? styles.block : styles.darkblock}>
+        <div className={theme == "light" ? styles.Text : styles.darkText}>
           <h1>
             {" "}
             Contact Form <Icon.InfoSquareFill></Icon.InfoSquareFill>
           </h1>
         </div>
-        <Form onSubmit={Send} className={styles.Forms}>
+        <Form
+          onSubmit={Send}
+          className={theme == "light" ? styles.Forms : styles.darkForms}
+        >
           <Row>
             <Col>
               <Form.Group>
