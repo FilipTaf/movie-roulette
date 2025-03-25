@@ -29,6 +29,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
     genre: string;
     rating: string;
     favorite: boolean;
+    img: string;
   }
   const favMovie = movies.filter((movie) => movie.favorite === true);
   const filteredMovies = useMemo(() => {
@@ -68,33 +69,39 @@ const MovieList = ({ query = "", isSearchClicked }) => {
 
   return (
     <>
-      <Container className={styles.tableContainer}>
-        <Table bordered hover responsive>
-          <thead>
-            <tr className="table-active">
-              <th onClick={handleSort}>Title</th>
-              <th>Genre</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            {moviesToDisplay.map((movie, index) => (
-              <tr key={index}>
-                <td onClick={() => Show(movie)}>{movie.title}</td>
-                <td onClick={() => Show(movie)}>{movie.genre}</td>
-                <td>
-                  {" "}
-                  <Button
-                    variant="danger"
-                    onClick={() => handleToggle(movie.title)}
-                  >
-                    <Icon.Trash />
-                  </Button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
+      <Container>
+        <br />
+        <Button onClick={handleSort}>
+          <Icon.Filter />
+        </Button>
+        <br />
+        <br />
+        {moviesToDisplay.map((movie, index) => (
+          <div className={styles.main} key={index} onClick={() => Show(movie)}>
+            <div className={styles.image}>
+              <img className={styles.imga} src={movie.img}></img>
+            </div>
+
+            <div className={styles.title}>
+              <h5>{movie.title}</h5>
+            </div>
+
+            <div className={styles.rate}>
+              <Icon.StarFill /> {movie.rating}
+            </div>
+
+            <div>
+              <div className={styles.genre}>
+                <span className={styles.mutedText}>genre </span>
+                {movie.genre}
+              </div>
+              <div className={styles.director}>
+                <span className={styles.mutedText}>director </span>
+                {movie.director}
+              </div>
+            </div>
+          </div>
+        ))}
       </Container>
       <InfoModal
         isShow={show}
