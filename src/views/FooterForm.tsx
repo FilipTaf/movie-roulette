@@ -32,12 +32,18 @@ const FooterForm = () => {
           <Row>
             <Col>
               <Form.Group>
-                <Form.Control type="text" name="name" placeholder="Your Name" />
+                <Form.Control
+                  className={styles.formControl}
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                />
               </Form.Group>
             </Col>
             <Col>
               <Form.Group>
                 <Form.Control
+                  className={styles.formControl}
                   type="email"
                   name="email_from"
                   placeholder="Your E-mail"
@@ -49,6 +55,7 @@ const FooterForm = () => {
             <Col colSpan={2}>
               <Form.Group>
                 <Form.Control
+                  className={styles.formControl}
                   as="textarea"
                   name="message"
                   placeholder="Your Message"
