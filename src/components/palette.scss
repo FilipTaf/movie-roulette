@@ -24,6 +24,17 @@ $secColoryellow: #f4d839;
 $secColorred: #ff7a5c;
 $secColorpurple: #a488ef;
 
+//dark color palette
+
+$darkmainBGcolor: #282828;
+$darksecBGcolor: #717171;
+$darktheBlack: rgba(0, 0, 0, 1);
+$darksecColorblue: #71abc4;
+$darksecColorgreen: #6fb66f;
+$darksecColoryellow: #b6a12b;
+$darksecColorred: #af5440;
+$darksecColorpurple: #7763ae;
+
 @mixin blockstyle {
   border: 3px $theBlack solid;
   -webkit-box-shadow: 8px 8px 1px -2px rgba(0, 0, 0, 0.745);
@@ -48,6 +59,11 @@ body {
 }
 .THEwebsite {
   background-color: $secBGcolor;
+  @include FontNormal();
+  min-height: 42.3rem;
+}
+.darkTHEwebsite {
+  background-color: $darksecBGcolor;
   @include FontNormal();
   min-height: 42.3rem;
 }

@@ -1,8 +1,14 @@
 @import "../palette.scss";
-.abovelogoblock{
+
+.abovelogoblock {
   padding: 3rem;
   padding-top: 1rem;
   background-color: $secBGcolor;
+}
+.darkabovelogoblock {
+  padding: 3rem;
+  padding-top: 1rem;
+  background-color: $darksecBGcolor;
 }
 .logoblock {
   width: 10rem;
@@ -10,10 +16,15 @@
   float: left;
   margin-left: 5rem;
   margin-right: 5rem;
-  background-color: $secBGcolor; 
+  background-color: $secBGcolor;
 }
-.aboverollerpoller{
+
+.aboverollerpoller {
   background-color: $mainBGcolor;
+  border-top: 2px $theBlack solid;
+}
+.darkaboverollerpoller {
+  background-color: $darkmainBGcolor;
   border-top: 2px $theBlack solid;
 }
 .rollerpoller {
@@ -26,6 +37,18 @@
   position: relative;
   top: -5rem;
 }
+
+.darkrollerpoller {
+  @include blockstyle;
+  margin: 0px;
+  padding: 1rem;
+  background-color: $darksecColorred;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  position: relative;
+  top: -5rem;
+}
+
 .history {
   position: absolute;
   top: 10px;
@@ -118,5 +141,5 @@
   &:disabled {
     background-color: #7fbc8c;
     color: rgba($theBlack, 0.6);
-  } 
+  }
 }

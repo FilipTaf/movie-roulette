@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 // @ts-ignore
 import cl from "./roulette.module.scss";
 import RouletteItem from "./RouletteItem.tsx";
@@ -7,6 +7,9 @@ import InfoModal from "../InfoModal.js";
 import { useDispatch } from "react-redux";
 import { addMovie } from "../../store/drawnReducer.js";
 import Spinner from "react-bootstrap/Spinner";
+
+import { ThemeContext } from "../../ThemeContext.tsx";
+
 interface RouletteElementParams {
   weapons: weaponAttributes[];
   weaponsCount: number;
@@ -26,6 +29,7 @@ const McRoulette = ({
   const [isSpinEnd, setIsSpinEnd] = useState<boolean>(false);
   const [winHistory, setWinHistory] = useState<weaponAttributes[]>([]);
   const [show, setShow] = useState(false);
+  const { theme } = useContext(ThemeContext);
 
   const rouletteContainerRef = useRef<HTMLDivElement>(null);
   const weaponsRef = useRef<HTMLDivElement>(null);
@@ -88,8 +92,10 @@ const McRoulette = ({
         onHide={() => setShow(false)}
         table={rouletteWeapons}
       ></InfoModal>
-      <center className={cl.abovelogoblock}>
-        <div className="logoblock">
+      <center
+        className={theme == "light" ? cl.abovelogoblock : cl.darkabovelogoblock}
+      >
+        <div>
           <img
             id="logo"
             src="/newlogo.svg"
@@ -99,8 +105,14 @@ const McRoulette = ({
         </div>
       </center>
       {/*i dont want to talk about all of these div. Somebody should do something about it because i dont know how to do it without them*/}
-      <div className={cl.aboverollerpoller}>
-        <div className={cl.rollerpoller}>
+      <div
+        className={
+          theme == "light" ? cl.aboverollerpoller : cl.darkaboverollerpoller
+        }
+      >
+        <div
+          className={theme == "light" ? cl.rollerpoller : cl.darkrollerpoller}
+        >
           <div ref={rouletteContainerRef}>
             <div className={cl.evRoulette}>
               <div className={cl.evTarget}></div>

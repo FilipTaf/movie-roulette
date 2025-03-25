@@ -1,9 +1,16 @@
 @import "../palette.scss";
-.maindivcar{
+.maindivcar {
   padding-left: 5rem;
   padding-right: 5rem;
   padding-top: 0rem;
-  background-color: $mainBGcolor; 
+  background-color: $mainBGcolor;
+  padding-bottom: 3rem;
+}
+.darkmaindivcar {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 0rem;
+  background-color: $darkmainBGcolor;
   padding-bottom: 3rem;
 }
 .carousel {
@@ -12,6 +19,7 @@
   background-color: $secColorblue;
   margin: 0px;
 }
+
 .carousel-item {
   height: 300px;
   background-size: 100% 100%;
@@ -22,4 +30,3 @@
   border-radius: 20px;
   color: white;
 }
-

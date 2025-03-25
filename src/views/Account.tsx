@@ -5,10 +5,10 @@ import MyNavbar from "./Navbar";
 const Account = () => {
   return (
     <>
-    <MyNavbar />
-    <div className="ultra">
-      <Logger />
-    </div>
+      <MyNavbar />
+      <div className="ultra">
+        <Logger />
+      </div>
     </>
   );
 };

@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./main.scss";
+import { ThemeContext } from "../ThemeContext";
 
 const CatFact = () => {
   const [catFact, setCatFact] = useState("");
+  const { theme } = useContext(ThemeContext);
   useEffect(() => {
     fetch("https://catfact.ninja/fact")
       .then((res) => res.json())
@@ -12,8 +14,8 @@ const CatFact = () => {
   }, []);
 
   return (
-    <div className="abovefact">
-      <div className="fact">
+    <div className={theme == "light" ? "abovefact" : "darkabovefact"}>
+      <div className={theme == "light" ? "fact" : "darkfact"}>
         <h1>Fact About Cats:</h1>
         <h4>{catFact}</h4>
       </div>

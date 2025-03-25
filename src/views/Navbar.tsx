@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Navbar, Nav, Container, Offcanvas, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { logout } from "../store/loginReducer.ts";
 import { useAppDispatch, useAppSelector } from "../store/hooks.ts";
 import "../components/main.scss";
 import * as Icon from "react-bootstrap-icons";
+import { ThemeContext } from "../ThemeContext.tsx";
 
 const MyNavbar = () => {
   const [show, setShow] = useState(false);
@@ -16,6 +17,7 @@ const MyNavbar = () => {
     dispatch(logout());
   };
   const [sticky, setSticky] = useState(false);
+  const { theme, setTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,23 +26,29 @@ const MyNavbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   });
-  /*
-  (e) => {e.currentTarget.blur()}
-  */
+
   return (
     <>
       <Navbar
         expand={false}
         variant="light"
-        className={sticky ? "navSticky" : "nav"}
+        className={
+          theme === "light"
+            ? sticky
+              ? "navSticky"
+              : "nav"
+            : sticky
+            ? "darknavSticky navbar-dark"
+            : "darknav  navbar-dark"
+        }
       >
         <Container fluid>
           <Navbar.Brand className="">Movie-roulette</Navbar.Brand>
           <Navbar.Toggle
-            aria-controls="offcanvasNavbar"
-            onClick={function(e){
+            aria-controls="offcanvasNavbar "
+            onClick={function (e) {
               handleShow();
-              e.currentTarget.blur()
+              e.currentTarget.blur();
             }}
             className="showIcon"
           />
@@ -96,6 +104,14 @@ const MyNavbar = () => {
                   </Button>
                 ) : (
                   ""
+                )}
+
+                {theme == "light" ? (
+                  <Icon.Sun onClick={() => setTheme("dark")}></Icon.Sun>
+                ) : (
+                  <Icon.SunFill
+                    onClick={() => setTheme("light")}
+                  ></Icon.SunFill>
                 )}
               </Nav>
             </Offcanvas.Body>
