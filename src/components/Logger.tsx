@@ -124,11 +124,11 @@ const Login = () => {
             <div className="login">
               <h1>
                 Welcome {loginValue}
-                <Icon.PersonRaisedHand />
+                {/*<Icon.PersonRaisedHand />*/}
               </h1>
               <img
                 className="image"
-                src="https://i.pinimg.com/originals/79/67/b7/7967b7455ad792c2ed7dac1dcc9ebffe.gif"
+                src="https://media.tenor.com/FEIo6vWVIOMAAAAj/hi.gif"
                 alt="Welcome"
               />
             </div>
