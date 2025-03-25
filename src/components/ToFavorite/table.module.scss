@@ -1,26 +1,54 @@
 @import "../palette.scss";
-
-.tableContainer {
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba($theBlack, 0.1);
-  background-color: $mainBGcolor;
-  text-align: center;
+.main {
+  width: 55rem;
+  height: 10rem;
+  @include FontNormal;
+  @include blockstyleSmall;
+  transition: 0.5s;
+  margin-bottom: 3rem;
+  &:hover {
+    transform: translate3D(0, -1px, 0) scale(1.05);
+    box-shadow: 4px 4px 10px -1px rgba(0, 0, 0, 0.745);
+  }
+}
+.image {
+  width: 20%;
+  height: 10rem;
+  float: left;
+}
+.title {
+  width: 80%;
+  height: 6rem;
+  float: left;
 }
 
-.tableContainer thead th {
-  background-color: $secColorblue;
-  color: $theBlack;
-  padding: 12px;
-  font-weight: bold;
-}
-.tableContainer thead tr {
-  border: 2px solid darken($secColorblue, 40%);
-}
-.tableContainer tbody tr {
-  border: 2px solid darken($secColorblue, 30%);
+.rate {
+  width: 80%;
+  height: 2rem;
+  float: left;
 }
 
-.tableContainer td {
-  background-color: lighten($secColorblue, 20%);
+.genre {
+  width: 40%;
+  height: 2rem;
+  float: left;
+}
+.director {
+  width: 40%;
+  height: 2rem;
+  float: left;
+}
+
+.imga {
+  width: 10rem;
+  height: 9.8rem;
+}
+.leg {
+  color: $secColoryellow;
+  @include FontBold;
+  font-size: 20px;
+}
+.mutedText {
+  color: lighten(black, 65%);
+  font-size: 95%;
 }
