@@ -75,7 +75,7 @@ const MovieList = ({ query = "", isSearchClicked }) => {
         <Button onClick={handleSort}>
           <Icon.Filter />
         </Button>
-        <Button onClick={handleClear}>
+        <Button onClick={handleClear} variant="danger">
           <Icon.Trash3Fill></Icon.Trash3Fill>
         </Button>
         <br />
