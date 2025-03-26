@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
@@ -11,6 +11,7 @@ import * as Icon from "react-bootstrap-icons";
 import { ThemeContext } from "../ThemeContext";
 
 const FooterForm = () => {
+  const [isDisabled, setIsDisabled] = useState(false);
   const Send = (e) => {
     e.preventDefault();
     emailjs.sendForm(
@@ -19,6 +20,9 @@ const FooterForm = () => {
       e.target,
       "8KlHuXhbV40jr6enq"
     );
+    alert("Message Send");
+    setIsDisabled(true);
+    setTimeout(() => setIsDisabled(false), 10000);
   };
   const { theme } = useContext(ThemeContext);
 
@@ -43,6 +47,7 @@ const FooterForm = () => {
                   type="text"
                   name="name"
                   placeholder="Your Name"
+                  required
                 />
               </Form.Group>
             </Col>
@@ -53,6 +58,7 @@ const FooterForm = () => {
                   type="email"
                   name="email_from"
                   placeholder="Your E-mail"
+                  required
                 />
               </Form.Group>
             </Col>
@@ -65,14 +71,19 @@ const FooterForm = () => {
                   as="textarea"
                   name="message"
                   placeholder="Your Message"
+                  required
                 />
               </Form.Group>
             </Col>
           </Row>
           <Row>
             <Form.Group>
-              <Button type="submit" className={styles.button}>
-                Send Message <Icon.Send></Icon.Send>
+              <Button
+                type="submit"
+                className={styles.button}
+                disabled={isDisabled}
+              >
+                {isDisabled ? "Wait 10 sec" : "Klik"}
               </Button>
             </Form.Group>
           </Row>
