@@ -34,27 +34,7 @@
   $secColorredDark: #af5440;
   $secColorpurpleDark: #7763ae;
 
-  [theme-mode="light"] {
-    --mainBGcolor: #($mainBGcolor);
-    --secBGcolor: #($secBGcolor);
-    --theBlack: #($theBlack);
-    --secColorblue: #($secColorblue);
-    --secColorgreen: #($secColorgreen);
-    --secColoryellow: #($secColoryellow);
-    --secColorred: #($secColorred);
-    --secColorpurple: #($secColorpurple);
-  }
   
-  [theme-mode="dark"] {
-    --mainBGcolor: #($mainBGcolorDark);
-    --secBGcolor: #($secBGcolorDark);
-    --theBlack: #($theBlackDark);
-    --secColorblue: #($secColorblueDark);
-    --secColorgreen: #($secColorgreenDark);
-    --secColoryellow: #($secColoryellowDark);
-    --secColorred: #($secColorredDark);
-    --secColorpurple: #($secColorpurpleDark);
-  }
 //dark color palette 2
 /*
 $mainBGcolor: #282828;
@@ -66,6 +46,28 @@ $secColoryellow: #4b4b4a;
 $secColorred: #4b4b4a;
 $secColorpurple: #4b4b4a;
 */
+
+[theme-mode="light"] {
+  --mainBGcolor: #{$mainBGcolor};
+  --secBGcolor: #{$secBGcolor};
+  --theBlack: #{$theBlack};
+  --secColorblue: #{$secColorblue};
+  --secColorgreen: #{$secColorgreen};
+  --secColoryellow: #{$secColoryellow};
+  --secColorred: #{$secColorred};
+  --secColorpurple: #{$secColorpurple};
+}
+
+[theme-mode="dark"] {
+  --mainBGcolor: #{$mainBGcolorDark};
+  --secBGcolor: #{$secBGcolorDark};
+  --theBlack: #{$theBlackDark};
+  --secColorblue: #{$secColorblueDark};
+  --secColorgreen: #{$secColorgreenDark};
+  --secColoryellow: #{$secColoryellowDark};
+  --secColorred: #{$secColorredDark};
+  --secColorpurple: #{$secColorpurpleDark};
+}
 
 @mixin blockstyle {
   border: 3px $theBlack solid;

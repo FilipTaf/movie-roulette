@@ -84,7 +84,7 @@ h1 {
   @include FontNormal;
   padding: 1rem;
   margin: 0px;
-  background-color: $secColorpurple;
+  background-color: var(--secColorpurple);
 }
 .showIcon {
   @include blockstyleSmall;
