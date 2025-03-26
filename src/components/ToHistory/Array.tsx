@@ -5,12 +5,14 @@ import InfoModal from "../InfoModal";
 import styles from "../ToFavorite/table.module.scss";
 import { Container, Button } from "react-bootstrap";
 import * as Icon from "react-bootstrap-icons";
+import { clearTable } from "../../store/drawnReducer";
+import { useDispatch } from "react-redux";
 
 const MovieList = ({ query = "", isSearchClicked }) => {
   let drawnList = useAppSelector((state) => state.drawns.drawns);
   const movieList = useAppSelector((state) => state.movies);
+  const dispatch = useDispatch();
   const [sortAZ, setSortAZ] = useState(false);
-
   const [selectedMovie, setSelectedMovie] = useState<Movie | undefined>(
     undefined
   );
@@ -30,6 +32,10 @@ const MovieList = ({ query = "", isSearchClicked }) => {
 
   const handleSort = () => {
     setSortAZ((prev) => !prev);
+  };
+
+  const handleClear = () => {
+    dispatch(clearTable());
   };
 
   const filteredMovies = useMemo(() => {
@@ -68,6 +74,9 @@ const MovieList = ({ query = "", isSearchClicked }) => {
         <br />
         <Button onClick={handleSort}>
           <Icon.Filter />
+        </Button>
+        <Button onClick={handleClear}>
+          <Icon.Trash3Fill></Icon.Trash3Fill>
         </Button>
         <br />
         <br />
