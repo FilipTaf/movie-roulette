@@ -110,9 +110,9 @@ const MyNavbar = () => {
                   )}
                 </Nav>
               </Offcanvas.Body>
-            </Navbar.Offcanvas>
+            </Navbar.Offcanvas >
             {theme == "light" ? (
-              <Icon.Sun
+              <Icon.Sun 
                 onClick={() => setTheme("dark")}
                 className=" showIcon themeIcon"
               ></Icon.Sun>
