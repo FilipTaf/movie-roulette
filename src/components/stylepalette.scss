@@ -91,7 +91,7 @@ body {
   background-color: var(--secBGcolor);
 }
 .THEwebsite {
-  background-color: var(--secBGcolor);
+  background-color: $secBGcolor;
   @include FontNormal();
   min-height: 42.3rem;
 }

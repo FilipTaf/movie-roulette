@@ -7,6 +7,7 @@ import ExampleMovies from "../components/Carousel/ExampleMovies.tsx";
 import Faq from "../components/FAQ/Faq.tsx";
 import MyNavbar from "./Navbar";
 import "../components/main.scss";
+import FooterForm from "./FooterForm.tsx";
 
 const Main = () => {
   const isAuth = useAppSelector((state) => state.auth.admin);
@@ -18,9 +19,9 @@ const Main = () => {
             <MyNavbar />
             <Mainbody />
             <ExampleMovies />
-
             <CatFact />
             <Faq />
+            <FooterForm />
           </>
         ) : (
           <>

@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Navbar, Nav, Container, Offcanvas, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { logout } from "../store/loginReducer.ts";
 import { useAppDispatch, useAppSelector } from "../store/hooks.ts";
 import "../components/main.scss";
 import * as Icon from "react-bootstrap-icons";
+import { ThemeContext } from "../ThemeContext.tsx";
 
 const MyNavbar = () => {
   const [show, setShow] = useState(false);
@@ -41,7 +42,15 @@ const MyNavbar = () => {
       <Navbar
         expand={false}
         variant="light"
-        className={sticky ? "navSticky" : "nav"}
+        className={
+          theme === "light"
+            ? sticky
+              ? "navSticky"
+              : "nav"
+            : sticky
+            ? "darknavSticky navbar-dark"
+            : "darknav  navbar-dark"
+        }
       >
         <Container fluid>
           <Navbar.Brand className="">Movie-roulette</Navbar.Brand>

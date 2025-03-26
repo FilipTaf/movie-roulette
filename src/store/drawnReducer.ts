@@ -17,8 +17,11 @@ const drawnReducer = createSlice({
       //@ts-ignore
       state.drawns = [...state.drawns, randomMovie];
     },
+    clearTable: (state) => {
+      state.drawns = [];
+    },
   },
 });
 
-export const { addMovie } = drawnReducer.actions;
+export const { addMovie, clearTable } = drawnReducer.actions;
 export default drawnReducer.reducer;

@@ -1,0 +1,52 @@
+@import "palette.scss";
+
+.block {
+  margin: 2rem;
+  height: 11rem;
+}
+.darkblock {
+  padding: 2rem;
+  height: 15rem;
+  background-color: $darksecBGcolor;
+}
+
+.Text {
+  text-align: center;
+  background-color: $secBGcolor;
+  @include FontBold;
+  width: 50%;
+  float: left;
+}
+.darkText {
+  text-align: center;
+  background-color: $darksecBGcolor;
+  @include FontBold;
+  width: 50%;
+  float: left;
+}
+
+.Forms {
+  text-align: center;
+  background-color: $secBGcolor;
+  @include FontBold;
+  width: 50%;
+  float: right;
+}
+.darkForms {
+  text-align: center;
+  background-color: $darksecBGcolor;
+  @include FontBold;
+  width: 50%;
+  float: right;
+}
+
+.button {
+  font-size: 15px;
+  margin-top: 0.5rem;
+  float: right;
+}
+
+.formControl {
+  border-radius: 10px;
+  @include blockstyleSmall;
+}

@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "./carousel.scss";
 import { useAppSelector } from "../../store/hooks";
+import { ThemeContext } from "../../ThemeContext";
 
 const ExampleMovies = () => {
   const movieList = useAppSelector((state) => state.movies);
 
   const rand = Math.floor(Math.random() * 50);
+  const { theme } = useContext(ThemeContext);
 
   const chosenMovies: Array<number> = [];
   for (var i = 0; i < 3; i++) {
@@ -14,7 +16,7 @@ const ExampleMovies = () => {
   }
 
   return (
-    <div className="maindivcar">
+    <div className={theme == "light" ? "maindivcar" : "darkmaindivcar"}>
       <center>
         <Carousel>
           <Carousel.Item

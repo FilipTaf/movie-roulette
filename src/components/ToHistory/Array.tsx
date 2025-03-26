@@ -1,16 +1,18 @@
 import React, { useMemo, useState } from "react";
-import Table from "react-bootstrap/Table";
 import { useAppSelector } from "../../store/hooks";
 import InfoModal from "../InfoModal";
 //@ts-ignore
 import styles from "../ToFavorite/table.module.scss";
-import { Container } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
+import * as Icon from "react-bootstrap-icons";
+import { clearTable } from "../../store/drawnReducer";
+import { useDispatch } from "react-redux";
 
 const MovieList = ({ query = "", isSearchClicked }) => {
   let drawnList = useAppSelector((state) => state.drawns.drawns);
   const movieList = useAppSelector((state) => state.movies);
+  const dispatch = useDispatch();
   const [sortAZ, setSortAZ] = useState(false);
-
   const [selectedMovie, setSelectedMovie] = useState<Movie | undefined>(
     undefined
   );
@@ -25,10 +27,15 @@ const MovieList = ({ query = "", isSearchClicked }) => {
     genre: string;
     rating: string;
     favorite: boolean;
+    img: string;
   }
 
   const handleSort = () => {
     setSortAZ((prev) => !prev);
+  };
+
+  const handleClear = () => {
+    dispatch(clearTable());
   };
 
   const filteredMovies = useMemo(() => {
@@ -63,27 +70,42 @@ const MovieList = ({ query = "", isSearchClicked }) => {
   );
   return (
     <>
-      <Container className={styles.tableContainer}>
-        <Table bordered hover responsive>
-          <thead>
-            <tr className="table-active">
-              <th onClick={handleSort}>Title</th>
-              <th>Genre</th>
-              <th>Director</th>
-              <th>Rating</th>
-            </tr>
-          </thead>
-          <tbody>
-            {moviesToDisplay.map((movie: Movie, index) => (
-              <tr key={index} onClick={() => Show(movie)}>
-                <td>{movie.title}</td>
-                <td>{movie.genre}</td>
-                <td>{movie.director}</td>
-                <td>{movie.rating}</td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
+      <Container>
+        <br />
+        <Button onClick={handleSort}>
+          <Icon.Filter />
+        </Button>
+        <Button onClick={handleClear} variant="danger">
+          <Icon.Trash3Fill></Icon.Trash3Fill>
+        </Button>
+        <br />
+        <br />
+        {moviesToDisplay.map((movie: Movie, index) => (
+          <div className={styles.main} key={index} onClick={() => Show(movie)}>
+            <div className={styles.image}>
+              <img className={styles.imga} src={movie.img}></img>
+            </div>
+
+            <div className={styles.title}>
+              <h5>{movie.title}</h5>
+            </div>
+
+            <div className={styles.rate}>
+              <Icon.StarFill /> {movie.rating}
+            </div>
+
+            <div>
+              <div className={styles.genre}>
+                <span className={styles.mutedText}>genre </span>
+                {movie.genre}
+              </div>
+              <div className={styles.director}>
+                <span className={styles.mutedText}>director </span>
+                {movie.director}
+              </div>
+            </div>
+          </div>
+        ))}
       </Container>
       <InfoModal
         isShow={show}

@@ -1,5 +1,5 @@
 import React from "react";
-import MovieList from "../components/ToFavorite/FavArray";
+import General from "../components/ToFavorite/Use";
 import { useAppSelector } from "../store/hooks";
 import MyNavbar from "./Navbar";
 
@@ -9,7 +9,15 @@ const Favorites = () => {
     <div>
       <MyNavbar />
       {isAuth ? (
-        <MovieList isSearchClicked={undefined} />
+        isAuth == "admin" ? (
+          <General />
+        ) : (
+          <center className="ultra center-margin">
+            <div className="login">
+              <h1>You must be an admin</h1>
+            </div>
+          </center>
+        )
       ) : (
         <center className="ultra center-margin">
           <div className="login">

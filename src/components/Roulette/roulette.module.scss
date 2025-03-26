@@ -5,6 +5,8 @@
   padding-top: 1rem;
   background-color: var(--secBGcolor);
 }
+
+}
 .logoblock {
   width: 10rem;
   position: relative;
@@ -17,6 +19,7 @@
   background-color: var(--mainBGcolor);
   border-top: 2px var(--theBlack) solid;
 }
+
 .rollerpoller {
   @include blockstyle;
   margin: 0px;
@@ -27,6 +30,9 @@
   position: relative;
   top: -5rem;
 }
+
+
+
 .history {
   position: absolute;
   top: 10px;

@@ -7,6 +7,9 @@ import InfoModal from "../InfoModal.js";
 import { useDispatch } from "react-redux";
 import { addMovie } from "../../store/drawnReducer.js";
 import Spinner from "react-bootstrap/Spinner";
+
+import { ThemeContext } from "../../ThemeContext.tsx";
+
 interface RouletteElementParams {
   weapons: weaponAttributes[];
   weaponsCount: number;
@@ -76,18 +79,6 @@ const McRoulette = ({
 
       setIsReplay(true);
     }, 1000);
-
-    const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-    
-    useEffect(() => {
-        document.documentElement.setAttribute("theme-mode", theme);
-        localStorage.setItem("theme", theme);
-      }, [theme]);
-    
-    const toggleTheme = () => {
-      setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-    };
-    
 
     return { roulette };
   }
