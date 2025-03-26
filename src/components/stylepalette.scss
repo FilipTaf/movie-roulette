@@ -1,3 +1,6 @@
+
+
+
 @mixin FontNormal {
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
@@ -13,16 +16,37 @@
 }
 //$mainBGcolor: #1ABC9C;
 
-//first color palette
-
-$mainBGcolor: #ffe3cc;
-$secBGcolor: #f9f5f2;
+//color palette
+/*
+  $mainBGcolor: #ffe3cc;
+  $secBGcolor: #f9f5f2;
+  $theBlack: rgba(0, 0, 0, 1);
+  $secColorblue: #88ceeb;
+  $secColorgreen: #91ed91;
+  $secColoryellow: #f4d839;
+  $secColorred: #ff7a5c;
+  $secColorpurple: #a488ef;
+*/
+//dark color palette
+/*
+$mainBGcolor: #282828;
+$secBGcolor: #717171;
 $theBlack: rgba(0, 0, 0, 1);
-$secColorblue: #88ceeb;
-$secColorgreen: #91ed91;
-$secColoryellow: #f4d839;
-$secColorred: #ff7a5c;
-$secColorpurple: #a488ef;
+$secColorblue: #71abc4;
+$secColorgreen: #6fb66f;
+$secColoryellow: #b6a12b;
+$secColorred: #af5440;
+$secColorpurple: #7763ae;
+*/
+//dark color palette 2
+$mainBGcolor: #282828;
+$secBGcolor: #8b8b8b;
+$theBlack: rgba(0, 0, 0, 1);
+$secColorblue: #4b4b4a;
+$secColorgreen: #4b4b4a;
+$secColoryellow: #4b4b4a;
+$secColorred: #4b4b4a;
+$secColorpurple: #4b4b4a;
 
 @mixin blockstyle {
   border: 3px $theBlack solid;

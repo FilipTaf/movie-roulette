@@ -1,4 +1,4 @@
-import "./components/palette.scss";
+import "./components/stylepalette.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router";
 import History from "./views/History";

@@ -2,6 +2,7 @@ import React from "react";
 import Mainbody from "../components/Roulette/MainBody";
 import { useAppSelector } from "../store/hooks";
 import CatFact from "../components/CatFact";
+import Apper from "../components/Apper.tsx";
 import ExampleMovies from "../components/Carousel/ExampleMovies.tsx";
 import Faq from "../components/FAQ/Faq.tsx";
 import MyNavbar from "./Navbar";
@@ -18,6 +19,7 @@ const Main = () => {
           <MyNavbar />
           <Mainbody />
           <ExampleMovies />
+          <Apper />
           <CatFact />
           <Faq />
         </>

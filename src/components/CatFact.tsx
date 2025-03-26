@@ -10,7 +10,7 @@ const CatFact = () => {
         setCatFact(data.fact);
       });
   }, []);
-
+  
   return (
     <div className="abovefact">
       <div className="fact">
