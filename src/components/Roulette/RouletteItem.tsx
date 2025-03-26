@@ -33,7 +33,9 @@ const RouletteItem = ({
           }}
         >
           <div style={{ background: "rgba(0,0,0,0.5)" }}>
-            <p>{title}</p>
+            <p>
+              <b>{title}</b>
+            </p>
             <p>{genre}</p>
           </div>
         </div>
