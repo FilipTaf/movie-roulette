@@ -14,27 +14,26 @@
 
 //color palette
 
-  $mainBGcolor: #ffe3cc;
-  $secBGcolor: #f9f5f2;
-  $theBlack: rgba(0, 0, 0, 1);
-  $secColorblue: #88ceeb;
-  $secColorgreen: #91ed91;
-  $secColoryellow: #f4d839;
-  $secColorred: #ff7a5c;
-  $secColorpurple: #a488ef;
+$mainBGcolor: #ffe3cc;
+$secBGcolor: #f9f5f2;
+$theBlack: rgba(0, 0, 0, 1);
+$secColorblue: #88ceeb;
+$secColorgreen: #91ed91;
+$secColoryellow: #f4d839;
+$secColorred: #ff7a5c;
+$secColorpurple: #a488ef;
 
 //dark color palette
 
-  $mainBGcolorDark: #282828;
-  $secBGcolorDark: #717171;
-  $theBlackDark: rgba(0, 0, 0, 1);
-  $secColorblueDark: #71abc4;
-  $secColorgreenDark: #6fb66f;
-  $secColoryellowDark: #b6a12b;
-  $secColorredDark: #af5440;
-  $secColorpurpleDark: #7763ae;
+$mainBGcolorDark: #282828;
+$secBGcolorDark: #717171;
+$theBlackDark: rgba(0, 0, 0, 1);
+$secColorblueDark: #71abc4;
+$secColorgreenDark: #6fb66f;
+$secColoryellowDark: #b6a12b;
+$secColorredDark: #af5440;
+$secColorpurpleDark: #7763ae;
 
-  
 //dark color palette 2
 /*
 $mainBGcolor: #282828;
@@ -89,10 +88,10 @@ $secColorpurple: #4b4b4a;
 }
 
 body {
-  background-color: $secBGcolor;
+  background-color: var(--secBGcolor);
 }
 .THEwebsite {
-  background-color: $secBGcolor;
+  background-color: var(--secBGcolor);
   @include FontNormal();
   min-height: 42.3rem;
 }
@@ -108,9 +107,9 @@ body {
   transition: all 0.4s;
   --bs-btn-hover-border-color: black;
 }
-.bi{
+.bi {
   width: 0.95em;
-  height:  0.95em;
+  height: 0.95em;
   vertical-align: baseline;
 }
 //[xmlns^="http://www.w3.org/-"]

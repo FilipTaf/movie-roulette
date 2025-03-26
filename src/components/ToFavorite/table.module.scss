@@ -4,12 +4,12 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba($theBlack, 0.1);
-  background-color: $mainBGcolor;
+  background-color: var(--mainBGcolor);
   text-align: center;
 }
 
 .tableContainer thead th {
-  background-color: $secColorblue;
+  background-color: var(--secColorblue);
   color: $theBlack;
   padding: 12px;
   font-weight: bold;

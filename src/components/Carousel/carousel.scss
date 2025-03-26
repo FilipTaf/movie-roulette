@@ -1,15 +1,15 @@
 @import "../stylepalette.scss";
-.maindivcar{
+.maindivcar {
   padding-left: 5rem;
   padding-right: 5rem;
   padding-top: 0rem;
-  background-color: $mainBGcolor; 
+  background-color: var(--mainBGcolor);
   padding-bottom: 3rem;
 }
 .carousel {
   overflow: hidden;
   @include blockstyle;
-  background-color: $secColorblue;
+  background-color: var(--secColorblue);
   margin: 0px;
 }
 .carousel-item {
@@ -22,4 +22,3 @@
   border-radius: 20px;
   color: white;
 }
-

@@ -7,7 +7,7 @@
 }
 #card1 {
   @include blockstyle;
-  background-color: $secColorgreen;
+  background-color: var(--secColorgreen);
   border-radius: 5px;
   margin-left: 5px;
   margin-right: 5px;
@@ -15,16 +15,15 @@
 }
 #card2 {
   @include blockstyle;
-  background-color: $secColorred;
+  background-color: var(--secColorred);
   border-radius: 5px;
   margin-left: 5px;
   margin-right: 5px;
   padding-bottom: 1rem;
- 
 }
 #card3 {
   @include blockstyle;
-  background-color: $secColorblue;
+  background-color: var(--secColorblue);
   border-radius: 5px;
   margin-left: 5px;
   margin-right: 5px;
@@ -46,12 +45,10 @@
 }
 
 .cards:hover {
-  transform: translate3D(0, -1px, 0) scale(1.03); 
-
+  transform: translate3D(0, -1px, 0) scale(1.03);
 }
 .darker {
   filter: brightness(50%);
   transition: all 0.4s;
   height: 34rem;
-
 }
