@@ -77,13 +77,21 @@ const MovieList = ({ query = "", isSearchClicked }) => {
         <br />
         <br />
         {moviesToDisplay.map((movie, index) => (
-          <div className={styles.main} key={index} onClick={() => Show(movie)}>
-            <div className={styles.image}>
+          <div className={styles.main} key={index}>
+            <div className={styles.image} onClick={() => Show(movie)}>
               <img className={styles.imga} src={movie.img}></img>
             </div>
 
             <div className={styles.title}>
               <h5>{movie.title}</h5>
+              <div style={{ textAlign: "right" }}>
+                <Button
+                  variant="danger"
+                  onClick={() => dispatch(delFavMovie(movie.title))}
+                >
+                  <Icon.Trash />
+                </Button>
+              </div>
             </div>
 
             <div className={styles.rate}>
