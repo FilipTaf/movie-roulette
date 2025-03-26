@@ -87,6 +87,10 @@ $secColorpurpleDark: #4b4b4a; */
 
 body {
   background-color: var(--secBGcolor);
+  overflow: auto !important;
+}
+.modal-open {
+  padding-right: 0px !important;
 }
 .THEwebsite {
   background-color: var(--secBGcolor);

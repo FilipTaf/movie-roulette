@@ -90,6 +90,7 @@ h1 {
 .showIcon {
   @include blockstyleSmall;
   margin: 0.2rem;
+  margin: 3.2px !important;
   &:hover {
     transform: translate3D(0, -1px, 0) scale(1.03);
     transition: all 0.4s;
