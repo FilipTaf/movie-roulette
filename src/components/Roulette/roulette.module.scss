@@ -1,9 +1,31 @@
 @import "../stylepalette.scss";
 
+[theme-mode="light"] {
+  --mainBGcolor: $mainBGcolor;
+  --secBGcolor: $secBGcolor;
+  --theBlack: $theBlack;
+  --secColorblue: $secColorblue;
+  --secColorgreen: $secColorgreen;
+  --secColoryellow: $secColoryellow;
+  --secColorred: $secColorred;
+  --secColorpurple: $secColorpurple;
+}
+
+[theme-mode="dark"] {
+  --mainBGcolor: $mainBGcolorDark;
+  --secBGcolor: $secBGcolorDark;
+  --theBlack: $theBlackDark;
+  --secColorblue: $secColorblueDark;
+  --secColorgreen: $secColorgreenDark;
+  --secColoryellow: $secColoryellowDark;
+  --secColorred: $secColorredDark;
+  --secColorpurple: $secColorpurpleDark;
+}
+
 .abovelogoblock{
   padding: 3rem;
   padding-top: 1rem;
-  background-color: $secBGcolor;
+  background-color: var(--secBGcolor);
 }
 .logoblock {
   width: 10rem;
@@ -11,17 +33,17 @@
   float: left;
   margin-left: 5rem;
   margin-right: 5rem;
-  background-color: $secBGcolor; 
+  background-color: var(--secBGcolor); 
 }
 .aboverollerpoller{
-  background-color: $mainBGcolor;
-  border-top: 2px $theBlack solid;
+  background-color: var(--mainBGcolor);
+  border-top: 2px var(--theBlack) solid;
 }
 .rollerpoller {
   @include blockstyle;
   margin: 0px;
   padding: 1rem;
-  background-color: $secColorred;
+  background-color: var(--secColorred);
   margin-left: 5rem;
   margin-right: 5rem;
   position: relative;

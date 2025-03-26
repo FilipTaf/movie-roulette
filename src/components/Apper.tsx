@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./styles.scss";
+import "./stylepalette.scss";
 
 const Apper = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");

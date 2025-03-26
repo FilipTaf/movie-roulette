@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 // @ts-ignore
 import cl from "./roulette.module.scss";
 import RouletteItem from "./RouletteItem.tsx";
@@ -76,6 +76,18 @@ const McRoulette = ({
 
       setIsReplay(true);
     }, 1000);
+
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+    
+    useEffect(() => {
+        document.documentElement.setAttribute("theme-mode", theme);
+        localStorage.setItem("theme", theme);
+      }, [theme]);
+    
+    const toggleTheme = () => {
+      setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    };
+    
 
     return { roulette };
   }

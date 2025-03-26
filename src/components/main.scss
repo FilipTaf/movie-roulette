@@ -4,35 +4,6 @@ h1 {
   @include FontBold;
 }
 
-#spinner {
-  color: $secColorred;
-  border: 1px, solid, $theBlack;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.custom-dark-table {
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: $secBGcolor;
-  color: $theBlack;
-}
-
-.custom-dark-table thead {
-  background-color: $secColorred;
-  color: #ffffff;
-}
-
-.custom-dark-table thead th {
-  padding: 12px;
-  font-size: 16px;
-}
-
-.custom-dark-table tbody tr {
-  transition: background 0.3s ease-in-out;
-}
-
 * {
   margin: 0;
   padding: 0;
