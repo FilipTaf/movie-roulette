@@ -166,7 +166,7 @@ footer {
 .modal-header {
   height: 1rem;
   padding: 1.5rem;
-  background-color: $secColoryellow;
+  background-color: var(--secColoryellow);
   border: 0;
 }
 
@@ -174,21 +174,16 @@ footer {
   align-items: center;
   flex-direction: row;
   float: left;
-  background-color: $secColoryellow;
+  background-color: var(--secColoryellow);
   border: 0;
 }
 
 .loginButtons {
   @include blockstyleSmall;
 }
-.themeIcon {
-  margin-left: 1rem;
-  padding-top: 0.5rem;
-  font-size: 2.5rem;
-}
 
 #favorite {
-  background-color: $secColorpurple;
+  background-color: var(--secColorpurple);
 }
 #ok {
   background-color: var(--secColorgreen);

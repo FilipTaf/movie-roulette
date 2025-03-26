@@ -3,7 +3,7 @@
   //@include blockstyle;
   border-top: 2px $theBlack solid;
   padding: 3rem;
-  background-color: $secColoryellow;
+  background-color: var(--secColoryellow);
 }
 #card1 {
   @include blockstyle;

@@ -9,11 +9,12 @@
 }
 
 .tableContainer thead th {
-  background-color: $secColorblue;
+  background-color: var(--secColorblue);
   color: $theBlack;
   padding: 12px;
   font-weight: bold;
 }
+
 .tableContainer thead tr {
   border: 2px solid darken($secColorblue, 40%);
 }
@@ -64,7 +65,7 @@
   height: 9.8rem;
 }
 .leg {
-  color: $secColoryellow;
+  color: var(--secColoryellow);
   @include FontBold;
   font-size: 20px;
 }

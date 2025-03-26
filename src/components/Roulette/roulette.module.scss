@@ -120,7 +120,7 @@
   transition: all 0.4s;
 
   &:disabled {
-    background-color: #7fbc8c;
+    background-color: var(--secColorgreen);
     color: rgba($theBlack, 0.6);
   }
 }

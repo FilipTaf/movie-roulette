@@ -9,15 +9,7 @@ const Favorites = () => {
     <div>
       <MyNavbar />
       {isAuth ? (
-        isAuth == "admin" ? (
-          <General />
-        ) : (
-          <center className="ultra center-margin">
-            <div className="login">
-              <h1>You must be an admin</h1>
-            </div>
-          </center>
-        )
+        <General />
       ) : (
         <center className="ultra center-margin">
           <div className="login">

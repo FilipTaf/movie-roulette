@@ -24,7 +24,7 @@ $secColorred: #ff7a5c;
 $secColorpurple: #a488ef;
 
 //dark color palette
-
+/*
 $mainBGcolorDark: #282828;
 $secBGcolorDark: #717171;
 $theBlackDark: rgba(0, 0, 0, 1);
@@ -33,18 +33,16 @@ $secColorgreenDark: #6fb66f;
 $secColoryellowDark: #b6a12b;
 $secColorredDark: #af5440;
 $secColorpurpleDark: #7763ae;
-
-//dark color palette 2
-/*
-$mainBGcolor: #282828;
-$secBGcolor: #8b8b8b;
-$theBlack: rgba(0, 0, 0, 1);
-$secColorblue: #4b4b4a;
-$secColorgreen: #4b4b4a;
-$secColoryellow: #4b4b4a;
-$secColorred: #4b4b4a;
-$secColorpurple: #4b4b4a;
 */
+//dark color palette 2
+$mainBGcolorDark: #282828;
+$secBGcolorDark: #8b8b8b;
+$theBlackDark: rgba(0, 0, 0, 1);
+$secColorblueDark: #4b4b4a;
+$secColorgreenDark: #4b4b4a;
+$secColoryellowDark: #4b4b4a;
+$secColorredDark: #4b4b4a;
+$secColorpurpleDark: #4b4b4a;
 
 [theme-mode="light"] {
   --mainBGcolor: #{$mainBGcolor};
