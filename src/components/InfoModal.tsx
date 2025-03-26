@@ -50,7 +50,6 @@ const InfoModal = ({ isShow, movieId, onHide, table }) => {
             className="modalButtons"
             id="favorite"
           >
-            Add to favorite{" "}
             {forFavoriteIcon?.favorite ? (
               <BookmarkHeartFill />
             ) : (

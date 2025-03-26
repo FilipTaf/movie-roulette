@@ -83,7 +83,7 @@ const FooterForm = () => {
                 className={styles.button}
                 disabled={isDisabled}
               >
-                {isDisabled ? "Wait 10 sec" : "Klik"}
+                {isDisabled ? "Wait 10 sec" : <Icon.Send />}
               </Button>
             </Form.Group>
           </Row>
