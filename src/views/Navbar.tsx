@@ -42,19 +42,11 @@ const MyNavbar = () => {
       <Navbar
         expand={false}
         variant="light"
-        className={
-          theme === "light"
-            ? sticky
-              ? "navSticky"
-              : "nav"
-            : sticky
-            ? "darknavSticky navbar-dark"
-            : "darknav  navbar-dark"
-        }
+        className={sticky ? "navSticky" : "nav"}
       >
         <Container fluid>
-          <Navbar.Brand className="">Movie-roulette</Navbar.Brand>
-          <div id="rightSideNavbar">
+          <Navbar.Brand>Movie-roulette</Navbar.Brand>
+          <div>
             <Navbar.Toggle
               aria-controls="offcanvasNavbar"
               onClick={function (e) {

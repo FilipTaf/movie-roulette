@@ -37,7 +37,6 @@ h1 {
 }
 
 .nav {
-  //background-color: $secColorred;
   //@include blockstyle;
   padding-left: 4rem;
   padding-right: 4rem;
@@ -48,18 +47,6 @@ h1 {
   overflow: hidden;
 }
 
-.darknav {
-  background-color: $darkmainBGcolor;
-  //@include blockstyle;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  @include FontBold;
-  z-index: 1000;
-  width: 100%;
-  transition: all 0.2s;
-  filter: saturate(4);
-  overflow: hidden;
-}
 .navSticky {
   background-color: var(--secColorred);
   @include blockstyle;
@@ -82,27 +69,6 @@ h1 {
   transition: all 0.2s;
 }
 
-.darknavSticky {
-  background-color: #4b4b4a;
-  @include blockstyle;
-  -webkit-box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0);
-  -moz-box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0);
-  box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0);
-  border-radius: 0%;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  margin: 0;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  @include FontBold;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  transition: all 0.2s;
-}
 .image {
   width: 100%;
   height: 100%;
@@ -144,17 +110,13 @@ footer {
   -moz-box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
   box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
   @include FontNormal();
-  color: var(--mainBGcolor);
-  background-color: $theBlack;
+  color: white;
+  background-color: var(--theBlack);
 }
 .offcanvas-body {
   @include FontNormal;
   background-color: var(--secBGcolor);
   color: $theBlack;
-}
-.darkoff {
-  @include FontNormal;
-  background-color: $darksecBGcolor;
 }
 .hate {
   padding-left: 1rem;
@@ -162,7 +124,7 @@ footer {
 
 .offcanvas-header {
   color: $theBlack;
-  background-color: $secColorgreen;
+  background-color: var(--secColorgreen);
 }
 .Bigtext {
   @include FontBold;
@@ -178,7 +140,7 @@ footer {
   -webkit-box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
   -moz-box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
   box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 1);
-  background-color: $secColoryellow;
+  background-color: var(--secColoryellow);
   margin: 0;
   padding: 1rem;
   padding-top: 0.4rem;
@@ -225,9 +187,6 @@ footer {
   font-size: 2.5rem;
 }
 
-#darkIcon {
-  filter: invert(100);
-}
 #favorite {
   background-color: $secColorpurple;
 }

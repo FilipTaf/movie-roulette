@@ -1,25 +1,13 @@
-@import "palette.scss";
+@import "stylepalette.scss";
 
 .block {
   margin: 2rem;
   height: 11rem;
 }
-.darkblock {
-  padding: 2rem;
-  height: 15rem;
-  background-color: $darksecBGcolor;
-}
 
 .Text {
   text-align: center;
-  background-color: $secBGcolor;
-  @include FontBold;
-  width: 50%;
-  float: left;
-}
-.darkText {
-  text-align: center;
-  background-color: $darksecBGcolor;
+  background-color: r var(--secBGcolor);
   @include FontBold;
   width: 50%;
   float: left;
@@ -27,14 +15,7 @@
 
 .Forms {
   text-align: center;
-  background-color: $secBGcolor;
-  @include FontBold;
-  width: 50%;
-  float: right;
-}
-.darkForms {
-  text-align: center;
-  background-color: $darksecBGcolor;
+  background-color: var(--secBGcolor);
   @include FontBold;
   width: 50%;
   float: right;
