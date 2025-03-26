@@ -31,3 +31,7 @@
   border-radius: 10px;
   @include blockstyleSmall;
 }
+
+textarea {
+  max-height: 50px;
+}
