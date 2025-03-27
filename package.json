@@ -6,6 +6,7 @@
     "@emailjs/browser": "^4.4.1",
     "@reduxjs/toolkit": "^2.6.0",
     "@tanstack/react-router": "^1.114.29",
+    "@tanstack/react-start": "^1.114.29",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
@@ -21,6 +22,7 @@
     "redux": "^5.0.1",
     "redux-persist": "^6.0.0",
     "uuid": "^11.1.0",
+    "vinxi": "^0.5.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
