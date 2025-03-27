@@ -1,19 +1,20 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [TanStackRouterVite(), react()],
   server: {
     host: true,
-    port: 3000, 
+    port: 3000,
   },
   build: {
-    outDir: 'dist',
+    outDir: "dist",
   },
 
   resolve: {
     alias: {
-      '@': '/src',
+      "@": "/src",
     },
   },
 });
